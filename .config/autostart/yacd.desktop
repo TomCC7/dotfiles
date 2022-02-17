@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=yacd
+GenericName=yacd clash gui
+Exec=/usr/bin/docker run -p 1234:80 -d --rm haishanh/yacd
+Terminal=false
+Categories=Network
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=10

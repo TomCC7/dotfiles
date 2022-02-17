@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: src_block_cpp
+# key: <scp
+# --
+#+begin_src cpp
+$0
+#+end_src

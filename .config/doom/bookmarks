@@ -1,0 +1,235 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("CAR_SIM"
+ (filename . "/mnt/share/Programming/Projects/CAR_SIM/")
+ (front-context-string)
+ (rear-context-string . "  0 02-07 13:08 ")
+ (position . 81))
+("guix"
+ (filename . "~/.config/guix/")
+ (front-context-string . "current -> /var/")
+ (rear-context-string . " 43 02-03 22:49 ")
+ (position . 82))
+("EARTH111"
+ (filename . "/mnt/share/JDsync/2022WI/EARTH 111 001 WN 2022/")
+ (front-context-string . "Class Slides/\n  ")
+ (rear-context-string . "  0 01-07 20:11 ")
+ (position . 33))
+("EECS201"
+ (filename . "/mnt/share/JDsync/2022WI/EECS 201 001 WN 2022/")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("EECS373"
+ (filename . "/mnt/share/JDsync/2022WI/EECS373/")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("EECS445"
+ (filename . "/mnt/share/JDsync/2022WI/EECS 445  WN 2022/")
+ (front-context-string . "course_image/\n  ")
+ (rear-context-string . "  0 01-07 20:15 ")
+ (position . 33))
+("EECS498-cv"
+ (filename . "/mnt/share/JDsync/2022WI/EECS 498 008 WN 2022/")
+ (front-context-string)
+ (rear-context-string . "  0 01-07 16:08 ")
+ (position . 33))
+("STATS412"
+ (filename . "/mnt/share/JDsync/2022WI/STATS 412 002 WN 2022/")
+ (front-context-string . "Exam Reviews/\n  ")
+ (rear-context-string . "  0 01-04 17:46 ")
+ (position . 33))
+("22WI"
+ (filename . "/mnt/share/JDsync/2022WI/")
+ (front-context-string . "EARTH 111 001 WN")
+ (rear-context-string . " 4k 01-04 17:50 ")
+ (position . 33))
+("MDP"
+ (filename . "/mnt/share/JDsync/um_misc/clubs/MDP/")
+ (front-context-string . "Statements/\n  dr")
+ (rear-context-string . " 4k 10-17 22:18 ")
+ (position . 80))
+("Documents"
+ (filename . "/mnt/share/JDsync/Documents/")
+ (front-context-string . "Chen,Che, 167208")
+ (rear-context-string . ".3k 2021-03-26  ")
+ (position . 485))
+("EAGLE"
+ (filename . "~/EAGLE/")
+ (front-context-string . "cam/\n  drwxr-xr-")
+ (rear-context-string . " 4k 09-12 13:20 ")
+ (position . 81))
+("maav"
+ (filename . "/mnt/share/JDsync/um_misc/clubs/maav/")
+ (front-context-string)
+ (rear-context-string . "  0 09-18 20:55 ")
+ (position . 80))
+("EECS498-001"
+ (filename . "/mnt/share/JDsync/2021FA/EECS 498 001 FA 2021/")
+ (front-context-string . "course_image/\n  ")
+ (rear-context-string . "  0 09-06 20:59 ")
+ (position . 80))
+("EECS200"
+ (filename . "/mnt/share/JDsync/2021FA/EECS 200 001 FA 2021/")
+ (front-context-string . "labs/\n  drwxrwxr")
+ (rear-context-string . "  0 09-06 20:59 ")
+ (position . 82))
+("MATH217"
+ (filename . "/mnt/share/JDsync/2021FA/MATH 217 All Sections FA 2021/")
+ (front-context-string . "Bertoloni Meli/\n")
+ (rear-context-string . "  0 08-29 20:58 ")
+ (position . 84))
+("EECS370"
+ (filename . "/mnt/share/JDsync/2021FA/EECS 370 FA 2021/")
+ (front-context-string)
+ (rear-context-string . "  0 08-31 15:10 ")
+ (position . 80))
+("EECS281"
+ (filename . "/mnt/share/JDsync/2021FA/EECS 281 FA 2021/")
+ (front-context-string . "course_image/\n  ")
+ (rear-context-string . "  0 08-29 20:56 ")
+ (position . 81))
+("2021FA"
+ (filename . "/mnt/share/JDsync/2021FA/")
+ (front-context-string . "EECS 281 FA 2021")
+ (rear-context-string . " 4k 08-29 20:56 ")
+ (position . 81))
+("um_misc"
+ (filename . "/mnt/share/JDsync/um_misc/")
+ (front-context-string . "documents/\n  drw")
+ (rear-context-string . " 4k 07-15 22:51 ")
+ (position . 81))
+("JDsync"
+ (filename . "/mnt/share/JDsync/")
+ (front-context-string . "2019FA/\n  drwxrw")
+ (rear-context-string . " 4k 07-09 23:35 ")
+ (position . 85))
+("books"
+ (filename . "/mnt/share/JDsync/books/")
+ (front-context-string . "algorithm/\n  drw")
+ (rear-context-string . "  0 2021-01-13  ")
+ (position . 83))
+("haskell-cis194"
+ (filename . "/mnt/share/Programming/learning/haskell/cis194/")
+ (front-context-string)
+ (rear-context-string . "159 07-09 09:57 ")
+ (position . 78))
+("telegram"
+ (filename . "~/Downloads/Telegram Desktop/")
+ (front-context-string . "044002000311-368")
+ (rear-context-string . ".1k 06-06 17:49 ")
+ (position . 140))
+("ranger- "
+ (filename . "/mnt/share/JDsync/2021SU/VE203/hw_self/hw11/")
+ (front-context-string . "hw11.org*\n  -rwx")
+ (rear-context-string . ".8k 08-03 20:39 ")
+ (position . 162))
+("srtdoc"
+ (filename . "/mnt/share/Programming/Projects/slam/srtdoc/")
+ (front-context-string . "dataset/\n  drwxr")
+ (rear-context-string . "  0 07-31 21:50 ")
+ (position . 81))
+("slam"
+ (filename . "/mnt/share/Programming/Projects/slam/")
+ (front-context-string . "xavier-catkin-wo")
+ (rear-context-string . " 4k 03-19 15:11 ")
+ (position . 326))
+("ORB_SLAM3"
+ (filename . "/mnt/share/Programming/Projects/slam/refs/ORB_SLAM3/")
+ (front-context-string . "build/\n  drwxrwx")
+ (rear-context-string . " 4k 07-26 19:32 ")
+ (position . 82))
+("citation"
+ (filename . "~/Documents/emacs/citation.bib")
+ (front-context-string . "\n@article{10.230")
+ (rear-context-string)
+ (position . 1))
+("Downloads"
+ (filename . "~/Downloads/")
+ (front-context-string . "BaiduNetDisk/\n  ")
+ (rear-context-string . " 4k 05-13 17:38 ")
+ (position . 83))
+("Papers"
+ (filename . "~/Documents/emacs/papers/")
+ (front-context-string . "japan/\n  drwxrwx")
+ (rear-context-string . " 4k 04-30 13:01 ")
+ (position . 83))
+("Emacs"
+ (filename . "~/Documents/emacs/papers/")
+ (front-context-string . "japan/\n  drwxrwx")
+ (rear-context-string . " 4k 04-30 13:01 ")
+ (position . 83))
+("org-capture-last-stored"
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220125142859-eecs598_rl.org")
+ (front-context-string)
+ (rear-context-string . "tle: EECS598-rl\n")
+ (position . 88))
+("Projects"
+ (filename . "/mnt/share/Programming/Projects/")
+ (front-context-string . ".backup/\n  drwxr")
+ (rear-context-string . " 4k 04-11 01:13 ")
+ (position . 81))
+("agv_ros"
+ (filename . "/mnt/share/Programming/Projects/ipp_agv/agv_ros/")
+ (front-context-string . "agv_env/\n  drwxr")
+ (rear-context-string . "  0 06-19 21:11 ")
+ (position . 81))
+("config"
+ (filename . "~/.emacs.d/")
+ (front-context-string . "auto-save-list/\n")
+ (rear-context-string . " 4k 07-14 20:40 ")
+ (position . 81))
+("learning"
+ (filename . "/mnt/share/Programming/learning/")
+ (front-context-string . "ComputerNetworki")
+ (rear-context-string . " 4k 2021-02-03  ")
+ (position . 79))
+("baidusb"
+ (filename . "/mnt/share/JDsync/2021SU/baidusb/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("notes"
+ (filename . "/mnt/share/Programming/notes/source/_posts/")
+ (front-context-string . "  /mnt/share/Pro")
+ (rear-context-string)
+ (position . 1))
+("VE203"
+ (filename . "/mnt/share/JDsync/2021SU/VE203/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("Citation.bib"
+ (filename . "~/Documents/emacs/citation.bib")
+ (front-context-string . "\n@article{10.230")
+ (rear-context-string)
+ (position . 1))
+("VE311"
+ (filename . "/mnt/share/JDsync/2021SU/VE311/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("VE300"
+ (filename . "/mnt/share/JDsync/2021SU/VE300/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("VE270"
+ (filename . "/mnt/share/JDsync/2021SU/VE270/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("VR235"
+ (filename . "/mnt/share/JDsync/2021SU/VR235/")
+ (front-context-string . "/mnt/share/JDsyn")
+ (rear-context-string)
+ (position . 3))
+("21SU"
+ (filename . "/mnt/share/JDsync/2021SU/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+)

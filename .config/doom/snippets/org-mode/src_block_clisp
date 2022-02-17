@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: src_block_clisp
+# key: <scl
+# --
+#+begin_src lisp
+$0
+#+end_src

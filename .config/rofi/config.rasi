@@ -1,0 +1,8 @@
+// @theme "nord"
+@theme "nord"
+configuration {
+  modi: "drun,ssh,combi";
+  font: "MesloLGMDZ 12";
+  combi-modi: "window,drun,ssh";
+  dpi:192;
+}

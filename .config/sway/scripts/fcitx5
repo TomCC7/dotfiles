@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+if ! killall fcitx5
+then
+  exec fcitx5
+fi

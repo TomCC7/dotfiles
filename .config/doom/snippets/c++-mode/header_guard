@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: header_guard
+# key: <g
+# --
+#ifndef __$1__
+#define __$1__
+$0
+#endif

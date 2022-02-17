@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: src_block_ledger
+# key: <slg
+# --
+#+name: $1
+#+begin_src ledger :noweb yes
+$0
+#+end_src

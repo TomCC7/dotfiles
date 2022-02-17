@@ -1,0 +1,18 @@
+[submodule "ranger/colorschemes"]
+	path = ranger/colorschemes
+	url = https://github.com/ranger/colorschemes.git
+[submodule "/home/cc/.config/kitty/kitty-themes"]
+	path = /home/cc/.config/kitty/kitty-themes
+	url = git@github.com:dexpota/kitty-themes.git
+[submodule "polybar-themes"]
+	path = polybar-themes
+	url = https://github.com/adi1090x/polybar-themes.git
+[submodule "i3wm-themer"]
+	path = i3wm-themer
+	url = https://github.com/unix121/i3wm-themer
+[submodule "scimax"]
+	path = scimax
+	url = https://github.com/jkitchin/scimax.git
+[submodule "doom/scimax"]
+	path = doom/scimax
+	url = https://github.com/jkitchin/scimax.git

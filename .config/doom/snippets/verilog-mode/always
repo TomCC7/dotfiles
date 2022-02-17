@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: always
+# key: always
+# --
+always @ ( /*AUTOSENSE*/ ) begin
+   $0
+end

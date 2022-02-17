@@ -1,0 +1,28 @@
+[submodule "org-ref"]
+	path = org-ref
+	url = https://github.com/jkitchin/org-ref.git
+[submodule "ob-ipython"]
+	path = ob-ipython
+	url = https://github.com/jkitchin/ob-ipython.git
+[submodule "ox-clip"]
+	path = ox-clip
+	url = https://github.com/jkitchin/ox-clip
+[submodule "ox-ipynb"]
+	path = ox-ipynb
+	url = https://github.com/jkitchin/ox-ipynb
+[submodule "ov-highlight"]
+	path = ov-highlight
+	url = https://github.com/jkitchin/ov-highlight
+[submodule "emacs-win"]
+	path = emacs-win
+	url = https://github.com/jkitchin/emacs-win
+[submodule "elpa"]
+	path = elpa
+	url = https://github.com/jkitchin/scimax-win-elpa
+[submodule "ob-ipython-upstream"]
+	path = ob-ipython-upstream
+	url = https://github.com/gregsexton/ob-ipython.git
+[submodule "org-mime"]
+	path = org-mime
+	url = https://github.com/jkitchin/org-mime.git
+	branch = file-eqns

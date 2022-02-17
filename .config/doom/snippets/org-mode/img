@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: imag
+# key: <img
+# --
+#+caption: $1
+#+name: fig:$2
+[[$0]]

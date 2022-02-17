@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: src_block_asm
+# key: <sa
+# --
+#+begin_src asm
+$0
+#+end_src

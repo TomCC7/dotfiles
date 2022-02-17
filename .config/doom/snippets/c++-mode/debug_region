@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: debug_region
+# key: <d
+# --
+#ifdef DEBUG
+$0
+#endif
