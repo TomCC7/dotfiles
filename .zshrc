@@ -181,4 +181,5 @@ source /etc/profile
 ### End of Zinit's installer chunk
 
 zinit snippet OMZT::ys
+source ~/.zprofile
 

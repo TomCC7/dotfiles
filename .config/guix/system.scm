@@ -67,25 +67,38 @@
               (bootloader grub-efi-bootloader)
               (targets '("/boot/efi"))))
  ;; disk encryption
- (mapped-devices
-  (list (mapped-device
-         (source (uuid "db1126b8-0ec9-4e24-bce9-f6daedca7c83"))
-         (targets '("sys-root"))
-         (type luks-device-mapping))))
+;;  (mapped-devices
+;;   (list (mapped-device
+;;          (source (uuid "db1126b8-0ec9-4e24-bce9-f6daedca7c83"))
+;;          (targets '("sys-root"))
+;;          (type luks-device-mapping))))
+;; 
+;;  (file-systems (append
+;;                 (list (file-system
+;;                        (device (file-system-label "sys-root"))
+;;                        (mount-point "/")
+;;                        (type "ext4")
+;;                        (dependencies mapped-devices))
+;;                       ;; (file-system
+;;                       ;;  (device (uuid "7CD85F373997531E" 'ntfs))
+;;                       ;;  ;; (device "/dev/nvme0n1p2")
+;;                       ;;  (mount-point "/mnt/share")
+;;                       ;;  (mount-may-fail? #t)
+;;                       ;;  (options "rw,uid=1000,gid=998")
+;;                       ;;  (type "ntfs-3g"))
+;;                       (file-system
+;;                        (device (uuid "8CBE-7EF0" 'fat))
+;;                        (mount-point "/boot/efi")
+;;                        (type "vfat")))
+;;                 %base-file-systems))
 
- (file-systems (append
-                (list (file-system
-                       (device (file-system-label "sys-root"))
-                       (mount-point "/")
-                       (type "ext4")
-                       (dependencies mapped-devices))
-                      ;; (file-system
-                      ;;  (device (uuid "7CD85F373997531E" 'ntfs))
-                      ;;  ;; (device "/dev/nvme0n1p2")
-                      ;;  (mount-point "/mnt/share")
-                      ;;  (mount-may-fail? #t)
-                      ;;  (options "rw,uid=1000,gid=998")
-                      ;;  (type "ntfs-3g"))
+(file-systems (append
+                (list 
+		  (file-system
+		    (device (uuid "0e0776fb-2a03-4b86-81bb-1c33c311bab3"))
+		(mount-point "/")
+		(type "btrfs")
+		(options "subvol=root"))
                       (file-system
                        (device (uuid "8CBE-7EF0" 'fat))
                        (mount-point "/boot/efi")
