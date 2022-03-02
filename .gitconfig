@@ -1,3 +1,5 @@
 [user]
-	email = playercc7@gmail.com
+	email = cctom@umich.edu
 	name = cc
+[pull]
+	rebase = true

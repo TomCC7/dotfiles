@@ -8,7 +8,7 @@
                      sound
                      networking
                      xorg
-                     nix
+                     docker
                      virtualization
                      pm
                      cups)
@@ -66,43 +66,18 @@
  (bootloader (bootloader-configuration
               (bootloader grub-efi-bootloader)
               (targets '("/boot/efi"))))
- ;; disk encryption
-;;  (mapped-devices
-;;   (list (mapped-device
-;;          (source (uuid "db1126b8-0ec9-4e24-bce9-f6daedca7c83"))
-;;          (targets '("sys-root"))
-;;          (type luks-device-mapping))))
-;; 
-;;  (file-systems (append
-;;                 (list (file-system
-;;                        (device (file-system-label "sys-root"))
-;;                        (mount-point "/")
-;;                        (type "ext4")
-;;                        (dependencies mapped-devices))
-;;                       ;; (file-system
-;;                       ;;  (device (uuid "7CD85F373997531E" 'ntfs))
-;;                       ;;  ;; (device "/dev/nvme0n1p2")
-;;                       ;;  (mount-point "/mnt/share")
-;;                       ;;  (mount-may-fail? #t)
-;;                       ;;  (options "rw,uid=1000,gid=998")
-;;                       ;;  (type "ntfs-3g"))
-;;                       (file-system
-;;                        (device (uuid "8CBE-7EF0" 'fat))
-;;                        (mount-point "/boot/efi")
-;;                        (type "vfat")))
-;;                 %base-file-systems))
 
-(file-systems (append
+ (file-systems (append
                 (list 
-		  (file-system
-		    (device (uuid "0e0776fb-2a03-4b86-81bb-1c33c311bab3"))
-		(mount-point "/")
-		(type "btrfs")
-		(options "subvol=root"))
-                      (file-system
-                       (device (uuid "8CBE-7EF0" 'fat))
-                       (mount-point "/boot/efi")
-                       (type "vfat")))
+                 (file-system
+                  (device (uuid "0e0776fb-2a03-4b86-81bb-1c33c311bab3"))
+                  (mount-point "/")
+                  (type "btrfs")
+                  (options "subvol=root"))
+                 (file-system
+                  (device (uuid "8CBE-7EF0" 'fat))
+                  (mount-point "/boot/efi")
+                  (type "vfat")))
                 %base-file-systems))
  ;; user
  (users (cons (user-account
@@ -114,6 +89,7 @@
                                        "netdev" ;; control network devices
                                        "tty"
                                        "input"
+                                       "docker" ;; docker
                                        ;; virtual machines
                                        "kvm"
                                        "libvirt"
@@ -148,32 +124,32 @@
                     nss-certs qutebrowser)
                    %base-packages))
 
- (services (cons* (service thermald-service-type)
-                  (pam-limits-service ;; This enables JACK to enter realtime mode
-                   (list
-                    (pam-limits-entry "@realtime" 'both 'rtprio 99)
-                    (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
-                  (extra-special-file "/usr/bin/env"
-                                      (file-append coreutils "/bin/env"))
-                  (extra-special-file "/usr/bin/zsh"
-                                      (file-append zsh "/bin/zsh"))
+ (services (cons* ;; (service thermald-service-type)
+            (pam-limits-service ;; This enables JACK to enter realtime mode
+             (list
+              (pam-limits-entry "@realtime" 'both 'rtprio 99)
+              (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
+            (extra-special-file "/usr/bin/env"
+                                (file-append coreutils "/bin/env"))
+            (extra-special-file "/usr/bin/zsh"
+                                (file-append zsh "/bin/zsh"))
 
-                  (bluetooth-service #:auto-enable? #t)
-                  (service libvirt-service-type
-                           (libvirt-configuration
-                            (unix-sock-group "libvirt")
-                            (tls-port "16555")))
-                  (service tlp-service-type
-                           (tlp-configuration
-                            (cpu-boost-on-ac? #t)
-                            (wifi-pwr-on-bat? #t)))
-                  (service nix-service-type)
-                  (cons* (udev-rules-service 'backlight "backlight-udev-rule")
-                         (set-xorg-configuration
-                          (xorg-configuration
-                           (keyboard-layout keyboard-layout))
-                          )
-                         %desktop-services)))
+            (bluetooth-service #:auto-enable? #t)
+            (service docker-service-type)
+            (service libvirt-service-type
+                     (libvirt-configuration
+                      (unix-sock-group "libvirt")
+                      (tls-port "16555")))
+            (service tlp-service-type
+                     (tlp-configuration
+                      (cpu-boost-on-ac? #t)
+                      (wifi-pwr-on-bat? #t)))
+            (cons* (udev-rules-service 'backlight "backlight-udev-rule")
+                   (set-xorg-configuration
+                    (xorg-configuration
+                     (keyboard-layout keyboard-layout))
+                    )
+                   %desktop-services)))
 
  ;; nvidia settings
  ;; allow resolution of '.local' host names with mDNS

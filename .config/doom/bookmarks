@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("CAR_SIM"
+(("dotfiles"
+ (filename . "~/dotfiles/")
+ (front-context-string)
+ (rear-context-string . "lable 464.9 GiB\n")
+ (position . 50))
+("donw"
+ (filename . "/mnt/share/Programming/Projects/CAR_SIM/wizard/Wizard/linux/drivers/BaseWheel.py")
+ (front-context-string . "\n        return ")
+ (rear-context-string . "ent), sep=': ')\n")
+ (position . 1690))
+("CAR_SIM"
  (filename . "/mnt/share/Programming/Projects/CAR_SIM/")
  (front-context-string)
  (rear-context-string . "  0 02-07 13:08 ")

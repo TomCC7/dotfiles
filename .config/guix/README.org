@@ -1,0 +1,5 @@
+#+TITLE: README
+
+* TODOs
++ [ ] pack nerd fonts
++ [ ] pack stm32cube

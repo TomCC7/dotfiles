@@ -36,7 +36,7 @@ bindsym $mod+q kill
 bindsym $mod+Return exec TERM_PROGRAM=$term $term
 
 # Dropdown terminal
-bindsym Mod1+Escape exec i3-quickterm
+bindsym Mod1+Escape exec "i3-quickterm shell"
 
 # always pop standard shell, without the menu
 #bindsym $mod+b exec i3-quickterm shell
@@ -277,6 +277,7 @@ mode "$mode_gaps_outer" {
 # set power-manager and volume control
 # exec --no-startup-id mate-power-manager
 exec "dex -a"
+exec_always flameshot
 exec_always emacs --daemon
 # exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 

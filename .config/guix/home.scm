@@ -12,36 +12,42 @@
        (list
         ;;  tools
         "git" "tig" "curl" "exa" "tmux" "stow" "flameshot"
-        "ncurses" "ranger" "ncdu" "flatpak"
+        "ncurses" "ranger" "ncdu" "flatpak" "ripgrep" "dex"
+        "autojump" "thunar" "nomacs" "rsync"
         ;; xorgs
-        "xinput" "xclip" ;; "xrdb"
+        "xinput" "xclip" "xhost" "libxcursor" "xrdb"
         ;; hardwares control
         "blueman" "pavucontrol" "virt-manager"
         ;; {{ programming
         ;; python
         "python" "python-wrapper" "python-pip"
         "python-evdev" "python-pygame" "poetry"
+        "python-ipython" "python-distro"
         ;; c++
-        "gcc-toolchain" "clang-toolchain" "clang"
-        "llvm" "cling"
+        "gcc-toolchain" "clang-toolchain"
+        "llvm" "cling" "make" "cmake"
         ;; latex
         "texlive"
+        ;; lisps
+        "mit-scheme" "clisp"
+        ;; other
+        "node" "perl"
         ;; }}
         ;; pdf
         "okular" "zathura-pdf-mupdf" "zathura"
         ;; apps
-        "telegram-desktop" "nextcloud-client"
+        "telegram-desktop" "nextcloud-client" "firefox"
         ;; emacs
-        "emacs-pgtk-native-comp" "emacs-eldev" "emacs-epl" "emacs-pdf-tools"
-        "emacs-vterm" "grip" "emacs-emacsql-sqlite3" "emacs-emacsql"
-        "emacs-guix"
+        "emacs-pgtk-native-comp" "emacs-vterm" "grip"
+        "emacs-guix" "emacs-org-roam" "emacs-pdf-tools"
+        "emacs-emacsql-sqlite3"
         ;; fonts
         "font-adobe-source-han-sans:cn" "font-adobe-source-code-pro"
         "font-google-material-design-icons" "arc-icon-theme"
+        "font-wqy-zenhei" "font-wqy-microhei"
         ;; input
         "fcitx5" "fcitx5-configtool" "fcitx5-qt"
-        "fcitx5-gtk" "fcitx5-chinese-addons"
-        )))
+        "fcitx5-gtk" "fcitx5-chinese-addons")))
  (services
   (list
    (service home-zsh-service-type

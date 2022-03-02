@@ -42,5 +42,5 @@
 (add-hook 'emacs-lisp-mode-hook
             (lambda ()
               (push '(">=" . ?≥) prettify-symbols-alist)))
-(setq display-line-numbers 'relative)
+(setq display-line-numbers-type 'relative)
 ;; }}
