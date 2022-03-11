@@ -13,6 +13,8 @@
 (package! auctex)
 ;; cdlatex
 (package! cdlatex)
+;; koma-letter
+(eval-after-load 'ox '(require 'ox-koma-letter))
 ;; }}
 
 ;; disable default snippets

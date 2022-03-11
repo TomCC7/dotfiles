@@ -14,6 +14,23 @@
          (url "https://gitlab.com/nonguix/nonguix"))
 
         (channel
+         (name 'guix-hpc)
+         (url "https://gitlab.inria.fr/guix-hpc/guix-hpc"))
+
+        (channel
+         (name 'guix-bimsb-nonfree)
+         (url "https://github.com/BIMSBbioinfo/guix-bimsb-nonfree"))
+
+        (channel
+         (name 'guix-past)
+         (url "https://gitlab.inria.fr/guix-hpc/guix-past")
+         (introduction
+          (make-channel-introduction
+           "0c119db2ea86a389769f4d2b9c6f5c41c027e336"
+           (openpgp-fingerprint
+            "3CE4 6455 8A84 FDC6 9DB4  0CFB 090B 1199 3D9A EBB5"))))
+
+        (channel
          (name 'flat)
          (url "https://github.com/flatwhatson/guix-channel.git")
          (introduction

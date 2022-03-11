@@ -13,9 +13,9 @@
         ;;  tools
         "git" "tig" "curl" "exa" "tmux" "stow" "flameshot"
         "ncurses" "ranger" "ncdu" "flatpak" "ripgrep" "dex"
-        "autojump" "thunar" "nomacs" "rsync"
+        "autojump" "thunar" "nomacs" "rsync" "unzip"
         ;; xorgs
-        "xinput" "xclip" "xhost" "libxcursor" "xrdb"
+        "xinput" "xclip" "xhost" "libxcursor" "xcursor-themes" "xrdb"
         ;; hardwares control
         "blueman" "pavucontrol" "virt-manager"
         ;; {{ programming

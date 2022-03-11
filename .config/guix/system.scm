@@ -39,8 +39,7 @@
                      shells
                      wm)
 ;; nvidia udev
-;; (simple-service 'custom-udev-rules udev-service-type (list nvidia-driver))
-
+(simple-service 'custom-udev-rules udev-service-type (list nvidia-driver))
 
 ;; Allow members of the "video" group to change the screen brightness.
 (define %backlight-udev-rule
@@ -54,7 +53,7 @@
 
 (operating-system
  ;; nonguix settings
- (kernel linux-lts)
+ (kernel linux)
  (initrd microcode-initrd)
  (firmware (list linux-firmware sof-firmware alsa-ucm-conf))
  ;; system
@@ -111,7 +110,7 @@
                     exfat-utils fuse-exfat ntfs-3g cryptsetup ;;ntfs-3g-static ntfsfix-static
                     ;; hardwares
                     bluez bluez-alsa pulseaudio tlp xf86-input-libinput alsa-utils pamixer
-                    ;; nvidia-driver nvidia-libs
+                    nvidia-driver nvidia-libs
                     ;; window managers
                     i3-gaps i3status rofi polybar picom
                     xrandr autorandr
@@ -124,7 +123,7 @@
                     nss-certs qutebrowser)
                    %base-packages))
 
- (services (cons* ;; (service thermald-service-type)
+ (services (cons* (service thermald-service-type)
             (pam-limits-service ;; This enables JACK to enter realtime mode
              (list
               (pam-limits-entry "@realtime" 'both 'rtprio 99)
@@ -147,8 +146,7 @@
             (cons* (udev-rules-service 'backlight "backlight-udev-rule")
                    (set-xorg-configuration
                     (xorg-configuration
-                     (keyboard-layout keyboard-layout))
-                    )
+                     (keyboard-layout keyboard-layout)))
                    %desktop-services)))
 
  ;; nvidia settings
