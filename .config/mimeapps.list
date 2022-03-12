@@ -7,7 +7,7 @@ x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-XH0QG1.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-6DFNI1.desktop
 x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/baiduyunguanjia=baidunetdisk.desktop
 x-scheme-handler/etcher=balena-etcher-electron.desktop
@@ -27,7 +27,7 @@ application/x-extension-xht=org.qutebrowser.qutebrowser.desktop;
 [Added Associations]
 image=vimiv.desktop
 text/x-python=visual-studio-code.desktop;visual-studio-code-insiders.desktop;emacsclient.desktop;Alacritty.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-WX9930.desktop;userapp-Telegram Desktop-2C1K60.desktop;userapp-Telegram Desktop-6EFWF1.desktop;userapp-Telegram Desktop-XH0QG1.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-WX9930.desktop;userapp-Telegram Desktop-2C1K60.desktop;userapp-Telegram Desktop-6EFWF1.desktop;userapp-Telegram Desktop-XH0QG1.desktop;userapp-Telegram Desktop-6DFNI1.desktop;
 image/jpeg=org.gnome.eog.desktop;vimiv.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-M1KQA1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-M1KQA1.desktop;

@@ -274,6 +274,8 @@ mode "$mode_gaps_outer" {
 }
 
 
+# wall paper
+exec_always "feh --randomize --bg-fill ~/Pictures/*"
 # set power-manager and volume control
 # exec --no-startup-id mate-power-manager
 exec "dex -a"
@@ -285,7 +287,7 @@ exec_always emacs --daemon
 bindsym $mod+Shift+s exec flameshot gui
 
 # fcitx5
-# bindsym Ctrl+space exec "/usr/bin/bash $scripts/fcitx5"
+bindsym Ctrl+space exec "/usr/bin/bash $scripts/fcitx5"
 
 # volumeec $HOME/.config/
 set $VOL_MAX 150

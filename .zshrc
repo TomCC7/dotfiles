@@ -175,11 +175,4 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
-### End of Zinit's installer chunk
-source $HOME/.guix-home/profile/etc/profile
-[[ -s $HOME/.guix-home/profile/etc/profile.d/autojump.sh ]] && source $HOME/.guix-home/profile/etc/profile.d/autojump.sh
-### End of Zinit's installer chunk
-
-source ~/.zprofile
-source ~/.zshenv
 zinit snippet OMZT::ys

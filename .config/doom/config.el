@@ -60,6 +60,25 @@
 (setq emacsql-sqlite-executable "/home/cc/.guix-home/profile/bin/emacsql-sqlite")
 ;; }}
 
+;; {{ mu4e
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
+(setq +mu4e-gmail-accounts '(("playercc7@gmail.com" . "/playercc7")))
+;; don't need to run cleanup after indexing for gmail
+(setq mu4e-index-cleanup nil
+      ;; because gmail uses labels as folders we can use lazy check since
+      ;; messages don't really "move"
+      mu4e-index-lazy-check t)
+(set-email-account! "gmail.com"
+  '((mu4e-sent-folder       . "/gmail.com/Sent Mail")
+    (mu4e-drafts-folder     . "/gmail.com/Drafts")
+    (mu4e-trash-folder      . "/gmail.com/Trash")
+    (mu4e-refile-folder     . "/gmail.com/All Mail")
+    (smtpmail-smtp-user     . "playercc7@gmail.com")
+    ;; (user-mail-address      . "foo@bar.com") only needed for mu < 1.4
+    (mu4e-compose-signature . "---\nYours truly\n Che Chen"))
+  t)
+;; }}
+
 
 ;; python
 (load! "config-python")
