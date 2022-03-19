@@ -94,6 +94,7 @@ haruna/
 nano/
 vimb/
 fontconfig/
+garuda/
 genericrc
 okularrc
 google-chrome*
@@ -105,4 +106,3 @@ tabby
 user-dirs*
 zoomus.conf
 Harunarc
-

@@ -5,8 +5,11 @@
 ;; on the command line, then restart Emacs for the changes to take effect -- or
 ;; use 'M-x doom/reload'.
 
-;; miscellaneous
+;; miscellaneous {{
 (package! wakatime-mode)
+;; dict
+(package! youdao-dictionary)
+;; }}
 
 ;; {{ latex
 ;; auctex
@@ -20,8 +23,11 @@
 ;; disable default snippets
 (package! doom-snippets :ignore t)
 
-;; dict
-(package! youdao-dictionary)
+;; python {{
+;; (package! company-jedi)
+;; }}
+
+
 ;; scimax
 ;; (setq scimax-dir "~/.config/doom/scimax")
 ;; (add-to-list 'load-path "~/.config/doom/scimax")

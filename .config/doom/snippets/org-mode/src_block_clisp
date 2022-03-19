@@ -2,6 +2,6 @@
 # name: src_block_clisp
 # key: <scl
 # --
-#+begin_src lisp
+#+begin_src lisp :results output :results verbatim
 $0
 #+end_src

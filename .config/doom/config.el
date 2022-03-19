@@ -57,7 +57,7 @@
 (setq yas-snippet-dirs '("/home/cc/.config/doom/snippets"))
 ;; }}
 ;; {{ emacsql
-(setq emacsql-sqlite-executable "/home/cc/.guix-home/profile/bin/emacsql-sqlite")
+;; (setq emacsql-sqlite-executable "/home/cc/.guix-home/profile/bin/emacsql-sqlite")
 ;; }}
 
 ;; {{ mu4e
@@ -79,6 +79,10 @@
   t)
 ;; }}
 
+;; enable wakatime
+(global-wakatime-mode)
 
 ;; python
 (load! "config-python")
+;; keys
+(load! "keys")

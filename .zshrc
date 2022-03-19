@@ -91,7 +91,7 @@ export EDITOR=nvim
 # acronym
 alias zshcfg="vim ~/.zshrc"
 alias ll="ls -lh"
-alias r="ranger"
+alias r="source ranger"
 alias svim="sudo -E nvim"
 alias cconfig="cmake -B ./build"
 alias cbuild="cmake --build ./build"

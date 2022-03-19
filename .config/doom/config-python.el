@@ -14,4 +14,10 @@
   (setq conda-env-home-directory (expand-file-name "~/.conda/")
         conda-anaconda-home "/opt/anaconda")
   (conda-env-activate))
+
+;; add jedi as company option
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
+(add-hook! 'python-mode-hook #'my/python-mode-hook)
+
 (provide 'config-python)
