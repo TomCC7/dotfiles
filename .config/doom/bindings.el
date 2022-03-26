@@ -33,4 +33,7 @@
 (map! :leader :desc "excecute codes in the subtree"
       :mode 'org-mode :n "c b" #'org-babel-execute-subtree)
 
+;; format buffer
+(map! :leader :desc "lsp format buffer" :mode 'lsp-mode :n "c =" #'lsp-format-buffer)
+
 ;; }}}

@@ -23,6 +23,9 @@
 ;; disable default snippets
 (package! doom-snippets :ignore t)
 
+;; slack
+;; (package! slack)
+
 ;; python {{
 ;; (package! company-jedi)
 ;; }}
