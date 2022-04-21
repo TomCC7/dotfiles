@@ -19,8 +19,26 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 ;; {{{ORG
-(setq org-roam-directory (file-truename "/home/cc/Documents/emacs/roam"))
+(setq org-roam-directory (file-truename "~/Documents/emacs/roam"))
 (setq org-noter-always-create-frame nil)
+(setq org-noter-notes-search-path '("~/Documents/emacs/papers/notes"))
+
+;; org-ref
+(setq bibtex-completion-bibliography '("~/Documents/emacs/citation.bib")
+      bibtex-completion-library-path '("~/Documents/emacs/papers")
+      bibtex-completion-notes-path "~/Documents/emacs/papers/notes"
+      bibtex-completion-notes-template-multiple-files "* ${author-or-editor}, ${title}, ${journal}, (${year}) :${=type=}: \n\nSee [[cite:&${=key=}]]\n"
+
+      bibtex-completion-additional-search-fields '(keywords)
+      bibtex-completion-display-formats
+      '((article       . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${journal:40}")
+        (inbook        . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} Chapter ${chapter:32}")
+        (incollection  . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
+        (inproceedings . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
+        (t             . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*}"))
+      bibtex-completion-pdf-open-function
+      (lambda (fpath)
+	(call-process "open" nil 0 nil fpath)))
 ;; }}
 
 (setq-default bookmark-default-file "/home/cc/.config/doom/bookmarks")
@@ -55,9 +73,6 @@
 
 ;; {{ yasnippet
 (setq yas-snippet-dirs '("/home/cc/.config/doom/snippets"))
-;; }}
-;; {{ emacsql
-;; (setq emacsql-sqlite-executable "/home/cc/.guix-home/profile/bin/emacsql-sqlite")
 ;; }}
 
 ;; {{ mu4e

@@ -280,7 +280,8 @@ exec_always "feh --randomize --bg-fill ~/Pictures/*"
 # exec --no-startup-id mate-power-manager
 exec "dex -a"
 exec_always flameshot
-exec_always emacs --daemon
+# exec_always emacs --daemon
+exec_always setxkbmap -option ctrl:swapcaps
 # exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # take screenshot

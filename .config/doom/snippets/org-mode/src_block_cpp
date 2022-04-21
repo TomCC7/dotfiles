@@ -2,6 +2,6 @@
 # name: src_block_cpp
 # key: <scp
 # --
-#+begin_src cpp
+#+begin_src cpp :includes '(iostream vector string) :namespaces std
 $0
 #+end_src

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: header_opencv
+# key: <hcv
+# --
+#+header: :flags $(pkg-config --cflags opencv4) :includes '(iostream opencv2/opencv.hpp)

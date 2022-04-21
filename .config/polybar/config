@@ -24,7 +24,7 @@ font-0 = "Source Code Pro Semibold:size=12;1"
 font-1 = "Font Awesome 5 Free:style=Solid:size=12;1"
 font-2 = "Font Awesome 5 Brands:size=12;1"
 
-modules-left = wlan eth alsa
+modules-left = wlan eth pulseaudio
 modules-center = i3
 modules-right = date battery powermenu
 
@@ -206,6 +206,21 @@ menu-3-0 = log off
 menu-3-0-exec = i3 exit logout
 menu-3-1 = cancel
 menu-3-1-exec = menu-open-0
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
 
 [module/alsa]
 type = internal/alsa

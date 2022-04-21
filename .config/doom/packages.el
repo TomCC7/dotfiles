@@ -20,6 +20,10 @@
 (eval-after-load 'ox '(require 'ox-koma-letter))
 ;; }}
 
+;; {{ org-ref
+(package! org-ref)
+;; }}
+
 ;; disable default snippets
 (package! doom-snippets :ignore t)
 

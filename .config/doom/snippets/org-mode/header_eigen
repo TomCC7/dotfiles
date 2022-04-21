@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: header_eigen
+# key: <heigen
+# --
+#+header: :flags $(pkg-config --cflags eigen3) :includes '(iostream Eigen/Dense)

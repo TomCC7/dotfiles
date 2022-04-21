@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("shixi"
+(("debug"
+ (filename . "~/Downloads/")
+ (front-context-string . "basic-debug.pdf\n")
+ (rear-context-string . "92k 04-09 14:14 ")
+ (position . 566))
+("shixi"
  (filename . "/mnt/share/Programming/shixi/")
  (front-context-string . "fyairo_desktop/\n")
  (rear-context-string . " 4k 2021-01-26  ")
@@ -183,10 +188,10 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220319194101-rpclib.org")
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220420163500-binary_cross_entropy.org")
  (front-context-string)
- (rear-context-string . "#+title: rpclib\n")
- (position . 84))
+ (rear-context-string . "y-cross-entropy\n")
+ (position . 98))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")
@@ -215,11 +220,6 @@
 ("VE203"
  (filename . "/mnt/share/JDsync/2021SU/VE203/")
  (front-context-string . "  /mnt/share/JDs")
- (rear-context-string)
- (position . 1))
-("Citation.bib"
- (filename . "~/Documents/emacs/citation.bib")
- (front-context-string . "\n@article{10.230")
  (rear-context-string)
  (position . 1))
 ("VE311"

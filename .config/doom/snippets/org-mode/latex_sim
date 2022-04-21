@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
 # name: latex_sim
-# key: ~
+# key: ,~
 # --
-\sim
+\sim $0
