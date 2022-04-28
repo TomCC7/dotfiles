@@ -11,7 +11,7 @@
 alias ls="exa"
 alias poweroff="systemctl hibernate"
 # file associations
-alias -s md="env GDK_BACKEND=x11 marktext"
+alias -s md="typora"
 alias -s pdf="zathura"
 alias -s mp3="mpv"
 alias -s pptx="libreoffice"

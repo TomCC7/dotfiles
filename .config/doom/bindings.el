@@ -1,10 +1,17 @@
 ;;; ../../.backup/home/cc/.config/doom/bindings.el -*- lexical-binding: t; -*-
 
 ;; {{{ pdf view
-(map! :map pdf-view-mode-map :desc "insert note at position" :n "i" #'org-noter-insert-note)
-(map! :map pdf-view-mode-map :desc "scroll pdf left" :n "C-b" #'image-scroll-right)
-(map! :map pdf-view-mode-map :desc "scroll pdf right" :n "C-f" #'image-scroll-left)
+(add-hook! 'pdf-view-mode-hook '(lambda ()
+                                  (map! :map pdf-view-mode-map :desc "insert note at position" :n "i" #'org-noter-insert-note)
+                                  (map! :map pdf-view-mode-map :desc "scroll pdf left" :n "C-b" #'image-scroll-right)
+                                  (map! :map pdf-view-mode-map :desc "scroll pdf right" :n "C-f" #'image-scroll-left)))
 ;; }}}
+
+;; cdlatex {{
+;; disable stupid binding...
+(map! :map cdlatex-mode-map "_" nil)
+(map! :map cdlatex-mode-map "^" nil)
+;; }}
 
 ;; {{{ Leader map
 (map! :leader :desc "find file in current workspace" :n "e" #'counsel-find-file)
@@ -22,6 +29,7 @@
 ;; notes
 (map! :leader :desc "org roam find node" :n "n f" #'org-roam-node-find)
 (map! :leader :desc "org roam graph" :n "n g" #'org-roam-graph)
+(map! :leader :desc "org roam ui" :n "n u" #'org-roam-ui-open)
 
 (map! :leader :desc "orgmode export options" :mode 'org-mode :n "c e" #'org-export-dispatch)
 

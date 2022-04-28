@@ -2,6 +2,6 @@
 # name: src_block_shell
 # key: <ss
 # --
-#+begin_src shell
+#+begin_src shell :results verbatim
 $0
 #+end_src

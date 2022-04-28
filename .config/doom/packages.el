@@ -27,6 +27,8 @@
 ;; disable default snippets
 (package! doom-snippets :ignore t)
 
+(unpin! org-roam)
+(package! org-roam-ui)
 ;; slack
 ;; (package! slack)
 

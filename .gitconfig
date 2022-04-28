@@ -2,4 +2,7 @@
 	email = cctom@umich.edu
 	name = cc
 [pull]
-	rebase = true
+	rebase = false
+	ff = only
+[init]
+	defaultBranch = main
