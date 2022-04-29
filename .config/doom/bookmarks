@@ -188,10 +188,10 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220427173415-dockerfile.org")
- (front-context-string)
- (rear-context-string . "tle: Dockerfile\n")
- (position . 88))
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220428151542-vps.org")
+ (front-context-string . "\n* Refs\n+ [[http")
+ (rear-context-string . "D:\n#+title: VPS\n")
+ (position . 81))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")

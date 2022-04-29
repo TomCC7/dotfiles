@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: plt.plot
-# key: pp
-# --
-plt.plot($1, $2)

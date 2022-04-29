@@ -24,6 +24,7 @@ alias ml="/home/cc/Applications/matlab/bin/matlab -desktop & disown"
 alias vmstart="xfreerdp /v:192.168.122.246:3389 /w:2560 /h:1440 /bpp:32 +clipboard +fonts /gdi:hw /rfx /rfx-mode:video /sound:sys:pulse +menu-anims +window-drag"
 alias vmstart_1080="xfreerdp /v:192.168.122.246:3389 /w:1920 /h:1080 /bpp:32 +clipboard +fonts /gdi:hw /rfx /rfx-mode:video /sound:sys:pulse +menu-anims +window-drag"
 alias vim="nvim"
+alias gz="docker exec ros-gui prime-run gzclient && disown"
 # }}}
 
 # FUNCTIONS{{{
