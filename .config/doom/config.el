@@ -38,6 +38,7 @@
           org-roam-ui-follow t
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))
+
 ;; org-ref
 (setq bibtex-completion-bibliography '("~/Documents/emacs/citation.bib")
       bibtex-completion-library-path '("~/Documents/emacs/papers")
@@ -72,14 +73,12 @@
       ;;   "pdflatex -interaction nonstopmode -output-directory %o %f"))
 
       '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-	"bibtex %b"
+        "bibtex %b"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f")) ;; org v8
+        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f")
+      ) ;; org v8
 
-(add-hook 'org-mode-hook
-          (lambda ()
-            (setq org-format-latex-options
-                  (plist-put org-format-latex-options :scale 0.6))))
+
 ;; (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
 
 ;; export with minted
@@ -120,8 +119,15 @@
                                 "--header-insertion=never"
                                 "--header-insertion-decorators=0"))
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
+;; remote lsp
+(after! lsp-mode (lsp-register-client
+                  (make-lsp-client :new-connection (lsp-tramp-connection "clangd")
+                                   :major-modes '(c-mode c++-mode)
+                                   :remote? t
+                                   :server-id 'clangd-remote)))
+
+;; (use-package! eaf)
+;; (use-package! eaf-browser)
 
 ;; python
 (load! "config-python")
-;; keys
-(load! "keys")

@@ -61,7 +61,7 @@ function find_up() {
   done
 }
 
-function rosource() {
+function rs() {
   source $(find_up -name "devel")/setup.zsh
 }
 

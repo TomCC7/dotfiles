@@ -13,10 +13,15 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size 16 :weight 'semi-light)
+(setq-default GDK_SCALE '2)
+(setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size (* 16 GDK_SCALE) :weight 'semi-light)
       doom-variable-pitch-font (font-spec :family "monospace") ; inherits `doom-font''s :size
-      doom-unicode-font (font-spec :family "MesloLGS Nerd Font Mono" :size 16)
-      doom-big-font (font-spec :family "MesloLGS Nerd Font Mono" :size 21))
+      doom-unicode-font (font-spec :family "MesloLGS Nerd Font Mono" :size (* 16 GDK_SCALE))
+      doom-big-font (font-spec :family "MesloLGS Nerd Font Mono" :size (* 21 GDK_SCALE)))
+
+;; org latex preview size
+(after! org (setq org-format-latex-options
+                  (plist-put org-format-latex-options :scale (* 1 GDK_SCALE))))
 ;; theme
 (setq doom-theme 'doom-one)
 ;; }}

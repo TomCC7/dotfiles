@@ -103,6 +103,8 @@ alias e="emacsclient --create-frame -nw"
 if [[ $HOST = cccomputer ]] && [[ $USER = cc ]];
 then
   source $ZSH_CONFIG_DIR/personal.zsh
+  # wakatime plugin
+  # zinit wait lucid for sobolevn/wakatime-zsh-plugin
 fi
 
 # Load a few important annexes, without Turbo

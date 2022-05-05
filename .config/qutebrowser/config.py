@@ -140,8 +140,8 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 
 # Search Engine
 c.url.searchengines = {
-    'DEFAULT': 'https://serx.cf/search?q={}',
-    'cn': 'https://serx.cf/search?q={}&language=zh-CN',
+    'DEFAULT': 'https://paulgo.io/search?q={}',
+    'cn': 'https://paulgo.io/search?q={}&language=zh-CN',
     'gg': 'https://google.com/search?q={}',
     'dd': 'https://duckduckgo.com/?q={}',
     'github': 'https://github.com/search?q={}',
