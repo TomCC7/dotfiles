@@ -21,7 +21,7 @@
 
 ;; org latex preview size
 (after! org (setq org-format-latex-options
-                  (plist-put org-format-latex-options :scale (* 1 GDK_SCALE))))
+                  (plist-put org-format-latex-options :scale (* 1.3 GDK_SCALE))))
 ;; theme
 (setq doom-theme 'doom-one)
 ;; }}
