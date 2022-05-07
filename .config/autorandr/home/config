@@ -1,9 +1,13 @@
+output HDMI-0
+off
 output DP-1
 off
-output DP-3
-off
 output DP-2
-crtc 1
+off
+output DP-1-2
+off
+output DP-1-1
+crtc 4
 mode 2560x1440
 pos 0x0
 rate 59.95
@@ -13,14 +17,11 @@ x-prop-broadcast_rgb Automatic
 x-prop-colorspace Default
 x-prop-max_bpc 12
 x-prop-non_desktop 0
-output eDP-1
+output DP-0
 crtc 0
-mode 3840x2160
-pos 3840x0
+mode 2560x1600
+panning 2560x2160+2560+0/5120x2160+0+0/0/0/0/0
+pos 2560x0
 primary
 rate 60.00
-x-prop-broadcast_rgb Automatic
-x-prop-colorspace Default
-x-prop-max_bpc 12
 x-prop-non_desktop 0
-x-prop-scaling_mode Full aspect

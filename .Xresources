@@ -1,24 +1,67 @@
-*background: #2f2f38
-*foreground: #b0c4bb
-*cursorColor: #b0c4bb
+XTerm*renderFont: true
+XTerm*faceName: xft:Fantasque Sans Mono, \
+                xft:JoyPixels:size=12, \
+                xft:Monospace:style=Medium:size=12   
+XTerm*faceSize: 11
+XTerm*utf8: 2
+XTerm*locale: true
 
-*color0: #34343e
-*color8: #b0c4bb
-*color1: #9aafaa
-*color9: #9aafaa
-*color2: #759496
-*color10: #759496
-*color3: #93b3b0
-*color11: #93b3b0
-*color4: #688486
-*color12: #81a2be
-*color5: #668ca1
-*color13: #668ca1
-*color6: #759496
-*color14: #759496
-*color7: #b0c4bb
-*color15: #b0c4bb
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font()
 
+
+
+! I like a LOT of scrollback...
+XTerm*savelines: 16384
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+
+! COLORS FOR SXIV
+Sxiv.foreground:   #bbc2cf
+Sxiv.background:   #282c34
+Sxiv.font: Ubuntu:style=bold:size=11
+
+
+! FOR ALL OTHER PROGRAMS USE XRESOURCES
+! This includes xterm and urxvt
+*.foreground:   #bbc2cf
+*.background:   #282c34
+*.cursorColor:  #bbc2cf
+
+! black
+*.color0:       #1c1f24
+*.color8:       #5b6268
+
+! red
+*.color1:       #ff6c6b
+*.color9:       #da8548
+
+! green
+*.color2:       #98be65
+*.color10:      #4db5bd
+
+! yellow
+*.color3:       #da8548
+*.color11:      #ecbe7b
+
+! blue
+*.color4:       #51afef
+*.color12:      #3071db
+
+! magenta
+*.color5:       #c678dd
+*.color13:      #a9a1e1
+
+! cyan
+*.color6:       #5699af
+*.color14:      #46d9ff
+
+! white
+*.color7:       #202328
+*.color15:      #dfdfdf
 
 ! These might also be useful depending on your monitor and personal preference:
 Xcursor.size:48

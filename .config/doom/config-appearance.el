@@ -13,7 +13,7 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq-default GDK_SCALE '2)
+(setq-default GDK_SCALE '1)
 (setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size (* 16 GDK_SCALE) :weight 'semi-light)
       doom-variable-pitch-font (font-spec :family "monospace") ; inherits `doom-font''s :size
       doom-unicode-font (font-spec :family "MesloLGS Nerd Font Mono" :size (* 16 GDK_SCALE))
