@@ -1,6 +1,6 @@
 [bar/i3wmthemer_bar]
 width = 100%
-dpi=192
+dpi=144
 height = 54
 radius = 0
 fixed-center = false

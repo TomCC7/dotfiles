@@ -55,6 +55,7 @@ else
     Plug 'preservim/nerdtree'
     Plug 'rbgrouleff/bclose.vim'
     Plug 'francoiscabrol/ranger.vim'
+    Plug 'wakatime/vim-wakatime'
     " input
     Plug 'tpope/vim-surround'
     Plug 'preservim/nerdcommenter'

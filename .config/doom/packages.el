@@ -39,6 +39,8 @@
 
 (package! docker-tramp.el :recipe (:host github :repo "emacs-pe/docker-tramp.el"))
 
+(package! frontside-javascript)
+
 ;; EAF {{
 ;; (package! eaf)
 ;; (package! eaf-browser)

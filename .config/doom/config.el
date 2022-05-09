@@ -126,6 +126,9 @@
                                    :remote? t
                                    :server-id 'clangd-remote)))
 
+(use-package! frontside-javascript
+  :init (frontside-javascript))
+
 ;; (use-package! eaf)
 ;; (use-package! eaf-browser)
 

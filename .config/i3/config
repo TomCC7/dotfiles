@@ -291,7 +291,15 @@ bindsym $mod+Shift+s exec flameshot gui
 bindsym Ctrl+space exec "/usr/bin/bash $scripts/fcitx5"
 
 # volumeec $HOME/.config/
-set $VOL_MAX 150
-bindsym XF86AudioRaiseVolume exec $scripts/volumectl -i $VOL_MAX
-bindsym XF86AudioLowerVolume exec $scripts/volumectl -d
-bindsym XF86AudioMute exec $scripts/volumectl -t
+bindsym XF86AudioRaiseVolume exec "$scripts/volumectl -i"
+bindsym XF86AudioLowerVolume exec "$scripts/volumectl -d"
+bindsym XF86AudioMute exec "amixer -q set Master toggle"
+
+bindsym XF86AudioPlay exec "playerctl play-pause"
+bindsym XF86AudioNext exec "playerctl next"
+bindsym XF86AudioPrev exec "playerctl previous"
+
+
+# brightness
+bindsym XF86MonBrightnessUp exec "brightnessctl s +5%"
+bindsym XF86MonBrightnessDown exec "brightnessctl s 5%- "

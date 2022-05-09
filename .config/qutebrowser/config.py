@@ -138,6 +138,9 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 # Type: Bool
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
+# zoom level
+config.set('zoom.default', '75%')
+
 # Search Engine
 c.url.searchengines = {
     'DEFAULT': 'https://paulgo.io/search?q={}',
