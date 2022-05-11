@@ -15,7 +15,7 @@ if [[ -n $(command -v docker) ]];then
   
   docker cp $0 ros-gui:setup.sh
   # add xauth
-  token=$(xauth list)
+  token=$(xauth list | head)
   docker exec -u0 $cname bash -c "/setup.sh $token"
 else #inside docker
   user=docker
@@ -27,5 +27,5 @@ else #inside docker
   # install vim plugin
   sudo -u $user sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   # add xauth
-  xauth add $1
+  xauth add $(echo $1)
 fi

@@ -131,6 +131,9 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
+# lockscreen
+bindsym $mod+Ctrl+q exec "i3lock --ring-color=9F5AFDFF --time-color=FFFFFFFF --date-color=FFFFFF --indicator -eFkB 3"
+
 
 
 # Open specific applications in floating mode
@@ -291,7 +294,7 @@ bindsym $mod+Shift+s exec flameshot gui
 bindsym Ctrl+space exec "/usr/bin/bash $scripts/fcitx5"
 
 # volumeec $HOME/.config/
-bindsym XF86AudioRaiseVolume exec "$scripts/volumectl -i"
+bindsym XF86AudioRaiseVolume exec "$scripts/volumectl -i 150"
 bindsym XF86AudioLowerVolume exec "$scripts/volumectl -d"
 bindsym XF86AudioMute exec "amixer -q set Master toggle"
 
@@ -299,7 +302,12 @@ bindsym XF86AudioPlay exec "playerctl play-pause"
 bindsym XF86AudioNext exec "playerctl next"
 bindsym XF86AudioPrev exec "playerctl previous"
 
-
 # brightness
 bindsym XF86MonBrightnessUp exec "brightnessctl s +5%"
 bindsym XF86MonBrightnessDown exec "brightnessctl s 5%- "
+
+
+# asus
+bindsym XF86Launch4 exec "asusctl profile -n"
+bindsym XF86KbdBrightnessDown exec "asusctl -p"
+bindsym XF86KbdBrightnessUp exec "asusctl -n"
