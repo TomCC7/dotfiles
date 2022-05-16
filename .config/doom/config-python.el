@@ -15,16 +15,12 @@
         conda-anaconda-home "/opt/anaconda")
   (conda-env-activate))
 
-;; add jedi as company option
-;; (defun my/python-mode-hook ()
-;;   (add-to-list 'company-backends 'company-jedi))
-;; (add-hook! 'python-mode-hook #'my/python-mode-hook)
-
-;; configure jedi as lsp backend
+;; use jedi for lsp-backend
+(add-hook! 'python-mode-hook 'yapf-mode)
 (use-package! lsp-jedi
-  :after lsp-mode
-  :config
-  (add-to-list 'lsp-disabled-clients 'pyright)
-  (add-to-list 'lsp-enabled-clients 'jedi))
+    :after lsp-mode
+    :config
+    (add-to-list 'lsp-disabled-clients 'pyright)
+    (add-to-list 'lsp-disabled-clients 'pyls))
 
 (provide 'config-python)

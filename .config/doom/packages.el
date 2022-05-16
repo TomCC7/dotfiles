@@ -40,8 +40,10 @@
 (package! docker-tramp.el :recipe (:host github :repo "emacs-pe/docker-tramp.el"))
 
 ;; EAF {{
-;; (package! eaf)
-;; (package! eaf-browser)
+;; (package! emacs-application-framework
+;;   :recipe (:host github :repo "manateelazycat/emacs-application-framework"
+;;            :files ("eaf.el" "src/lisp/*.el")
+;;            :build (:not compile)))
 ;; }}
 
 ;; slack
@@ -50,4 +52,12 @@
 ;; python {{
 ;; (package! company-jedi)
 (package! lsp-jedi)
+(package! yapfify :recipe (:host github :repo "JorisE/yapfify"))
 ;; }}
+
+;; pdf-tools
+(unpin! pdf-tools)
+(package! pdf-tools :recipe (:host github :repo "vedang/pdf-tools" :branch "master"))
+
+;; matlab
+(package! matlab-mode :recipe (:host github :repo "yuhonglin/matlab-mode"))

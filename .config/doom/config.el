@@ -19,9 +19,11 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 ;; {{{ORG
-(setq org-roam-directory (file-truename "~/Documents/emacs/roam"))
-(setq org-noter-always-create-frame nil)
-(setq org-noter-notes-search-path '("~/Documents/emacs/roam"))
+(use-package! org-roam
+  :config
+  (setq org-roam-directory (file-truename "~/Documents/emacs/roam"))
+  (setq org-noter-always-create-frame nil)
+  (setq org-noter-notes-search-path '("~/Documents/emacs/roam")))
 
 ;; org-roam-ui
 (use-package! websocket
@@ -40,30 +42,32 @@
           org-roam-ui-open-on-start t))
 
 ;; org-ref
-(setq bibtex-completion-bibliography '("~/Documents/emacs/citation.bib")
-      bibtex-completion-library-path '("~/Documents/emacs/papers")
-      bibtex-completion-notes-path "~/Documents/emacs/roam"
-      bibtex-completion-notes-template-multiple-files "* ${author-or-editor}, ${title}, ${journal}, (${year}) :${=type=}: \n\nSee [[cite:&${=key=}]]\n"
+(use-package! org-ref
+  :config
+  (setq bibtex-completion-bibliography '("~/Documents/emacs/citation.bib")
+        bibtex-completion-library-path '("~/Documents/emacs/papers")
+        bibtex-completion-notes-path "~/Documents/emacs/roam"
+        bibtex-completion-notes-template-multiple-files "* ${author-or-editor}, ${title}, ${journal}, (${year}) :${=type=}: \n\nSee [[cite:&${=key=}]]\n"
 
-      bibtex-completion-additional-search-fields '(keywords)
-      bibtex-completion-display-formats
-      '((article       . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${journal:40}")
-        (inbook        . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} Chapter ${chapter:32}")
-        (incollection  . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
-        (inproceedings . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
-        (t             . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*}"))
-      bibtex-completion-pdf-open-function
-      (lambda (fpath)
-	(call-process "open" nil 0 nil fpath)))
+        bibtex-completion-additional-search-fields '(keywords)
+        bibtex-completion-display-formats
+        '((article       . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${journal:40}")
+          (inbook        . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} Chapter ${chapter:32}")
+          (incollection  . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
+          (inproceedings . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
+          (t             . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*}"))
+        bibtex-completion-pdf-open-function
+        (lambda (fpath)
+          (call-process "open" nil 0 nil fpath))))
 ;; }}
 
 (setq-default bookmark-default-file "/home/cc/.config/doom/bookmarks")
 
 ;; {{ org-latex
 ;; (use-package! auctex)
-(use-package! cdlatex)
-;; preview size
-(add-hook 'org-mode-hook #'turn-on-cdlatex)
+(use-package! cdlatex
+  :config
+  (add-hook 'org-mode-hook #'turn-on-cdlatex))
 ;; {{ export org-mode in Chinese into PDF
 ;; @see http://freizl.github.io/posts/tech/2012-04-06-export-orgmode-file-in-Chinese.html
 (setq org-latex-pdf-process
@@ -119,6 +123,7 @@
                                 "--header-insertion=never"
                                 "--header-insertion-decorators=0"))
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
+(setq lsp-clangd-binary-path "/usr/bin/clangd")
 ;; remote lsp
 (after! lsp-mode (lsp-register-client
                   (make-lsp-client :new-connection (lsp-tramp-connection "clangd")
@@ -126,8 +131,29 @@
                                    :remote? t
                                    :server-id 'clangd-remote)))
 
-;; (use-package! eaf)
+;; matlab
+(use-package! matlab-mode
+  :config
+  (setq matlab-server-executable "/usr/bin/matlab")
+  (setq-default default-fill-column fill-column)
+  (matlab-mode-common-setup))
+
+;; eaf {{
+;; (use-package! eaf
+;;   :config
+;;   (setq browse-url-browser-function 'eaf-open-browser)
+;;   (defalias 'browse-web #'eaf-open-browser)
+;;   (setq eaf-browser-enable-adblocker "true")
+;;   (setq eaf-browser-continue-where-left-off t)
+;;   (setq eaf-browser-default-search-engine "duckduckgo")
+;;   (setq eaf-browse-blank-page-url "https://duckduckgo.com")
+;;   (setq eaf-browser-default-zoom "3")
+;;   (require 'eaf-org)
+;;   (defun eaf-org-open-file (file &optional link)
+;;     "An wrapper function on eaf-open'." (eaf-open file)) ;; use emacs-application-framework' to open PDF file: link
+;;   (add-to-list 'org-file-apps '("\.pdf\'" . eaf-org-open-file)))
 ;; (use-package! eaf-browser)
+;; }}
 
 ;; python
 (load! "config-python")

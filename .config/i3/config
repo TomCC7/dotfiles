@@ -12,6 +12,9 @@ set $term alacritty
 # set scripts path
 set $scripts $HOME/.config/i3/scripts
 
+set $lock_cmd "i3lock --ring-color=9F5AFDFF --time-color=FFFFFFFF --date-color=FFFFFF --indicator -eFkB 3"
+
+
 new_window pixel 1
 new_float normal
 
@@ -132,8 +135,8 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
 # lockscreen
-bindsym $mod+Ctrl+q exec "i3lock --ring-color=9F5AFDFF --time-color=FFFFFFFF --date-color=FFFFFF --indicator -eFkB 3"
-
+bindsym $mod+Ctrl+q exec $lock_cmd
+exec xautolock -time 5 -locker $lock_cmd
 
 
 # Open specific applications in floating mode

@@ -36,15 +36,17 @@ alias gz="docker exec ros-gui prime-run gzclient && disown"
 # function touchpad_switch() {
 #   swaymsg input 1267:12515:DELL0922:00_04F3:30E3_Touchpad events toggle enabled disabled
 # }
-# old for xorg
-function kb_switch() {
-  kb_name='AT Translated Set 2 keyboard' # give keyboard name
 
-  if xinput list "$kb_name" | grep -i --quiet disable; then
-    xinput enable "$kb_name"
+# for xorg
+function kb_switch() {
+  # kb_name='AT Translated Set 2 keyboard' # give keyboard name
+  kb_name=15 # give keyboard name
+
+  if xinput list $kb_name | grep -i --quiet disable; then
+    xinput enable $kb_name
     echo keyboard on
   else
-    xinput disable "$kb_name"
+    xinput disable $kb_name
     echo keyboard off
   fi
 }

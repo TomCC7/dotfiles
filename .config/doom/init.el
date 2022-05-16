@@ -135,17 +135,17 @@
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ; a language you can depend on
        json              ; At least it ain't XML
-       ;;(java +meghanada) ; the poster child for carpal tunnel syndrome
-       ;;javascript        ; all(hope(abandon(ye(who(enter(here))))))
-       ;;julia             ; a better, faster MATLAB
+       ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
+       ;; (javascript +lsp)         ; all(hope(abandon(ye(who(enter(here))))))
+       ;; julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
-       latex             ; writing papers in Emacs has never been so fun
+       (latex +fold +cdlatex)              ; writing papers in Emacs has never been so fun
        ;; lean              ; for folks with too much to prove
        ;; ledger            ; be audit you can be
        lua               ; one-based indices? one-based indices
        (markdown +grip)         ; writing docs for people to ignore
-       ;;nim               ; python + lisp at the speed of c
-       nix               ; I hereby declare "nix geht mehr!"
+       ;; nim               ; python + lisp at the speed of c
+       ;; nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        (org +roam2 +noter +pretty +pandoc +jupyter)              ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
