@@ -9,7 +9,7 @@
    '("/mnt/share/JDsync/Documents/emacs/roam/20220505133609-multiple_view_geometry.org" "/mnt/share/JDsync/2022WI/STATS 412 002 WN 2022/Homework Assignments/hw11/hw11.org" "/mnt/share/JDsync/2022WI/STATS 412 002 WN 2022/Homework Assignments/hw10/hw10.org" "/mnt/share/JDsync/2022WI/STATS 412 002 WN 2022/Homework Assignments/hw4/hw4.org"))
  '(package-selected-packages '(wakatime-mode))
  '(smtpmail-smtp-server "smtp.gmail.com")
- '(warning-suppress-types '((pdf-view-after-change-page-hook))))
+ '(warning-suppress-types '((mule) (pdf-view-after-change-page-hook))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

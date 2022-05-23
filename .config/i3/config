@@ -281,7 +281,7 @@ mode "$mode_gaps_outer" {
 
 
 # wall paper
-exec_always "feh --randomize --bg-fill ~/Pictures/*"
+exec_always "feh --randomize --bg-fill ~/Pictures/wallpapers/*"
 # set power-manager and volume control
 # exec --no-startup-id mate-power-manager
 exec "dex -a"

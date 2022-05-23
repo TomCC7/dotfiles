@@ -115,22 +115,6 @@
 ;; enable wakatime
 (global-wakatime-mode)
 
-;; c
-(setq lsp-clients-clangd-args '("-j=3"
-                                "--background-index"
-                                "--clang-tidy"
-                                "--completion-style=detailed"
-                                "--header-insertion=never"
-                                "--header-insertion-decorators=0"))
-(after! lsp-clangd (set-lsp-priority! 'clangd 2))
-(setq lsp-clangd-binary-path "/usr/bin/clangd")
-;; remote lsp
-(after! lsp-mode (lsp-register-client
-                  (make-lsp-client :new-connection (lsp-tramp-connection "clangd")
-                                   :major-modes '(c-mode c++-mode)
-                                   :remote? t
-                                   :server-id 'clangd-remote)))
-
 ;; matlab
 (use-package! matlab-mode
   :config
@@ -138,22 +122,8 @@
   (setq-default default-fill-column fill-column)
   (matlab-mode-common-setup))
 
-;; eaf {{
-;; (use-package! eaf
-;;   :config
-;;   (setq browse-url-browser-function 'eaf-open-browser)
-;;   (defalias 'browse-web #'eaf-open-browser)
-;;   (setq eaf-browser-enable-adblocker "true")
-;;   (setq eaf-browser-continue-where-left-off t)
-;;   (setq eaf-browser-default-search-engine "duckduckgo")
-;;   (setq eaf-browse-blank-page-url "https://duckduckgo.com")
-;;   (setq eaf-browser-default-zoom "3")
-;;   (require 'eaf-org)
-;;   (defun eaf-org-open-file (file &optional link)
-;;     "An wrapper function on eaf-open'." (eaf-open file)) ;; use emacs-application-framework' to open PDF file: link
-;;   (add-to-list 'org-file-apps '("\.pdf\'" . eaf-org-open-file)))
-;; (use-package! eaf-browser)
-;; }}
+;; c
+(load! "config-c")
 
 ;; python
 (load! "config-python")

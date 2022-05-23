@@ -39,6 +39,8 @@
 
 (package! docker-tramp.el :recipe (:host github :repo "emacs-pe/docker-tramp.el"))
 
+(package! arduino-mode :recipe (:host github :repo "bookest/arduino-mode"))
+
 ;; EAF {{
 ;; (package! emacs-application-framework
 ;;   :recipe (:host github :repo "manateelazycat/emacs-application-framework"
