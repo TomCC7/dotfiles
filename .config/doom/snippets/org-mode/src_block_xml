@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: src_block_xml
+# key: <sxml
+# --
+#+begin_src xml
+$0
+#+end_src

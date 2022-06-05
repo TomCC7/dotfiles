@@ -115,12 +115,16 @@
 ;; enable wakatime
 (global-wakatime-mode)
 
+;; add urdf to xml-mode
+(add-to-list 'auto-mode-alist '("\\.urdf\\'" . xml-mode))
+
 ;; matlab
 (use-package! matlab-mode
   :config
   (setq matlab-server-executable "/usr/bin/matlab")
   (setq-default default-fill-column fill-column)
-  (matlab-mode-common-setup))
+  (matlab-mode-common-setup)
+  (add-hook! matlab-mode #'display-line-numbers-mode))
 
 ;; c
 (load! "config-c")

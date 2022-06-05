@@ -248,10 +248,10 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220521122825-paper_mrnea.org")
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220530142033-paper_openpose.org")
  (front-context-string)
- (rear-context-string . "le: paper-MRNEA\n")
- (position . 89))
+ (rear-context-string . " paper-OpenPose\n")
+ (position . 92))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")

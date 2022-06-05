@@ -6,3 +6,5 @@
 	ff = only
 [init]
 	defaultBranch = main
+[credential]
+	helper = "!f() { /home/docker/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/node /tmp/vscode-remote-containers-d275c43f07306244d4877748d6bfd27d6b35d61b.js $*; }; f"
