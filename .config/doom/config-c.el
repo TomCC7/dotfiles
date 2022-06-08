@@ -1,19 +1,16 @@
 ;;; ../../dotfiles/.config/doom/config-c.el -*- lexical-binding: t; -*-
 
-(setq lsp-clients-clangd-args '("-j=3"
+(setq lsp-clients-clangd-args '("-j=6"
                                 "--background-index"
-                                "--clang-tidy"
-                                "--completion-style=detailed"
-                                "--header-insertion=never"
-                                "--header-insertion-decorators=0"
                                 "--compile-commands-dir=./build"))
+(setq lsp-tramp-command lsp-clients-clangd-args)
+(push "clangd" lsp-tramp-command)
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
 ;; remote lsp
 (after! lsp-mode
   (lsp-register-client
    (make-lsp-client :new-connection
-                    (lsp-tramp-connection '("clangd"
-                                            "--compile-commands-dir=./build"))
+                    (lsp-tramp-connection lsp-tramp-command)
                     :major-modes '(c-mode c++-mode)
                     :remote? t
                     :server-id 'clangd-remote))
