@@ -59,9 +59,6 @@
         bibtex-completion-pdf-open-function
         (lambda (fpath)
           (call-process "open" nil 0 nil fpath))))
-;; }}
-
-(setq-default bookmark-default-file "/home/cc/.config/doom/bookmarks")
 
 ;; {{ org-latex
 ;; (use-package! auctex)
@@ -87,7 +84,12 @@
 
 ;; export with minted
 (setq org-latex-listings 'minted)
+
+(use-package! ob-rust)
 ;; }}
+
+(setq-default bookmark-default-file "/home/cc/.config/doom/bookmarks")
+
 
 ;; {{ yasnippet
 (setq yas-snippet-dirs '("/home/cc/.config/doom/snippets"))
@@ -115,8 +117,10 @@
 ;; enable wakatime
 (global-wakatime-mode)
 
-;; add urdf to xml-mode
+;; add urdf and launch to xml-mode
 (add-to-list 'auto-mode-alist '("\\.urdf\\'" . xml-mode))
+(add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
+(add-to-list 'auto-mode-alist '("\\.mjcf$" . xml-mode))
 
 ;; matlab
 (use-package! matlab-mode

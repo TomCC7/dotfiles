@@ -7,4 +7,4 @@
 [init]
 	defaultBranch = main
 [credential]
-	helper = "!f() { /home/docker/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/node /tmp/vscode-remote-containers-237621f6cb614d24caf325c5f736c84591ec047d.js $*; }; f"
+	helper = "!f() { /home/docker/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/node /tmp/vscode-remote-containers-2883bb2f3b7b7b02cbf8de6530df0d4f593dc169.js $*; }; f"

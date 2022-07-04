@@ -44,4 +44,6 @@
 ;; format buffer
 (map! :leader :desc "lsp format buffer" :mode 'lsp-mode :n "c =" #'lsp-format-buffer)
 
+;; rust
+(map! :leader :desc "rust run" :mode 'rust-mode :n "c c" #'lsp-rust-analyzer-run)
 ;; }}}

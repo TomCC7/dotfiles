@@ -1,0 +1,7 @@
+main_mode = 'Normal'
+speak = false
+
+[Normal]
+with_pronunciation = true
+with_variants = true
+with_sentence = false

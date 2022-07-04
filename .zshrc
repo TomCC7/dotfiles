@@ -6,6 +6,7 @@ ZSH_CONFIG_DIR=~/.config/zsh
 ## PERSONAL SETTINGS ##
 # ros
 [[ -f /opt/ros/noetic/setup.zsh ]] && source /opt/ros/noetic/setup.zsh
+[[ -f /opt/ros/foxy/setup.zsh ]] && source /opt/ros/foxy/setup.zsh && export ROS_DOMAIN_ID=7
 alias catkin_clean="rm -r build && rm -r devel"
 
 ## BASIC SETTINGS ##
@@ -197,3 +198,5 @@ function vterm_printf(){
     fi
 }
 ## }}
+
+export PATH="$HOME/.poetry/bin:$PATH"

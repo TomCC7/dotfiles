@@ -63,3 +63,6 @@
 
 ;; matlab
 (package! matlab-mode :recipe (:host github :repo "yuhonglin/matlab-mode"))
+
+;; rust
+(package! ob-rust :recipe (:host gitlab :repo "ajyoon/ob-rust"))

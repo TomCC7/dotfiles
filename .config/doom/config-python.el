@@ -23,4 +23,11 @@
     (add-to-list 'lsp-disabled-clients 'pyright)
     (add-to-list 'lsp-disabled-clients 'pyls))
 
+(after! lsp-mode
+  (lsp-register-client
+   (make-lsp-client :new-connection
+                    (lsp-tramp-connection "jedi-language-server")
+                    :major-modes '(python-mode)
+                    :remote? t
+                    :server-id 'jedi-remote)))
 (provide 'config-python)
