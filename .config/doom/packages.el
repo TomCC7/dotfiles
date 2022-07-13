@@ -55,6 +55,7 @@
 ;; (package! company-jedi)
 (package! lsp-jedi)
 (package! yapfify :recipe (:host github :repo "JorisE/yapfify"))
+(package! jupyter)
 ;; }}
 
 ;; pdf-tools
@@ -66,3 +67,8 @@
 
 ;; rust
 (package! ob-rust :recipe (:host gitlab :repo "ajyoon/ob-rust"))
+
+;; plantuml
+(package! plantuml-mode :pin "ea45a13707abd2a70df183f1aec6447197fc9ccc")
+(when (featurep! :checkers syntax)
+  (package! flycheck-plantuml :pin "183be89e1dbba0b38237dd198dff600e0790309d"))

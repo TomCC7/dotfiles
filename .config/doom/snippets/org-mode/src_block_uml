@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: src_block_uml
+# key: <suml
+# --
+#+begin_src plantuml :file /tmp/uml_`(random 999999)`.png :exports results
+$0
+#+end_src

@@ -200,3 +200,22 @@ function vterm_printf(){
 ## }}
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if [[ $(whoami) = docker ]];
+then
+  __conda_setup="$('/home/docker/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+  if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+  else
+    if [ -f "/home/docker/anaconda3/etc/profile.d/conda.sh" ]; then
+      . "/home/docker/anaconda3/etc/profile.d/conda.sh"
+    else
+      export PATH="/home/docker/anaconda3/bin:$PATH"
+    fi
+  fi
+  unset __conda_setup
+fi
+# <<< conda initialize <<<
+

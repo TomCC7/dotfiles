@@ -86,6 +86,13 @@
 (setq org-latex-listings 'minted)
 
 (use-package! ob-rust)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((latex . t)
+   (shell . t)
+   (python . t)
+   (ein . t)
+   (lisp . t)))
 ;; }}
 
 (setq-default bookmark-default-file "/home/cc/.config/doom/bookmarks")
@@ -118,9 +125,15 @@
 (global-wakatime-mode)
 
 ;; add urdf and launch to xml-mode
-(add-to-list 'auto-mode-alist '("\\.urdf\\'" . xml-mode))
-(add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
-(add-to-list 'auto-mode-alist '("\\.mjcf$" . xml-mode))
+(use-package! nxml-mode
+  :mode "\\.urdf\\'"
+  :mode "\\.launch\\'"
+  :mode "\\.mjcf\\'"
+  :config
+  (setq nxml-slash-auto-complete-flag t
+        nxml-auto-insert-xml-declaration-flag t)
+  (set-company-backend! 'nxml-mode '(company-nxml company-yasnippet))
+  (setq-hook! 'nxml-mode-hook tab-width nxml-child-indent))
 
 ;; matlab
 (use-package! matlab-mode
@@ -135,3 +148,6 @@
 
 ;; python
 (load! "config-python")
+
+;; lang
+(load! "config-lang")

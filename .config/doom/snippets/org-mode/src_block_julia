@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: src_block_julia
+# key: <sj
+# --
+#+begin_src julia :results output
+$0
+#+end_src
