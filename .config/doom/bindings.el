@@ -34,8 +34,10 @@
 (map! :leader :desc "orgmode export options" :mode 'org-mode :n "c e" #'org-export-dispatch)
 
 ;; dict
-(map! :leader :desc "search word from input" :n "d d" #'youdao-dictionary-search-from-input)
-(map! :leader :desc "search word at point" :n "d p" #'youdao-dictionary-search-at-point-posframe)
+(map! :leader :desc "search word from input"
+      :n "d d" #'youdao-dictionary-search-from-input)
+(map! :leader :desc "search word at point"
+      :n "d p" #'youdao-dictionary-search-at-point-posframe)
 
 ;; org-babel excecute subtree
 (map! :leader :desc "excecute codes in the subtree"
@@ -43,6 +45,8 @@
 
 ;; format buffer
 (map! :leader :desc "lsp format buffer" :mode 'lsp-mode :n "c =" #'lsp-format-buffer)
+(map! :leader :desc "julia format buffer"
+      :mode 'julia-mode :n "c =" #'julia-format-buffer)
 
 ;; rust
 (map! :leader :desc "rust run" :mode 'rust-mode :n "c c" #'lsp-rust-analyzer-run)

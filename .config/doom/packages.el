@@ -68,7 +68,18 @@
 ;; rust
 (package! ob-rust :recipe (:host gitlab :repo "ajyoon/ob-rust"))
 
+;; julia
+(package! ob-julia :recipe (:host github :repo "gjkerns/ob-julia"))
+(package! ox-ipynb :recipe (:host github :repo "jkitchin/ox-ipynb"))
+(package! julia-formatter :recipe (:host github :repo "ki-chi/julia-formatter"))
+
 ;; plantuml
 (package! plantuml-mode :pin "ea45a13707abd2a70df183f1aec6447197fc9ccc")
 (when (featurep! :checkers syntax)
   (package! flycheck-plantuml :pin "183be89e1dbba0b38237dd198dff600e0790309d"))
+
+;; pandoc import
+(package! org-pandoc-import
+  :recipe (:host github
+           :repo "tecosaur/org-pandoc-import"
+           :files ("*.el" "filters" "preprocessors")))

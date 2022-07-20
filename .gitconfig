@@ -7,7 +7,7 @@
 [init]
 	defaultBranch = main
 [credential]
-	helper = "!f() { /home/docker/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node /tmp/vscode-remote-containers-19828056eef5ab95b07684d152c20c1925c4ae5b.js $*; }; f"
+	helper = "!f() { /home/docker/.vscode-server/bin/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9/node /tmp/vscode-remote-containers-0fe4716a61297a054f60c79c0081094715c478a1.js $*; }; f"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

@@ -1,6 +1,4 @@
 ;;; config-python.el -*- lexical-binding: t; -*-
-(setq ein:output-area-inlined-images t)
-
 (defun +conda/env-activate ()
   "set `conda-env-home-directory` before run `conda-env-activate`"
   (interactive)
@@ -30,7 +28,6 @@
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
-     (julia . t)
      (python . t)
      (jupyter . t))))
 

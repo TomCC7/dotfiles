@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("ranger-k"
+(("kinova-sys-id"
+ (filename . "/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova-sys-id/")
+ (front-context-string . "pyproject.toml*\n")
+ (rear-context-string . "410 07-13 13:36 ")
+ (position . 337))
+("ranger-k"
  (filename . "/mnt/share/JDsync/2022SU/visual-odometry-eth/exercises/Exercise 3 - Simple Keypoint Tracker/code/")
  (front-context-string . "matchDescriptors")
  (rear-context-string . "528 2021-10-19  ")

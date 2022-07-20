@@ -93,6 +93,9 @@
    (python . t)
    (ein . t)
    (lisp . t)))
+
+(use-package! org-pandoc-import :after org)
+(use-package! ox-ipynb)
 ;; }}
 
 (setq-default bookmark-default-file "/home/cc/.config/doom/bookmarks")
@@ -142,6 +145,9 @@
   (setq-default default-fill-column fill-column)
   (matlab-mode-common-setup)
   (add-hook! matlab-mode #'display-line-numbers-mode))
+
+;; julia
+(load! "config-julia")
 
 ;; c
 (load! "config-c")
