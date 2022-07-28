@@ -2,21 +2,31 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("kinova-sys-id"
+(("ranger-j"
+ (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
+ (front-context-string . "SinExperiment_16")
+ (rear-context-string . ".3M 07-26 11:42 ")
+ (position . 703))
+("docker-kinova"
+ (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
+ (front-context-string)
+ (rear-context-string . "  0 07-21 20:22 ")
+ (position . 160))
+("kinova-sys-id"
  (filename . "/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova-sys-id/")
  (front-context-string . "pyproject.toml*\n")
  (rear-context-string . "410 07-13 13:36 ")
  (position . 337))
 ("ranger-k"
- (filename . "/mnt/share/JDsync/2022SU/visual-odometry-eth/exercises/Exercise 3 - Simple Keypoint Tracker/code/")
- (front-context-string . "matchDescriptors")
- (rear-context-string . "528 2021-10-19  ")
- (position . 250))
+ (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control/src/roahm_controller/include/roahm_controller/")
+ (front-context-string . "Gen3ControllerIn")
+ (rear-context-string . ".2k 07-11 12:23 ")
+ (position . 141))
 ("ranger-;"
- (filename . "/mnt/share/JDsync/2022SU/visual-odometry-eth/exercises/Exercise 3 - Simple Keypoint Tracker/code/")
- (front-context-string . "matchDescriptors")
- (rear-context-string . "528 2021-10-19  ")
- (position . 250))
+ (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
+ (front-context-string . "SinExperiment_16")
+ (rear-context-string . ".3M 07-26 11:42 ")
+ (position . 703))
 ("docker-ros2"
  (filename . "/docker:ros2:/mnt/share/Programming/Projects/")
  (front-context-string . "petoi\n  drwxrwxr")
@@ -27,11 +37,6 @@
  (front-context-string)
  (rear-context-string . "  0 05-20 22:18 ")
  (position . 79))
-("docker-kinova"
- (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control/")
- (front-context-string . "src/\n  -rwxrwxrw")
- (rear-context-string . "  0 05-19 17:19 ")
- (position . 250))
 ("EECS498-algorithmic-robotics"
  (filename . "/mnt/share/JDsync/2021FA/EECS 498 001 FA 2021/")
  (front-context-string . "books\n  drwxrwxr")
@@ -268,10 +273,10 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220712153625-python.org")
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220727113123-system_identification_for_robot.org")
  (front-context-string)
- (rear-context-string . "#+title: Python\n")
- (position . 84))
+ (rear-context-string . "ation for Robot\n")
+ (position . 109))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")

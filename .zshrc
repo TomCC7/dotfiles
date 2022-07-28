@@ -170,6 +170,7 @@ function keep() {
 # usage: find_up pattern
 # recursively find in parent dir until found
 function find_up() {
+  ORIG=$PWD
   while [[ $PWD != "/" ]] ; do
     res=$(find "$PWD"/ -maxdepth 1 "$@")
     if [[ -z $res ]]; then
@@ -179,10 +180,11 @@ function find_up() {
       return
     fi
   done
+  cd $ORIG
 }
 
 function rs() {
-  source $(find_up -name "devel")/setup.zsh
+  source $(find_up -regex ".*/\(devel\|install\)$")/setup.zsh
 }
 
 # {{ EMACS FUNCTIONS

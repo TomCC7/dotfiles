@@ -150,6 +150,7 @@ c.url.searchengines = {
     'github': 'https://github.com/search?q={}',
     'wiki': 'https://en.wikipedia.org/wiki/{}',
     'translate': 'https://translate.google.com/?text={}',
+    'cpp': 'https://duckduckgo.com/?sites=cppreference.com&q={}&ia=web',
 }
 
 # proxy

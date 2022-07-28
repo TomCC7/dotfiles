@@ -138,6 +138,11 @@
   (set-company-backend! 'nxml-mode '(company-nxml company-yasnippet))
   (setq-hook! 'nxml-mode-hook tab-width nxml-child-indent))
 
+;; projectile
+(use-package! projectile
+  :config
+  (setq projectile-indexing-method 'native))
+
 ;; matlab
 (use-package! matlab-mode
   :config

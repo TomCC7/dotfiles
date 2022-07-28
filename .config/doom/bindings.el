@@ -40,13 +40,13 @@
       :n "d p" #'youdao-dictionary-search-at-point-posframe)
 
 ;; org-babel excecute subtree
-(map! :leader :desc "excecute codes in the subtree"
-      :mode 'org-mode :n "c b" #'org-babel-execute-subtree)
+(map! :leader :desc "excecute babel in buffer"
+      :mode 'org-mode :n "c b" #'org-babel-execute-buffer)
 
 ;; format buffer
-(map! :leader :desc "lsp format buffer" :mode 'lsp-mode :n "c =" #'lsp-format-buffer)
-(map! :leader :desc "julia format buffer"
-      :mode 'julia-mode :n "c =" #'julia-format-buffer)
+;; (map! :mode 'julia-mode :leader :desc "julia format buffer"
+;;        :n "c =" #'julia-format-buffer)
+(map! :map 'lsp-mode-map :leader :desc "lsp format buffer" :n "c =" #'lsp-format-buffer)
 
 ;; rust
 (map! :leader :desc "rust run" :mode 'rust-mode :n "c c" #'lsp-rust-analyzer-run)

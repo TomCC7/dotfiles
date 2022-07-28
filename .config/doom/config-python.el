@@ -29,6 +29,17 @@
    'org-babel-load-languages
    '((emacs-lisp . t)
      (python . t)
-     (jupyter . t))))
+     (jupyter . t)))
+  (setq ob-async-no-async-languages-alist '("jupyter-python" "jupyter-julia"))
+  )
+
+(use-package! ob-jupyter
+  :config
+  ;; use LANG intead of jupyter-LANG in src block
+  (org-babel-jupyter-override-src-block "python")
+  (org-babel-jupyter-override-src-block "julia"))
+
+;; poetry
+(setq poetry-tracking-strategy 'projectile)
 
 (provide 'config-python)

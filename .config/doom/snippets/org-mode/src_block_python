@@ -2,6 +2,6 @@
 # name: src_block_python
 # key: <sp
 # --
-#+BEGIN_SRC jupyter-python :session py-`(file-name-nondirectory buffer-file-name)` :async yes
+#+BEGIN_SRC python :session py-`(file-name-nondirectory buffer-file-name)` :async yes
 $0
 #+END_SRC
