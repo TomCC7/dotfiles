@@ -115,7 +115,7 @@
 ;; }}
 
 ;; enable wakatime
-(global-wakatime-mode)
+;; (global-wakatime-mode)
 
 ;; add urdf and launch to xml-mode
 (add-to-list 'auto-mode-alist '("\\.urdf\\'" . xml-mode))
