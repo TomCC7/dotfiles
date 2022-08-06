@@ -2,11 +2,11 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("ranger-j"
- (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
- (front-context-string . "SinExperiment_16")
- (rear-context-string . ".3M 07-26 11:42 ")
- (position . 703))
+(("kinova-ros2"
+ (filename . "/docker:ros2:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_ros2/")
+ (front-context-string . "src/\n  -rwxrwxrw")
+ (rear-context-string . "  0 07-27 10:57 ")
+ (position . 409))
 ("docker-kinova"
  (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
  (front-context-string)
@@ -17,16 +17,6 @@
  (front-context-string . "pyproject.toml*\n")
  (rear-context-string . "410 07-13 13:36 ")
  (position . 337))
-("ranger-k"
- (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control/src/roahm_controller/include/roahm_controller/")
- (front-context-string . "Gen3ControllerIn")
- (rear-context-string . ".2k 07-11 12:23 ")
- (position . 141))
-("ranger-;"
- (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
- (front-context-string . "SinExperiment_16")
- (rear-context-string . ".3M 07-26 11:42 ")
- (position . 703))
 ("docker-ros2"
  (filename . "/docker:ros2:/mnt/share/Programming/Projects/")
  (front-context-string . "petoi\n  drwxrwxr")
@@ -232,11 +222,6 @@
  (front-context-string . "044002000311-368")
  (rear-context-string . ".1k 06-06 17:49 ")
  (position . 140))
-("ranger- "
- (filename . "/mnt/share/JDsync/2021SU/VE203/hw_self/hw11/")
- (front-context-string . "hw11.org*\n  -rwx")
- (rear-context-string . ".8k 08-03 20:39 ")
- (position . 162))
 ("srtdoc"
  (filename . "/mnt/share/Programming/Projects/slam/srtdoc/")
  (front-context-string . "dataset/\n  drwxr")

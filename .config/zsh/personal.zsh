@@ -51,6 +51,10 @@ function kb_switch() {
   fi
 }
 
+function fktail() {
+  ~/.config/zsh/fktail.py
+}
+
   # select laptop performance mode
   # function perform() {
   #   if [[ $1 == '-p' ]] ;

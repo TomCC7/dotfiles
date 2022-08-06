@@ -149,7 +149,8 @@
   (setq matlab-server-executable "/usr/bin/matlab")
   (setq-default default-fill-column fill-column)
   (matlab-mode-common-setup)
-  (add-hook! matlab-mode #'display-line-numbers-mode))
+  (add-hook! matlab-mode #'display-line-numbers-mode)
+  (add-hook! matlab-mode  '(hl-todo-mode t)))
 
 ;; julia
 (load! "config-julia")

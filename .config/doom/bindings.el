@@ -15,7 +15,7 @@
 
 ;; {{{ Leader map
 (map! :leader :desc "find file in current workspace" :n "e" #'counsel-find-file)
-(map! :leader :desc "ranger" :n "r" #'ranger)
+(map! :leader :desc "ranger" :n "r" #'deer)
 (map! :leader :desc "toggle vterm" :n "j" #'+vterm/toggle)
 ;; search
 (map! :leader :desc "git grep" :n "s g" #'counsel-git-grep)
