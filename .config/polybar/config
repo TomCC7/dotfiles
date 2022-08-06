@@ -1,69 +1,174 @@
-[bar/i3wmthemer_bar]
+;-------------------------------------------------
+;                                                ;
+;           Polybar config for my themes         ;
+; 				                 ;
+;                                                ;
+;-------------------------------------------------
+
+
+[colors]
+;My colors are set from .Xresources to match everything else
+my_background 	= ${xrdb:background}
+my_foreground 	= ${xrdb:foreground}
+my_color0	= ${xrdb:color0}
+my_color1	= ${xrdb:color1}
+my_color2	= ${xrdb:color2}
+my_color3	= ${xrdb:color3}
+my_color4	= ${xrdb:color4}
+my_color5	= ${xrdb:color5}
+my_color6	= ${xrdb:color6}
+my_color7	= ${xrdb:color7}
+my_color8	= ${xrdb:color8}
+my_color9	= ${xrdb:color9}
+my_color10	= ${xrdb:color10}
+my_color11	= ${xrdb:color11}
+my_color12	= ${xrdb:color12}
+my_color13	= ${xrdb:color13}
+my_color14	= ${xrdb:color14}
+my_color15	= ${xrdb:color15}
+
+[bar/main_bar]
+;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:eDP1}
+bottom = false
 width = 100%
-dpi=144
-height = 54
-radius = 0
-fixed-center = false
+dpi = 192
+height = 60
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = true
 
-background = #2f2f38
-foreground = #b0c4bb
 
-line-size = 3
-line-color =
+background = ${colors.my_background}
+foreground =  ${colors.my_foreground}
+
+line-size = 2.5
+line-color = ${colors.my_foreground}
 
 border-size = 0
-border-color =
+border-color = ${colors.my_color2}
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 0
+module-margin-right = 0
 
-font-0 = "Source Code Pro Semibold:size=12;1"
-font-1 = "Font Awesome 5 Free:style=Solid:size=12;1"
-font-2 = "Font Awesome 5 Brands:size=12;1"
+font-2 = FontAwesome:fontformat=truetype:size=9;1
+font-0 = monofur:fontformat=truetype:size=11;1
+font-1 = monofur:fontformat=truetype:size=11;1
 
-modules-left = wlan eth pulseaudio
-modules-center = i3
-modules-right = date battery powermenu
 
-tray-position = left
-;tray-padding =
+modules-left = i3 wlan eth pulseaudio
+modules-center = date 
+modules-right = musicinfo battery
+
+# tray
+tray-position = none
+tray-padding = 9
+tray-transparent = false
+tray-offset-y = 0%
+tray-offset-x = 0%
+tray-maxsize = 18
+tray-detached = false
+tray-background = ${colors.my_background}
+
 wm-restack = i3
-# override-redirect = true
 
-cursor-click = pointer
-cursor-scroll = ns-resize
+;override-redirect = true
 
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
 
+label-unfocused-background = ${colors.my_background}
+label-unfocused-foreground = ${colors.my_foreground}
+
+label-mode = %mode%
 label-mode-padding = 2
-label-mode-foreground = #34343e
-label-mode-background = #2f2f38
+label-mode-background = ${colors.my_background}
 
 label-focused = %index%
-label-focused-background = #688486
-label-focused-foreground = #2f2f38
+label-focused-foreground = ${colors.my_foreground}
+label-focused-background = ${colors.my_background}
+label-focused-underline = ${colors.my_foreground}
 label-focused-padding = 2
 
 label-unfocused = %index%
-label-unfocused-background = #81a2be
-label-unfocused-foreground = #2f2f38
 label-unfocused-padding = 2
 
 label-visible = %index%
-label-visible-background = #81a2be
-label-visible-foreground = #2f2f38
-label-visible-padding = 2
+label-visible-underline = ${colors.my_foreground}
+label-visible-padding = 4
 
 label-urgent = %index%
-label-urgent-background = #BA2922
+label-urgent-foreground = ${colors.my_foreground}
+label-urgent-background = ${colors.my_background}
+label-urgent-underline = ${colors.my_foreground}
 label-urgent-padding = 2
+
+[module/musicinfo]
+type = custom/script
+
+exec = ~/.config/polybar/music.sh
+interval = 5
+format = <label>
+label = %output:0:30:...%
+format-padding = 10
+format-foreground = ${colors.my_color8}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = "%d/%m/%Y"
+
+time = "%a %b %d, %I:%M %p "
+
+time-alt = %H:%M
+
+format-prefix-foreground = ${colors.my_foreground}
+format-underline =
+
+
+label = %date% %time%
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 99
+
+format-full-background = ${colors.my_background}
+format-charging-background = ${colors.my_background}
+format-charging = "⁣  <label-charging> <animation-charging> "
+format-charging-underline = ${colors.my_color2}
+
+format-discharging-background = ${colors.my_background}
+format-discharging = "⁣ <label-discharging> <ramp-capacity> "
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix-foreground = ${colors.my_background}
+format-full-underline = ${self.format-charging-underline}
+
+format-charing-background = ${colors.my_background}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.my_foreground}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.my_foreground}
+animation-charging-framerate = 750
 
 [module/wlan]
 type = internal/network
@@ -71,8 +176,8 @@ interface = wlo1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-foreground = #2f2f38
-format-connected-background = #81a2be
+format-connected-foreground = ${colors.my_color2}
+format-connected-background = ${colors.my_color2}
 format-connected-padding = 2
 label-connected = %essid%
 
@@ -83,7 +188,7 @@ ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = #2f2f38
+ramp-signal-foreground = #272827
 
 [module/eth]
 type = internal/network
@@ -91,173 +196,24 @@ interface = enp0s3
 interval = 3.0
 
 format-connected-padding = 2
-format-connected-foreground = #2f2f38
-format-connected-background = #81a2be
+format-connected-foreground = #272827
+format-connected-background = #7E807E
 format-connected-prefix = " "
-format-connected-prefix-foreground = #2f2f38
+format-connected-prefix-foreground = #272827
 label-connected = %local_ip%
 
 format-disconnected =
-
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = AC
-full-at = 98
-
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
-
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
-
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
-
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
-
-[module/date]
-type = internal/date
-interval = 5
-
-date =
-date-alt = " %Y-%m-%d"
-
-time = %H:%M
-time-alt = %H:%M:%S
-
-format-prefix = 
-format-foreground = #2f2f38
-format-background = #81a2be
-format-padding = 2
-
-label = %date% %time%
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = #81a2be
-label-close =  cancel
-label-close-foreground = #81a2be
-label-separator = |
-label-separator-foreground = #81a2be
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = hibernate
-menu-0-1-exec = menu-open-2
-menu-0-2 = log off
-menu-0-2-exec = menu-open-3
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = reboot
-
-menu-2-0 = hibernate
-menu-2-0-exec = systemctl hibernate
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
-
-menu-3-0 = log off
-menu-3-0-exec = i3 exit logout
-menu-3-1 = cancel
-menu-3-1-exec = menu-open-0
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
-sink = alsa_output.pci-0000_12_00.3.analog-stereo
+sink = alsa_output.pci-0000_03_00.6.analog-stereo
 
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ; Default: true
-use-ui-max = true
-
-; Interval for volume increase/decrease (in percent points)
-; Default: 5
-interval = 5
-
-[module/alsa]
-type = internal/alsa
-
-; Soundcard to be used
-; Usually in the format hw:# where # is the card number
-; You can find the different card numbers in `/proc/asound/cards`
-master-soundcard = default
-speaker-soundcard = default
-headphone-soundcard = default
-
-; Name of the master, speaker and headphone mixers
-; Use the following command to list available mixer controls:
-; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
-; If master, speaker or headphone-soundcard isn't the default, 
-; use `amixer -c # scontrols` instead where # is the number 
-; of the master, speaker or headphone soundcard respectively
-;
-; Default: Master
-master-mixer = Master
-
-; Optionally define speaker and headphone mixers
-; Default: none
-;;speaker-mixer = Speaker
-; Default: none
-;;headphone-mixer = Headphone
-
-; NOTE: This is required if headphone_mixer is defined
-; Use the following command to list available device controls
-; $ amixer controls | sed -r "/CARD/\!d; s/.*=([0-9]+).*name='([^']+)'.*/printf '%3.0f: %s\n' '\1' '\2'/e" | sort
-; You may also need to use `amixer -c # controls` as above for the mixer names
-; Default: none
-;;headphone-id = 9
-
-; Use volume mapping (similar to amixer -M and alsamixer), where the increase in volume is linear to the ear
-; Default: false
-;;mapped = true
+use-ui-max = false
 
 ; Interval for volume increase/decrease (in percent points)
 ; Default: 5
@@ -274,32 +230,37 @@ format-volume = <ramp-volume> <label-volume>
 ;   <ramp-volume>
 ;   <bar-volume>
 format-muted = <label-muted>
+format-muted-prefix = 
 
 ; Available tokens:
 ;   %percentage% (default)
 label-volume = %percentage%%
 
 ; Available tokens:
-;   %percentage% (default)
-label-muted = 🔇 muted
-label-muted-foreground = ${color.foreground-alt}
+;   %percentage% (default
+label-muted = " Muted"
+label-muted-foreground = ${colors.my_color2}
 
 ; Only applies if <ramp-volume> is used
-ramp-volume-0 = 🔈
-ramp-volume-1 = 🔉
-ramp-volume-2 = 🔊
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
-; If defined, it will replace <ramp-volume> when
-; headphones are plugged in to `headphone_control_numid`
-; If undefined, <ramp-volume> will be used for both
-; Only applies if <ramp-volume> is used
-ramp-headphones-0 = 
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [settings]
 screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
 
 [global/wm]
-margin-top = 0
-margin-bottom = 0
+margin-top = 5
+margin-bottom = 5
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+label-padding = 10
+label-foreground = ${colors.my_color8}

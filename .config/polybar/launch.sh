@@ -1,7 +1,11 @@
-#!/bin/bash
+# Basic script to kill all old bars and launch new.
 
-killall -q polybar
+# Terminate already running bad instances
+pkill polybar
 
-polybar base 2>&1 | tee -a /tmp/polybar.log & disown
+# Wait until the processes have been shut down
+while grep -x polybar >/dev/null; do sleep 1; done
 
-echo "Polybar launched..."
+# Launch the example bar
+polybar main_bar
+

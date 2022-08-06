@@ -1,10 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
-  programs.home-manager.enable = true;
-  targets.genericLinux.enable = true;
-  programs = {
-    vscode = {
-      enable = true;
-    };
-  };
+  home.username = "cc";
+  home.homeDirectory = "/home/cc";
+
+  imports = [ ./packages/packages.nix ./configs/configs.nix];
 }
