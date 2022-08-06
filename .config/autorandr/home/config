@@ -1,14 +1,8 @@
-output DP-2
+output DP2
 off
-output HDMI-1-0
+output VIRTUAL1
 off
-output DP-1-0
-off
-output DP-1-1
-off
-output DP-1-2
-off
-output DP-1
+output DP1
 crtc 1
 mode 2560x1440
 pos 0x0
@@ -18,7 +12,7 @@ x-prop-broadcast_rgb Automatic
 x-prop-colorspace Default
 x-prop-max_bpc 12
 x-prop-non_desktop 0
-output eDP-1
+output eDP1
 crtc 0
 mode 2560x1600
 pos 2560x0
