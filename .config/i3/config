@@ -12,7 +12,7 @@ set $term alacritty
 # set scripts path
 set $scripts $HOME/.config/i3/scripts
 
-set $lock_cmd "i3lock --ring-color=9F5AFDFF --time-color=FFFFFFFF --date-color=FFFFFF --indicator -eFkB 3"
+set $lock_cmd "i3lock-color --ring-color=9F5AFDFF --time-color=FFFFFFFF --date-color=FFFFFF --indicator -eFkB 3"
 
 
 new_window pixel 1
@@ -46,7 +46,7 @@ bindsym Mod1+Escape exec "i3-quickterm shell"
 
 
 # Start your launcher
-bindsym Mod1+space exec --no-startup-id "rofi -combi-modi drun,run -show combi -icon-theme 'Papirus' -show-icons"
+bindsym Mod1+space exec --no-startup-id "rofi -combi-modi drun,window -show combi -icon-theme 'Papirus' -show-icons"
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
 # Despite the name, also works for non-floating windows.
