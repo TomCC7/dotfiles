@@ -4,9 +4,6 @@
   (add-to-list 'org-babel-load-languages '(julia . t))
   (org-babel-do-load-languages 'org-babel-load-languages org-babel-load-languages))
 
-;; set display image width
-(setq org-image-actual-width (/ (display-pixel-width) 3))
-
 (use-package! julia-formatter
   :config
   ;; fix path issue

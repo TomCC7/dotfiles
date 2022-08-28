@@ -1,5 +1,5 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-if ! killall fcitx5; then
+if ! pkill fcitx5; then
 exec fcitx5
 fi

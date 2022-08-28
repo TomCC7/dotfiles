@@ -136,8 +136,8 @@ bindsym $mod+Shift+a focus child
 
 # lockscreen
 bindsym $mod+Ctrl+q exec $lock_cmd
-exec xautolock -time 5 -locker $lock_cmd
-
+# Only exported variables can be used within the timer's command.
+exec "$scripts/lock_screen"
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -292,7 +292,7 @@ exec_always setxkbmap -option ctrl:swapcaps
 bindsym $mod+Shift+s exec flameshot gui
 
 # fcitx5
-bindsym Ctrl+space exec "/usr/bin/bash $scripts/fcitx5"
+bindsym Ctrl+space exec "$scripts/fcitx5"
 
 # volumeec $HOME/.config/
 bindsym XF86AudioRaiseVolume exec "$scripts/volumectl -i 150"

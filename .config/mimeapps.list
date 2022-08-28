@@ -34,7 +34,6 @@ x-scheme-handler/mailto=userapp-Thunderbird-M1KQA1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-M1KQA1.desktop;
 application/x-applix-spreadsheet=emacs.desktop;visual-studio-code-insiders.desktop;emacsclient.desktop;
 image/png=org.gnome.eog.desktop;
-application/pdf=google-chrome.desktop;org.gnome.Evince.desktop;
 text/x-c++src=visual-studio-code-insiders.desktop;nvim.desktop;
 x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;;
 x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;;

@@ -152,6 +152,9 @@
   (add-hook! matlab-mode #'display-line-numbers-mode)
   (add-hook! matlab-mode  '(hl-todo-mode t)))
 
+;; disable native comp
+;; (setq no-native-compile t)
+
 ;; julia
 (load! "config-julia")
 

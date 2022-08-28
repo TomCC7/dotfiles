@@ -2,7 +2,22 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("kinova-ros2"
+(("kinova-ros1"
+ (filename . "/docker:ros1:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
+ (front-context-string)
+ (rear-context-string . "610 07-25 11:44 ")
+ (position . 402))
+("ekf-matlab"
+ (filename . "/mnt/share/Programming/Projects/Roahm/kinova_gen3/EKF-Kinova/")
+ (front-context-string . "1.mw*\n  -rwxrwxr")
+ (rear-context-string . ".1k 08-10 14:01 ")
+ (position . 123))
+("flake"
+ (filename . "~/flake/")
+ (front-context-string . "flake.lock\n  -rw")
+ (rear-context-string . ".9k 08-06 10:48 ")
+ (position . 202))
+("kinova-ros2"
  (filename . "/docker:ros2:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_ros2/")
  (front-context-string . "src/\n  -rwxrwxrw")
  (rear-context-string . "  0 07-27 10:57 ")
@@ -258,10 +273,10 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220806151239-aba.org")
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220811145423-complex_step_approximation.org")
  (front-context-string)
- (rear-context-string . "D:\n#+title: aba\n")
- (position . 81))
+ (rear-context-string . "p Approximation\n")
+ (position . 104))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")

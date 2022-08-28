@@ -79,7 +79,8 @@ zinit wait lucid for \
   OMZP::cp \
   OMZP::extract \
   as"completion" \
-  OMZP::docker/_docker
+  OMZP::docker/_docker \
+  OMZP::autojump \
   # hohmannr/bubblified  \
   # sobolevn/zsh-wakatime   \
 

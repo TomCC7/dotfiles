@@ -23,7 +23,8 @@
 (after! ob-plantuml
   (add-to-list 'org-babel-default-header-args:plantuml
                '(:cmdline . "-charset utf-8")))
-(setq org-plantuml-jar-path "/usr/share/java/plantuml/plantuml.jar")
+;; nixos specific
+(setq org-plantuml-jar-path "/run/current-system/sw/lib/plantuml.jar")
 ;; }}
 
 (provide 'config-lang)

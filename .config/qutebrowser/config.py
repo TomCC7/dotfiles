@@ -151,6 +151,7 @@ c.url.searchengines = {
     'wiki': 'https://en.wikipedia.org/wiki/{}',
     'translate': 'https://translate.google.com/?text={}',
     'cpp': 'https://duckduckgo.com/?sites=cppreference.com&q={}&ia=web',
+    'nix': 'https://mynixos.com/search?q={}',
 }
 
 # proxy

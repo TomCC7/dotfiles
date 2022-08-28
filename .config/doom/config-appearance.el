@@ -21,13 +21,16 @@
 
 ;; org latex preview size
 (after! org (setq org-format-latex-options
-                  (plist-put org-format-latex-options :scale (* 3 GDK_SCALE))))
+                  (plist-put org-format-latex-options :scale (* 2 GDK_SCALE))))
 ;; theme
 (setq doom-theme 'doom-one)
 ;; }}
 
 ;; modeline
-(setq doom-modeline-hud nil)
+(setq doom-modeline-hud t)
+
+;; set display image width
+(setq org-image-actual-width (/ (display-pixel-width) 6))
 
 ;; {{ prettify-symbols-mode
 (defconst lisp--prettify-symbols-alist
