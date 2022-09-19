@@ -3,7 +3,7 @@
 (use-package! plantuml-mode
   :commands plantuml-download-jar
   :init
-  (setq plantuml-jar-path (concat doom-etc-dir "plantuml.jar")
+  (setq plantuml-jar-path "/usr/share/java/plantuml/plantuml.jar"
         org-plantuml-jar-path plantuml-jar-path)
   :config
   (set-popup-rule! "^\\*PLANTUML" :size 0.4 :select nil :ttl 0)
@@ -24,7 +24,7 @@
   (add-to-list 'org-babel-default-header-args:plantuml
                '(:cmdline . "-charset utf-8")))
 ;; nixos specific
-(setq org-plantuml-jar-path "/run/current-system/sw/lib/plantuml.jar")
+;; (setq org-plantuml-jar-path "/run/current-system/sw/lib/plantuml.jar")
 ;; }}
 
 (provide 'config-lang)

@@ -83,7 +83,8 @@
 ;; (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
 
 ;; export with minted
-(setq org-latex-listings 'minted)
+(setq org-latex-src-block-backend 'minted)
+(setq org-export-latex-listings 'minted)
 
 (use-package! ob-rust)
 (org-babel-do-load-languages
@@ -125,7 +126,7 @@
 ;; }}
 
 ;; enable wakatime
-(global-wakatime-mode)
+;; (global-wakatime-mode)
 
 ;; add urdf and launch to xml-mode
 (use-package! nxml-mode

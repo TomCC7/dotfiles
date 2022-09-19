@@ -39,15 +39,34 @@ alias ch="char-coal query"
 
 # for xorg
 function kb_switch() {
+  setopt shwordsplit
   # kb_name='AT Translated Set 2 keyboard' # give keyboard name
-  kb_name=15 # give keyboard name
+  kb_ids=$(xinput list --long | grep 'Asus Keyboard.*keyboard' | cut -b 5- | awk {'print $4;'} | cut -b 4-)
+  kb_ids="${kb_ids//$'\n'/ }"
+  saveIFS="$IFS"
+  IFS=' '
+  kb_ids=(${kb_ids})
+  IFS="$saveIFS"
+  for id in ${kb_ids[@]};
+  do
+    if xinput list $id | grep -i --quiet disable; then
+      xinput enable $id
+      echo keyboard on
+    else
+      xinput disable $id
+      echo keyboard off
+    fi
+  done
+}
 
-  if xinput list $kb_name | grep -i --quiet disable; then
-    xinput enable $kb_name
-    echo keyboard on
+function touchpad_switch() {
+  id=$(xinput list --long | grep 'Touchpad' | awk '{print $6}' | cut -c4-)
+  if xinput list $id | grep -i --quiet disable; then
+    xinput enable $id
+    echo touchpad on
   else
-    xinput disable $kb_name
-    echo keyboard off
+    xinput disable $id
+    echo touchpad off
   fi
 }
 

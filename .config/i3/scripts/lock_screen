@@ -11,6 +11,3 @@ xidlehook \
   --timer 120 \
     'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; i3lock-color --ring-color=9F5AFDFF --time-color=FFFFFFFF --date-color=FFFFFF --indicator -eFkB 3' \
     '' \
-  --timer 600 \
-    'systemctl suspend' \
-    ''

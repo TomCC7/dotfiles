@@ -2,7 +2,52 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("kinova-ros1"
+(("bot3b"
+ (filename . "/ssh:bot3b:/workspace/")
+ (front-context-string . "botlab\n  drwxr-x")
+ (rear-context-string . " 4k 09-18 13:16 ")
+ (position . 80))
+("467bot"
+ (filename . "/ssh:467bot:/workspace/")
+ (front-context-string)
+ (rear-context-string . " 4k 09-07 16:02 ")
+ (position . 81))
+("ranger-k"
+ (filename . "/mnt/share/Programming/Projects/Roahm/kinova_gen3/data/sys_id_open/0905/")
+ (front-context-string . "SinExperiment_16")
+ (rear-context-string . ".3k 07-26 12:18 ")
+ (position . 3056))
+("ranger-;"
+ (filename . "/mnt/share/Programming/Projects/Roahm/kinova_gen3/data/sys_id_open/0905/")
+ (front-context-string . "SinExperiment_16")
+ (rear-context-string . ".3k 07-26 12:18 ")
+ (position . 3056))
+("AEROSP584"
+ (filename . "/mnt/share/JDsync/2022FA/AEROSP 584 001 FA 2022/")
+ (front-context-string . "1-slide Introduc")
+ (rear-context-string . "296 09-05 18:49 ")
+ (position . 82))
+("EECS467"
+ (filename . "/mnt/share/JDsync/2022FA/EECS 467 001 FA 2022/")
+ (front-context-string . "codes@ -> /mnt/s")
+ (rear-context-string . " 39 09-01 20:18 ")
+ (position . 81))
+("EECS461"
+ (filename . "/mnt/share/JDsync/2022FA/EECS 461 001 FA 2022/")
+ (front-context-string . "handouts/\n  drwx")
+ (rear-context-string . " 4k 08-28 18:58 ")
+ (position . 82))
+("EECS460"
+ (filename . "/mnt/share/JDsync/2022FA/EECS 460 001 FA 2022/")
+ (front-context-string . "EECS460Fall22_Co")
+ (rear-context-string . ".6M 08-28 18:57 ")
+ (position . 174))
+("2022FA"
+ (filename . "/mnt/share/JDsync/2022FA/")
+ (front-context-string . "AEROSP 584 001 F")
+ (rear-context-string . " 4k 09-01 10:27 ")
+ (position . 82))
+("kinova-ros1"
  (filename . "/docker:ros1:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
  (front-context-string)
  (rear-context-string . "610 07-25 11:44 ")
@@ -273,10 +318,10 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220811145423-complex_step_approximation.org")
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20220901103536-aerosp584.org")
  (front-context-string)
- (rear-context-string . "p Approximation\n")
- (position . 104))
+ (rear-context-string . "itle: AEROSP584\n")
+ (position . 87))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")

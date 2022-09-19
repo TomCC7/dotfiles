@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: latex_hat
+# key: ,h
+# --
+\hat{$0}
