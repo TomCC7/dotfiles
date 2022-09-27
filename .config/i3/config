@@ -15,8 +15,8 @@ set $scripts $HOME/.config/i3/scripts
 set $lock_cmd "i3lock --ring-color=9F5AFDFF --time-color=FFFFFFFF --date-color=FFFFFF --indicator -eFkB 3"
 
 
-new_window pixel 1
-new_float normal
+default_border none
+default_floating_border none
 
 hide_edge_borders none
 
@@ -42,7 +42,7 @@ bindsym $mod+Return exec TERM_PROGRAM=$term $term
 bindsym Mod1+Escape exec "i3-quickterm shell"
 
 # always pop standard shell, without the menu
-#bindsym $mod+b exec i3-quickterm shell
+# bindsym $mod+b exec i3-quickterm shell
 
 
 # Start your launcher
@@ -171,7 +171,7 @@ for_window [class="MATLAB R2020a - academic use"] floating enable
 # ref: https://major.io/2019/02/08/automatic-floating-windows-in-i3/
 
 # switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
+# for_window [urgent=latest] focus
 
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
