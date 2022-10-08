@@ -4,6 +4,11 @@
 # autojump
 # [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 [[ -s .guix-profile/etc/profile.d/autojump.sh ]] && source .guix-profile/etc/profile.d/autojump.sh
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 # }}}
 
 # ALIAS{{{
@@ -121,3 +126,4 @@ then
   [[ $ans_exit = 'n' ]] || exit 0
 fi
 # }}}
+
