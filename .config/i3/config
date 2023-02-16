@@ -12,7 +12,7 @@ set $term alacritty
 # set scripts path
 set $scripts $HOME/.config/i3/scripts
 
-set $lock_cmd "i3lock --ring-color=9F5AFDFF --time-color=FFFFFFFF --date-color=FFFFFF --indicator -eFkB 3"
+set $lock_cmd "i3lock --ring-color=9F5AFDFF --time-color=FFFFFFFF --date-color=FFFFFF --indicator -eFkB 7"
 
 
 default_border none

@@ -85,3 +85,5 @@
            :files ("*.el" "filters" "preprocessors")))
 
 (package! smartparens)
+
+(package! zotxt-emacs :recipe (:host github :repo "egh/zotxt-emacs"))

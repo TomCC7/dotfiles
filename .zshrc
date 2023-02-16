@@ -202,7 +202,7 @@ function vterm_printf(){
 }
 ## }}
 
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$HOME/.local/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

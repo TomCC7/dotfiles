@@ -25,9 +25,11 @@
   (setq org-noter-always-create-frame nil)
   (setq org-noter-notes-search-path '("~/Documents/emacs/roam")))
 
+(add-hook! org-mode #'org-zotxt-mode)
+
 ;; org-roam-ui
 (use-package! websocket
-    :after org-roam)
+  :after org-roam)
 
 (use-package! org-roam-ui
     :after org-roam ;; or :after org
@@ -59,6 +61,11 @@
         bibtex-completion-pdf-open-function
         (lambda (fpath)
           (call-process "open" nil 0 nil fpath))))
+
+;; {{ org-agenda
+(setq org-agenda-files '("/mnt/share/JDsync/Documents/emacs/agenda/agenda.org")
+      calendar-week-start-day 1)
+;; }}
 
 ;; {{ org-latex
 ;; (use-package! auctex)

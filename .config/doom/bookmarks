@@ -2,7 +2,47 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("roahm"
+(("TC496"
+ (filename . "/mnt/share/JDsync/2023WI/TCHNCLCM 496 011 WN 2023/")
+ (front-context-string . "assignments/\n  d")
+ (rear-context-string . "  0 01-29 15:33 ")
+ (position . 81))
+("ROB498"
+ (filename . "/mnt/share/JDsync/2023WI/ROB 498 001 WN 2023/")
+ (front-context-string . "homeworks/\n  drw")
+ (rear-context-string . "  0 01-20 09:54 ")
+ (position . 175))
+("IOE510"
+ (filename . "/mnt/share/JDsync/2023WI/IOE 510 001 WN 2023/")
+ (front-context-string . "Articles and Int")
+ (rear-context-string . " 4k 01-06 14:01 ")
+ (position . 82))
+("EECS489"
+ (filename . "/mnt/share/JDsync/2023WI/EECS489/")
+ (front-context-string . "eecs489/\n  drwxr")
+ (rear-context-string . " 4k 01-05 13:32 ")
+ (position . 81))
+("ROB530"
+ (filename . "/mnt/share/JDsync/2023WI/NAVARCH 568 001 WN 2023/")
+ (front-context-string . "assignments/\n  d")
+ (rear-context-string . "  0 01-04 14:36 ")
+ (position . 82))
+("2023WI"
+ (filename . "/mnt/share/JDsync/2023WI/")
+ (front-context-string . "NAVARCH 568 001 ")
+ (rear-context-string . " 4k 01-04 14:36 ")
+ (position . 82))
+("viva"
+ (filename . "/docker:ros2:/mnt/share/Programming/Projects/eecs467/viva_wksp/")
+ (front-context-string . "build/\n  drwxrwx")
+ (rear-context-string . "  0 12-08 13:27 ")
+ (position . 82))
+("MS app"
+ (filename . "/mnt/share/JDsync/2022FA/app/")
+ (front-context-string . "transcript_SJTU_")
+ (rear-context-string . ".4k 11-23 21:25 ")
+ (position . 312))
+("roahm"
  (filename . "/mnt/share/Programming/Projects/Roahm/")
  (front-context-string)
  (rear-context-string . " 4k 10-04 18:00 ")
@@ -308,10 +348,10 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20221003154105-paper_ultimate_robust_performancec_control_of_rigid_robot_manipulator.org")
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20230209131734-paper_ego_swarm.org")
  (front-context-string)
- (rear-context-string . "bot_manipulator\n")
- (position . 147))
+ (rear-context-string . "paper-ego-swarm\n")
+ (position . 93))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")

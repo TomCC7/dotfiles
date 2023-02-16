@@ -14,7 +14,7 @@ eval "$(pyenv init -)"
 # ALIAS{{{
 # overwrite
 alias ls="exa"
-alias poweroff="systemctl hibernate"
+# alias poweroff="systemctl hibernate"
 # file associations
 alias -s md="typora"
 alias -s pdf="zathura"
