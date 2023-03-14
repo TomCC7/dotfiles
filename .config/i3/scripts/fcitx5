@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-if ! pkill fcitx5; then
+if ! pgrep MATLAB && ! pkill fcitx5; then
 exec fcitx5
 fi

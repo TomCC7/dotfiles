@@ -1,13 +1,33 @@
 ;;; config-python.el -*- lexical-binding: t; -*-
+;; elpy
+(use-package! elpy
+  :ensure t
+  :hook
+  (python-mode . (lambda ()
+                 (add-hook! 'before-save-hook #'elpy-black-fix-code)
+                 (map! :map 'python-mode-map :leader :desc "elpy format buffer" :n "c =" #'elpy-black-fix-code)))
+  :init
+  (elpy-enable)
+  :config
+  (custom-set-variables
+   '(python-check-command "ruff")
+   '(elpy-syntax-check-command "ruff")))
+
+;; ruff support for flymake
+(use-package! flymake-ruff
+  :ensure t
+  :hook
+  (python-mode . flymake-ruff-load))
+
+;; conda
 (defun +conda/env-activate ()
-  "set `conda-env-home-directory` before run `conda-env-activate`"
+  "Set `conda-env-home-directory` before run `conda-env-activate`."
   (interactive)
   (setq conda-env-home-directory (expand-file-name "~/.conda/")
         conda-anaconda-home "/opt/anaconda")
   (conda-env-activate))
 
 ;; use jedi for lsp-backend
-(add-hook! 'python-mode-hook 'yapf-mode)
 (use-package! lsp-jedi
     :after lsp-mode
     :config

@@ -18,7 +18,8 @@
    (make-lsp-client :new-connection (lsp-tramp-connection "cmake-language-server")
                     :major-modes '(cmake-mode)
                     :remote? t
-                    :server-id 'cmakels-remote)))
+                    :server-id 'cmakels-remote))
+  (add-hook! 'c++-mode-hook '(lambda () (add-hook! 'before-save-hook #'lsp-format-buffer))))
 
 ;; also arduino
 (use-package! arduino-mode)

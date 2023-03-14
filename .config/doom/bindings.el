@@ -30,6 +30,7 @@
 (map! :leader :desc "org roam find node" :n "n f" #'org-roam-node-find)
 (map! :leader :desc "org roam graph" :n "n g" #'org-roam-graph)
 (map! :leader :desc "org roam ui" :n "n u" #'org-roam-ui-open)
+(map! :leader :desc "org noter kill session" :n "n k" #'org-noter-kill-session)
 
 (map! :leader :desc "orgmode export options" :mode 'org-mode :n "c e" #'org-export-dispatch)
 
@@ -50,4 +51,8 @@
 
 ;; rust
 (map! :leader :desc "rust run" :mode 'rust-mode :n "c c" #'lsp-rust-analyzer-run)
+
+;; flymake
+(map! :desc "flymake next error" :mode 'flymake-mode :n "g e" #'flymake-goto-next-error)
+(map! :desc "flymake previous error" :mode 'flymake-mode :n "g E" #'flymake-goto-prev-error)
 ;; }}}

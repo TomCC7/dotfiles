@@ -41,21 +41,18 @@
 
 (package! arduino-mode :recipe (:host github :repo "bookest/arduino-mode"))
 
-;; EAF {{
-;; (package! emacs-application-framework
-;;   :recipe (:host github :repo "manateelazycat/emacs-application-framework"
-;;            :files ("eaf.el" "src/lisp/*.el")
-;;            :build (:not compile)))
-;; }}
-
 ;; slack
 ;; (package! slack)
 
 ;; python {{
 ;; (package! company-jedi)
 (package! lsp-jedi)
-(package! yapfify :recipe (:host github :repo "JorisE/yapfify"))
 (package! jupyter)
+;; elpy
+(package! elpy)
+;; flymake-ruff
+(package! flymake-ruff :recipe
+  (:host github :repo "erickgnavar/flymake-ruff" :branch "master"))
 ;; }}
 
 ;; pdf-tools
@@ -87,3 +84,7 @@
 (package! smartparens)
 
 (package! zotxt-emacs :recipe (:host github :repo "egh/zotxt-emacs"))
+
+;; copilot
+(package! copilot
+  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))

@@ -6,6 +6,7 @@
  '(custom-safe-themes
    '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "fe2539ccf78f28c519541e37dc77115c6c7c2efcec18b970b16e4a4d2cd9891d" default))
  '(package-selected-packages '(ob-ess-julia wakatime-mode))
+ '(python-check-command "ruff check --fix")
  '(smtpmail-smtp-server "smtp.gmail.com")
  '(warning-suppress-types '((mule) (pdf-view-after-change-page-hook))))
 (custom-set-faces

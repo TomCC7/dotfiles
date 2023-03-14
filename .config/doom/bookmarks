@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("TC496"
+(("nerf"
+ (filename . "/mnt/share/Programming/Projects/nerf/")
+ (front-context-string . "data/\n  drwxrwxr")
+ (rear-context-string . "  0 03-09 12:56 ")
+ (position . 82))
+("rdf"
+ (filename . "/mnt/share/Programming/Projects/Roahm/rdf/")
+ (front-context-string . "rdf/\n  drwxrwxrw")
+ (rear-context-string . " 4k 02-17 10:18 ")
+ (position . 82))
+("TC496"
  (filename . "/mnt/share/JDsync/2023WI/TCHNCLCM 496 011 WN 2023/")
  (front-context-string . "assignments/\n  d")
  (rear-context-string . "  0 01-29 15:33 ")
@@ -348,10 +358,10 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20230209131734-paper_ego_swarm.org")
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20230307095531-ski_tracking.org")
  (front-context-string)
- (rear-context-string . "paper-ego-swarm\n")
- (position . 93))
+ (rear-context-string . "e: ski tracking\n")
+ (position . 90))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")

@@ -139,12 +139,12 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
 # zoom level
-config.set('zoom.default', '100%')
+config.set('zoom.default', '125%')
 
 # Search Engine
 c.url.searchengines = {
-    'DEFAULT': 'https://paulgo.io/search?q={}',
-    'cn': 'https://paulgo.io/search?q={}&language=zh-CN',
+    'DEFAULT': 'https://etsi.me/search?q={}',
+    'cn': 'https://etsi.me/search?q={}&language=zh-CN',
     'gg': 'https://google.com/search?q={}',
     'dd': 'https://duckduckgo.com/?q={}',
     'github': 'https://github.com/search?q={}',

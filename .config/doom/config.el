@@ -160,8 +160,27 @@
   (add-hook! matlab-mode #'display-line-numbers-mode)
   (add-hook! matlab-mode  '(hl-todo-mode t)))
 
+;; copilot
+;; accept completion from copilot and fallback to company
+(use-package! copilot
+  ;; :hook (prog-mode . copilot-mode)
+  :bind (("C-TAB" . 'copilot-accept-completion-by-word)
+         ("C-<tab>" . 'copilot-accept-completion-by-word)
+         :map copilot-completion-map
+         ("<tab>" . 'copilot-accept-completion)
+         ("TAB" . 'copilot-accept-completion))
+  :config
+  (defun +enable-copilot ()
+    "enable copilot mode in current emacs session"
+    (interactive)
+    (add-hook! 'prog-mode-hook #'copilot-mode)
+    (add-hook! 'matlab-mode-hook #'copilot-mode)))
+
 ;; disable native comp
 ;; (setq no-native-compile t)
+
+;; helper
+(load! "helpers")
 
 ;; julia
 (load! "config-julia")
