@@ -47,7 +47,7 @@
 ;; format buffer
 ;; (map! :mode 'julia-mode :leader :desc "julia format buffer"
 ;;        :n "c =" #'julia-format-buffer)
-(map! :map 'lsp-mode-map :leader :desc "lsp format buffer" :n "c =" #'lsp-format-buffer)
+(map! :mode 'lsp-mode :leader :desc "lsp format buffer" :n "c =" #'lsp-format-buffer)
 
 ;; rust
 (map! :leader :desc "rust run" :mode 'rust-mode :n "c c" #'lsp-rust-analyzer-run)
@@ -55,4 +55,12 @@
 ;; flymake
 (map! :desc "flymake next error" :mode 'flymake-mode :n "g e" #'flymake-goto-next-error)
 (map! :desc "flymake previous error" :mode 'flymake-mode :n "g E" #'flymake-goto-prev-error)
+
+;; org-mode
+(map! :desc "org next block" :mode 'org-mode :n "g n" #'org-next-block)
+(map! :desc "org prev block" :mode 'org-mode :n "g p" #'org-previous-block)
+
+;; dart
+(map! :desc "flutter run or hot-reload"
+      :leader :mode 'dart-mode :n "c c" #'flutter-run-or-hot-reload)
 ;; }}}

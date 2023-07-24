@@ -37,8 +37,6 @@
 (package! doom-snippets :ignore t)
 
 
-(package! docker-tramp.el :recipe (:host github :repo "emacs-pe/docker-tramp.el"))
-
 (package! arduino-mode :recipe (:host github :repo "bookest/arduino-mode"))
 
 ;; slack
@@ -50,6 +48,7 @@
 (package! jupyter)
 ;; elpy
 (package! elpy)
+(package! blacken)
 ;; flymake-ruff
 (package! flymake-ruff :recipe
   (:host github :repo "erickgnavar/flymake-ruff" :branch "master"))

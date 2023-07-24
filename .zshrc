@@ -104,6 +104,7 @@ alias e="emacsclient --create-frame -nw"
 if [[ $HOST = cccomputer ]] && [[ $USER = cc ]];
 then
   source $ZSH_CONFIG_DIR/personal.zsh
+  source $ZSH_CONFIG_DIR/private.zsh
   # wakatime plugin
   # zinit wait lucid for sobolevn/wakatime-zsh-plugin
 fi
@@ -120,34 +121,36 @@ zinit snippet OMZT::ys
 
 ## FUNCTIONS {{
 # add vpn
-# function vpn() {
-#   export VPN_HOST_IP=127.0.0.1
-#   HTTP_PROXY_PORT=8889
-#   HTTP_PROXY=http://$VPN_HOST_IP:$HTTP_PROXY_PORT
-#   if [[ $1 = "off" ]];
-#   then
-#     unset http_proxy
-#     unset https_proxy
-#     unset all_proxy
-#     unset GIT_SSH_COMMAND
-#     git config --global --unset http.https://github.com.proxy
-#     git config --global --unset core.gitproxy
-#     echo vpn off
-#   else
-#     export http_proxy=$HTTP_PROXY
-#     export https_proxy=$HTTP_PROXY
-#     export all_proxy=$HTTP_PROXY
-#     # only for 'github.com'
-#     git config --global http.https://github.com.proxy $HTTP_PROXY
-#     # use 'connect' with HTTP_PROXY environment
-#     export GIT_SSH_COMMAND="ssh -o ProxyCommand=\"nc -X connect -x $VPN_HOST_IP:$HTTP_PROXY_PORT %h %p\""
-#     git config --global core.gitproxy "/usr/bin/gitproxy for github.com"
-#     if [[ $1 != -q ]]; then
-#       # echo
-#       echo vpn started!
-#     fi
-#   fi
-# }
+function vpn() {
+  export VPN_HOST_IP=127.0.0.1
+  HTTP_PROXY_PORT=7893
+  SOCKS_PROXY_PORT=7893
+  SOCKS_PROXY=socks5h://$VPN_HOST_IP:$SOCKS_PROXY_PORT
+  HTTP_PROXY=http://$VPN_HOST_IP:$HTTP_PROXY_PORT
+  if [[ $1 = "off" ]];
+  then
+    unset http_proxy
+    unset https_proxy
+    unset all_proxy
+    unset GIT_SSH_COMMAND
+    git config --global --unset http.https://github.com.proxy
+    git config --global --unset core.gitproxy
+    echo vpn off
+  else
+    export http_proxy=$HTTP_PROXY
+    export https_proxy=$HTTP_PROXY
+    export all_proxy=$HTTP_PROXY
+    # only for 'github.com'
+    git config --global http.https://github.com.proxy $SOCKS_PROXY
+    # use 'connect' with HTTP_PROXY environment
+    # export GIT_SSH_COMMAND="ssh -o ProxyCommand=\"nc -X connect -x $VPN_HOST_IP:$HTTP_PROXY_PORT %h %p\""
+    # git config --global core.gitproxy "/usr/bin/gitproxy for github.com"
+    if [[ $1 != -q ]]; then
+      # echo
+      echo vpn started!
+    fi
+  fi
+}
 
 # mount iso file
 function mount_iso() {
@@ -203,6 +206,8 @@ function vterm_printf(){
 ## }}
 
 export PATH="$HOME/.poetry/bin:$HOME/.local/bin:$PATH"
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

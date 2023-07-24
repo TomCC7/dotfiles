@@ -2,6 +2,8 @@
 
 (setq lsp-clients-clangd-args '("-j=6"
                                 "--background-index"
+                                "--clang-tidy"
+                                "--header-insertion-decorators=0"
                                 "--compile-commands-dir=./build"))
 (setq lsp-tramp-command lsp-clients-clangd-args)
 (push "clangd" lsp-tramp-command)
@@ -19,7 +21,8 @@
                     :major-modes '(cmake-mode)
                     :remote? t
                     :server-id 'cmakels-remote))
-  (add-hook! 'c++-mode-hook '(lambda () (add-hook! 'before-save-hook #'lsp-format-buffer))))
+  ;; (add-hook! 'c++-mode-hook '(lambda () (add-hook! 'before-save-hook #'lsp-format-buffer)))
+  )
 
 ;; also arduino
 (use-package! arduino-mode)

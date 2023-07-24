@@ -54,8 +54,8 @@
        :editor
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
-       fold              ; (nigh) universal code folding
-       ;;(format +onsave)  ; automated prettiness
+       ;; fold              ; (nigh) universal code folding
+       ;; (format +onsave)  ; automated prettiness
        ;;god               ; run Emacs commands without modifier keys
        lispy               ; vim for lisp, for people who don't like vim
        ;;multiple-cursors  ; editing in many places at once
@@ -119,7 +119,7 @@
        ;;crystal           ; ruby at the speed of c
        ;;csharp            ; unity, .NET, and mono shenanigans
        ;; data              ; config/data formats
-       ;;(dart +flutter)   ; paint ui and not much else
+       (dart +flutter +lsp)   ; paint ui and not much else
        ;;elixir            ; erlang done right
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
@@ -135,10 +135,10 @@
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ; a language you can depend on
        json              ; At least it ain't XML
-       ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
+       (java +lsp) ; the poster child for carpal tunnel syndrome
        ;; (javascript +lsp)         ; all(hope(abandon(ye(who(enter(here))))))
        (julia +lsp)              ; a better, faster MATLAB
-       ;; kotlin            ; a better, slicker Java(Script)
+       (kotlin +lsp)            ; a better, slicker Java(Script)
        (latex +fold +cdlatex)              ; writing papers in Emacs has never been so fun
        ;; lean              ; for folks with too much to prove
        ;; ledger            ; be audit you can be

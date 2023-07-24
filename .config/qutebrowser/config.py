@@ -139,7 +139,7 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
 # zoom level
-config.set('zoom.default', '125%')
+config.set('zoom.default', '100%')
 
 # Search Engine
 c.url.searchengines = {
