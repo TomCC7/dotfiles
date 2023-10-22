@@ -2,6 +2,6 @@
 # name: src_block_julia
 # key: <sj
 # --
-#+begin_src julia :session jl-`(file-name-nondirectory buffer-file-name)` :async yes
+#+begin_src julia :session jl-`(file-name-nondirectory buffer-file-name)` :async yes :exports none
 $0
 #+end_src

@@ -9,7 +9,7 @@ mixed-port: 7893
 allow-lan: false
 mode: rule
 log-level: info
-external-controller: '127.0.0.1:34983'
+external-controller: '127.0.0.1:45127'
 secret: ''
 dns:
   enable: false

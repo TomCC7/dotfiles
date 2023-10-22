@@ -8,7 +8,7 @@
 ;; miscellaneous {{
 (package! wakatime-mode)
 ;; dict
-(package! youdao-dictionary)
+;; (package! youdao-dictionary)
 ;; }}
 
 ;; {{ latex
@@ -82,8 +82,7 @@
 
 (package! smartparens)
 
-(package! zotxt-emacs :recipe (:host github :repo "egh/zotxt-emacs"))
+;; (package! zotxt-emacs :recipe (:host github :repo "egh/zotxt-emacs"))
 
 ;; copilot
-(package! copilot
-  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
+(package! copilot :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))

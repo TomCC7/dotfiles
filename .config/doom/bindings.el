@@ -35,10 +35,10 @@
 (map! :leader :desc "orgmode export options" :mode 'org-mode :n "c e" #'org-export-dispatch)
 
 ;; dict
-(map! :leader :desc "search word from input"
-      :n "d d" #'youdao-dictionary-search-from-input)
-(map! :leader :desc "search word at point"
-      :n "d p" #'youdao-dictionary-search-at-point-posframe)
+;; (map! :leader :desc "search word from input"
+;;       :n "d d" #'youdao-dictionary-search-from-input)
+;; (map! :leader :desc "search word at point"
+;;       :n "d p" #'youdao-dictionary-search-at-point-posframe)
 
 ;; org-babel excecute subtree
 (map! :leader :desc "excecute babel in buffer"

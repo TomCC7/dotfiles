@@ -2,7 +2,55 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("codes"
+(("rts"
+ (filename . "/mnt/share/Programming/Projects/Roahm/rts/")
+ (front-context-string . "rts-arm-planning")
+ (rear-context-string . "456 10-02 16:22 ")
+ (position . 34)
+ (last-modified 25883 9942 97743 847000))
+("enerf"
+ (filename . "/mnt/share/Programming/Projects/event_nerf/")
+ (front-context-string)
+ (rear-context-string . "  0 09-17 23:02 ")
+ (position . 118)
+ (last-modified 25866 27568 967714 579000))
+("docker-enerf"
+ (filename . "/docker:ubuntu-cuda:/mnt/share/Programming/Projects/event_nerf/")
+ (front-context-string)
+ (rear-context-string . "  0 09-17 23:02 ")
+ (position . 118)
+ (last-modified 25866 27554 259667 120000))
+("rearmour"
+ (filename . "/mnt/share/Programming/Projects/Roahm/rearmour/")
+ (front-context-string)
+ (rear-context-string . " 4k 09-04 23:21 ")
+ (position . 34)
+ (last-modified 25847 32962 477650 503000))
+("ROB501"
+ (filename . "/mnt/share/JDsync/2023FA/ROB 501 001 FA 2023/")
+ (front-context-string . "hw_solutions/\n  ")
+ (rear-context-string . "  0 08-31 09:38 ")
+ (position . 354)
+ (last-modified 25844 37636 509968 31000))
+("ROB550"
+ (filename . "/mnt/share/JDsync/2023FA/ROB 550 001 FA 2023/")
+ (front-context-string . "course files_cou")
+ (rear-context-string . "  0 08-30 09:46 ")
+ (position . 74)
+ (last-modified 25840 46351 745259 8000))
+("24intern"
+ (filename . "/mnt/share/JDsync/2023FA/intern/")
+ (front-context-string . "intern24.org*\n  ")
+ (rear-context-string . " 3k 08-30 15:14 ")
+ (position . 170)
+ (last-modified 25840 4304 857364 97000))
+("2023FA"
+ (filename . "/mnt/share/JDsync/2023FA/")
+ (front-context-string . "chores/\n  drwxrw")
+ (rear-context-string . "  0 08-29 16:19 ")
+ (position . 34)
+ (last-modified 25839 37361 195828 176000))
+("codes"
  (filename . "~/codes/")
  (front-context-string)
  (rear-context-string . "176 05-25 15:11 ")
@@ -87,16 +135,6 @@
  (front-context-string . "botlab\n  drwxr-x")
  (rear-context-string . " 4k 09-18 13:16 ")
  (position . 80))
-("ranger-k"
- (filename . "/docker:ros2:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_ros2/src/kinova_control/roahm_dynamics_lib/src/roahm_dynamics_lib/")
- (front-context-string . "spatial.cpp@ -> ")
- (rear-context-string . " 79 10-05 23:10 ")
- (position . 898))
-("ranger-;"
- (filename . "/docker:ros2:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_ros2/src/kinova_control/roahm_dynamics_lib/src/roahm_dynamics_lib/")
- (front-context-string . "spatial.cpp@ -> ")
- (rear-context-string . " 79 10-05 23:10 ")
- (position . 898))
 ("AEROSP584"
  (filename . "/mnt/share/JDsync/2022FA/AEROSP 584 001 FA 2022/")
  (front-context-string . "1-slide Introduc")
@@ -383,10 +421,11 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20230616112336-flutter.org")
- (front-context-string . "\n[[https://flutt")
- (rear-context-string . "+title: flutter\n")
- (position . 85))
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20230926150016-collision.org")
+ (front-context-string)
+ (rear-context-string . "itle: collision\n")
+ (position . 87)
+ (last-modified 25875 10818 718550 747000))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Mathworks Service Host
+Exec=/home/cc/.MathWorks/ServiceHost/cccomputer/v2023.10.0.4/bin/glnxa64/MathWorksServiceHost service --realm-id companion@prod@production
+Terminal=false

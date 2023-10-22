@@ -5,7 +5,14 @@ ZSH_CONFIG_DIR=~/.config/zsh
 
 ## PERSONAL SETTINGS ##
 # ros
-[[ -f /opt/ros/noetic/setup.zsh ]] && source /opt/ros/noetic/setup.zsh
+for release in "noetic" "melodic"
+do
+  if [[ -f "/opt/ros/$release/setup.zsh" ]];
+  then
+    source /opt/ros/$release/setup.zsh
+    ulimit -Sn 4096 && ulimit -Hn 4096
+  fi
+done
 [[ -f /opt/ros/foxy/setup.zsh ]] && source /opt/ros/foxy/setup.zsh && export ROS_DOMAIN_ID=7
 alias catkin_clean="rm -r build && rm -r devel"
 
@@ -79,7 +86,6 @@ zinit wait lucid for \
   OMZP::cp \
   OMZP::extract \
   as"completion" \
-  OMZP::docker/_docker \
   OMZP::autojump \
   # hohmannr/bubblified  \
   # sobolevn/zsh-wakatime   \
@@ -163,14 +169,6 @@ function mnt_media() {
   sudo mount $1 /mnt/media/$2 -o uid=1000,gid=1000,umask=0000 
 }
 
-function keep() {
-  while true;do
-    clear
-    $@
-    sleep 1
-  done
-}
-
 # usage: find_up pattern
 # recursively find in parent dir until found
 function find_up() {
@@ -206,24 +204,22 @@ function vterm_printf(){
 ## }}
 
 export PATH="$HOME/.poetry/bin:$HOME/.local/bin:$PATH"
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if [[ $(whoami) = docker ]];
-then
-  __conda_setup="$('/home/docker/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-  if [ $? -eq 0 ]; then
+__conda_setup="$('/home/cc/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
     eval "$__conda_setup"
-  else
-    if [ -f "/home/docker/anaconda3/etc/profile.d/conda.sh" ]; then
-      . "/home/docker/anaconda3/etc/profile.d/conda.sh"
+else
+    if [ -f "/home/cc/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/cc/miniforge3/etc/profile.d/conda.sh"
     else
-      export PATH="/home/docker/anaconda3/bin:$PATH"
+        export PATH="/home/cc/miniforge3/bin:$PATH"
     fi
-  fi
-  unset __conda_setup
+fi
+unset __conda_setup
+
+if [ -f "/home/cc/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/cc/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
-

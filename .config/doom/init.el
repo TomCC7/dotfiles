@@ -43,7 +43,7 @@
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
        ;; tabs              ; a tab bar for Emacs
-       treemacs          ; a project drawer, like neotree but cooler
+       ;; treemacs          ; a project drawer, like neotree but cooler
        unicode           ; extended unicode support for various languages
        ;; vc-gutter         ; vcs diff in the fringe
        ;; vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -89,7 +89,7 @@
        ;; direnv
        docker
        editorconfig      ; let someone else argue about tabs vs spaces
-       ein               ; tame Jupyter notebooks with emacs
+       ;; ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
        lookup              ; navigate your code and its documentation
@@ -103,7 +103,7 @@
        ;;taskrunner        ; taskrunner for all your projects
        ;;terraform         ; infrastructure as code
        ;; tmux              ; an API for interacting with tmux
-       ;; upload            ; map local to remote projects via ssh/ftp
+       upload            ; map local to remote projects via ssh/ftp
 
        :os
        ;; (:if IS-MAC macos)  ; improve compatibility with macOS
@@ -151,7 +151,7 @@
        ;;php               ; perl's insecure younger brother
        ;; plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +lsp +pyright +poetry +conda)            ; beautiful is better than ugly
+       (python +lsp +pyright +conda)            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6

@@ -28,7 +28,7 @@
 ;; (use-package! org-zotxt
 ;;   :config
 ;;   )
-(add-hook! org-mode #'org-zotxt-mode)
+;; (add-hook! org-mode #'org-zotxt-mode)
 
 ;; org-roam-ui
 (use-package! websocket
@@ -85,7 +85,7 @@
       ;;   "pdflatex -interaction nonstopmode -output-directory %o %f")
 
       '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "bibtex %b"
+        "bibtex -shell-escape %b"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f")
       )
@@ -181,6 +181,12 @@
     (interactive)
     (add-hook! 'prog-mode-hook #'copilot-mode)
     (add-hook! 'matlab-mode-hook #'copilot-mode)))
+
+;; ssh sync
+(use-package! ssh-deploy
+  :ensure t
+  :config
+  (ssh-deploy-line-mode))
 
 ;; disable native comp
 ;; (setq no-native-compile t)

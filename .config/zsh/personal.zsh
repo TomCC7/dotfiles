@@ -5,15 +5,12 @@
 # [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 [[ -s .guix-profile/etc/profile.d/autojump.sh ]] && source .guix-profile/etc/profile.d/autojump.sh
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 # }}}
 
 # ALIAS{{{
 # overwrite
 alias ls="exa"
+# alias ssh="kitty +kitten ssh"
 # alias poweroff="systemctl hibernate"
 # file associations
 alias -s md="typora"
@@ -75,27 +72,6 @@ function touchpad_switch() {
   fi
 }
 
-function fktail() {
-  ~/.config/zsh/fktail.py
-}
-
-  # select laptop performance mode
-  # function perform() {
-  #   if [[ $1 == '-p' ]] ;
-  #   then
-  #     sudo smbios-thermal-ctl --set-thermal-mode=Performance
-  #   elif [[ $1 == '-b' ]] ;
-  #   then
-  #     sudo smbios-thermal-ctl --set-thermal-mode=Balanced
-  #   else
-  #     echo "Invalid Argument"
-  #     echo "Supported arguments:"
-  #     echo "-p: Performance"
-  #     echo "-b: Balanced"
-  #   fi
-  # }
-  # }}}
-
 # TERMINAL BEHAVIOR{{{
 # ENV specification for certain environment
 if [[ -n $TERM_ENV ]];
@@ -110,7 +86,7 @@ fi
 
 # tmux auto attach
 # need env $TERM_PROGRAM
-TERMS_ALLOWED=(alacritty vscode)
+TERMS_ALLOWED=(alacritty vscode kitty)
 if [[ -n $TERM_PROGRAM ]] && [[ -n $(echo $TERMS_ALLOWED | grep $TERM_PROGRAM) ]] && ! [[ -v TMUX ]] && ! [[ -v VIM ]];
 then
   export TERM_ENV=$TERM_PROGRAM
@@ -125,5 +101,5 @@ then
   read ans_exit
   [[ $ans_exit = 'n' ]] || exit 0
 fi
-# }}}
 
+# }}}
