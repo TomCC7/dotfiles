@@ -15,12 +15,12 @@
                     (lsp-tramp-connection lsp-tramp-command)
                     :major-modes '(c-mode c++-mode)
                     :remote? t
-                    :server-id 'clangd-remote))
+                    :server-id 'clangd-tramp))
   (lsp-register-client
    (make-lsp-client :new-connection (lsp-tramp-connection "cmake-language-server")
                     :major-modes '(cmake-mode)
                     :remote? t
-                    :server-id 'cmakels-remote))
+                    :server-id 'cmakels-tramp))
   ;; (add-hook! 'c++-mode-hook '(lambda () (add-hook! 'before-save-hook #'lsp-format-buffer)))
   )
 

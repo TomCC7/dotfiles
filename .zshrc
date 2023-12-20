@@ -5,7 +5,7 @@ ZSH_CONFIG_DIR=~/.config/zsh
 
 ## PERSONAL SETTINGS ##
 # ros
-for release in "noetic" "melodic"
+for release in "noetic" "melodic" "rolling" "humble"
 do
   if [[ -f "/opt/ros/$release/setup.zsh" ]];
   then
@@ -126,6 +126,12 @@ zinit light-mode for \
 zinit snippet OMZT::ys
 
 ## FUNCTIONS {{
+# swaymsg
+swaymsg(){
+        export SWAYSOCK=$XDG_RUNTIME_DIR/sway-ipc.$UID.$(pgrep -x sway).sock
+        command swaymsg "$@"
+    }
+
 # add vpn
 function vpn() {
   export VPN_HOST_IP=127.0.0.1

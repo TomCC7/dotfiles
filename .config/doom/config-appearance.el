@@ -14,9 +14,8 @@
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 (setq-default GDK_SCALE '0.7)
-(setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size (* 16 GDK_SCALE) :weight 'semi-light)
+(setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size (* 16 GDK_SCALE))
       doom-variable-pitch-font (font-spec :family "monospace") ; inherits `doom-font''s :size
-      doom-unicode-font (font-spec :family "MesloLGS Nerd Font Mono" :size (* 16 GDK_SCALE))
       doom-big-font (font-spec :family "MesloLGS Nerd Font Mono" :size (* 21 GDK_SCALE)))
 
 ;; org latex preview size

@@ -1,0 +1,43 @@
+#!/bin/sh
+# usage:
+DEFAULT_VOLUME_STEP=2 # step 5%
+
+function help() {
+  echo "usage:"
+  echo "  -i (<max_value>): increase volume "
+  echo "  -d: decrease volume "
+  echo "  -t: toggle mute status"
+}
+
+function check_mute() {
+  if [[ $(pamixer --get-mute) == "true" ]];
+  then
+    pamixer -u
+  fi
+}
+
+vol_now=$(pamixer --get-volume)
+vol_max=100
+if [[ $1 == "-i" ]];
+then
+  check_mute
+  if [[ -n $2 ]];
+  then
+    vol_max=$2
+  fi
+  if [[ $vol_now -lt $vol_max ]];
+  then
+    pamixer --allow-boost -i $DEFAULT_VOLUME_STEP
+  fi
+  echo $(pamixer --get-volume)
+elif [[ $1 == "-d" ]];
+then
+  check_mute
+  pamixer --allow-boost -d $DEFAULT_VOLUME_STEP
+  echo $(pamixer --get-volume)
+elif [[ $1 == "-t" ]];
+then
+  pamixer -t
+else
+  help
+fi

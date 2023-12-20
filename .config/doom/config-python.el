@@ -16,7 +16,7 @@
 ;;    '(elpy-syntax-check-command "ruff")))
 
 (custom-set-variables
- '(conda-anaconda-home "/opt/anaconda/"))
+ '(conda-anaconda-home "/home/cc/miniforge3"))
 
 (use-package! flymake-ruff
   :hook
@@ -24,7 +24,7 @@
   (python-mode . flymake-ruff-load)
   :config
   (custom-set-variables
-   '(python-check-command "ruff")
+   ;; '(python-check-command "ruff")
    '(flymake-start-on-save-buffer t)))
 
 (use-package! blacken
@@ -35,18 +35,27 @@
   (setq blacken-only-if-project-is-blackened t)
   (map! :mode 'python-mode :leader :desc "blacken buffer" :n "c =" #'blacken-buffer))
 
-(use-package! lsp-jedi
-  :after lsp-mode
-  :config
-  (add-to-list 'lsp-disabled-clients 'pyright)
-  (add-to-list 'lsp-disabled-clients 'pyls)
-  (after! lsp-mode
+;; (use-package! lsp-jedi
+;;   :after lsp-mode
+;;   :config
+;;   (add-to-list 'lsp-disabled-clients 'pyright)
+;;   (add-to-list 'lsp-disabled-clients 'pyls)
+;;   (add-to-list 'lsp-disabled-clients 'jedi)
+;;   (after! lsp-mode
+;;     (lsp-register-client
+;;      (make-lsp-client :new-connection
+;;                       (lsp-tramp-connection "jedi-language-server")
+;;                       :major-modes '(python-mode)
+;;                       :remote? t
+;;                       :server-id 'jedi-tramp))))
+(after! lsp-mode
     (lsp-register-client
      (make-lsp-client :new-connection
-                      (lsp-tramp-connection "jedi-language-server")
+                      (lsp-tramp-connection "pylsp")
                       :major-modes '(python-mode)
                       :remote? t
-                      :server-id 'jedi-remote))))
+                      :server-id 'pylsp-tramp)))
+
 
 
 ;; load emacs-jupyter

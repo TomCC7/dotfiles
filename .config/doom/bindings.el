@@ -14,15 +14,26 @@
 ;; }}
 
 ;; {{{ Leader map
-(map! :leader :desc "find file in current workspace" :n "e" #'counsel-find-file)
+(map! :leader :desc "find file in current workspace" :n "e" #'find-file)
 (map! :leader :desc "ranger" :n "r" #'deer)
 (map! :leader :desc "toggle vterm" :n "j" #'+vterm/toggle)
+(map! :leader :desc "jump to bookmark" :n "RET" #'bookmark-jump)
 ;; search
 (map! :leader :desc "git grep" :n "s g" #'counsel-git-grep)
 ;; files
 (map! :leader :desc "kill buffer" :n "f k" #'kill-this-buffer)
 ;; window
 (map! :leader :desc "ace the window" :n "w w" #'ace-window)
+(map! :leader :desc "split window" :n "w s" #'evil-window-split)
+(map! :leader :desc "vsplit window" :n "w v" #'evil-window-vsplit)
+(map! :leader :desc "window down" :n "w j" #'evil-window-down)
+(map! :leader :desc "window up" :n "w k" #'evil-window-up)
+(map! :leader :desc "window right" :n "w l" #'evil-window-right)
+(map! :leader :desc "window left" :n "w h" #'evil-window-left)
+(map! :leader :desc "window move down" :n "w J" #'+evil/window-move-down)
+(map! :leader :desc "window move up" :n "w K" #'+evil/window-move-up)
+(map! :leader :desc "window move right" :n "w L" #'+evil/window-move-right)
+(map! :leader :desc "window move left" :n "w H" #'+evil/window-move-left)
 ;; workspaces
 (map! :leader :desc "next tab" :n "TAB l" #'+workspace/switch-right)
 (map! :leader :desc "previous tab" :n "TAB h" #'+workspace/switch-left)

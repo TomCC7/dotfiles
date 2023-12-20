@@ -10,3 +10,8 @@
 	helper = "!f() { /home/docker/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/node /tmp/vscode-remote-containers-90dea242924c2b1576802412959f759330d61c18.js $*; }; f"
 [safe]
 	directory = /opt/flutter
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

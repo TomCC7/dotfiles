@@ -2,7 +2,24 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("rts"
+(("docker-ros-rolling-wayland"
+ (filename . "/docker:ros_rolling_wayland:/mnt/share/Programming/Projects/")
+ (front-context-string . "441/\n  drwxrwxrw")
+ (rear-context-string . "  0 07-17 10:30 ")
+ (position . 34)
+ (last-modified 25986 20390 697830 587000))
+("docker-ros-rolling"
+ (filename . "/docker:ros_rolling:/mnt/share/Programming/Projects/")
+ (front-context-string . "441\n  drwxrwxrwx")
+ (rear-context-string . "  0 07-17 10:30 ")
+ (position . 82))
+("ranger-o"
+ (filename . "/mnt/share/Programming/Projects/Roahm/moveit_ws/src/moveit2_tutorials/")
+ (front-context-string . "_templates/\n  -r")
+ (rear-context-string . "  0 12-04 02:51 ")
+ (position . 157)
+ (last-modified 25978 27988 236724 665000))
+("rts"
  (filename . "/mnt/share/Programming/Projects/Roahm/rts/")
  (front-context-string . "rts-arm-planning")
  (rear-context-string . "456 10-02 16:22 ")
@@ -421,11 +438,11 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20230926150016-collision.org")
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20231030141255-underactuated_robotics.org")
  (front-context-string)
- (rear-context-string . "itle: collision\n")
- (position . 87)
- (last-modified 25875 10818 718550 747000))
+ (rear-context-string . "tuated robotics\n")
+ (position . 100)
+ (last-modified 25919 61992 570141 448000))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")

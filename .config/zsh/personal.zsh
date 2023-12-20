@@ -31,35 +31,35 @@ alias ch="charcoal query"
 
 # FUNCTIONS{{{
 # toggle laptop keyboard
-# function kb_switch() {
-#   swaymsg input 1:1:AT_Translated_Set_2_keyboard events toggle enabled disabled
-# }
+function kb_switch() {
+  swaymsg input 2821:6582:Asus_Keyboard events toggle enabled disabled
+}
 
 # function touchpad_switch() {
 #   swaymsg input 1267:12515:DELL0922:00_04F3:30E3_Touchpad events toggle enabled disabled
 # }
 
 # for xorg
-function kb_switch() {
-  setopt shwordsplit
-  # kb_name='AT Translated Set 2 keyboard' # give keyboard name
-  kb_ids=$(xinput list --long | grep 'Asus Keyboard.*keyboard' | cut -b 5- | awk {'print $4;'} | cut -b 4-)
-  kb_ids="${kb_ids//$'\n'/ }"
-  saveIFS="$IFS"
-  IFS=' '
-  kb_ids=(${kb_ids})
-  IFS="$saveIFS"
-  for id in ${kb_ids[@]};
-  do
-    if xinput list $id | grep -i --quiet disable; then
-      xinput enable $id
-      echo keyboard on
-    else
-      xinput disable $id
-      echo keyboard off
-    fi
-  done
-}
+# function kb_switch() {
+#   setopt shwordsplit
+#   # kb_name='AT Translated Set 2 keyboard' # give keyboard name
+#   kb_ids=$(xinput list --long | grep 'Asus Keyboard.*keyboard' | cut -b 5- | awk {'print $4;'} | cut -b 4-)
+#   kb_ids="${kb_ids//$'\n'/ }"
+#   saveIFS="$IFS"
+#   IFS=' '
+#   kb_ids=(${kb_ids})
+#   IFS="$saveIFS"
+#   for id in ${kb_ids[@]};
+#   do
+#     if xinput list $id | grep -i --quiet disable; then
+#       xinput enable $id
+#       echo keyboard on
+#     else
+#       xinput disable $id
+#       echo keyboard off
+#     fi
+#   done
+# }
 
 function touchpad_switch() {
   id=$(xinput list --long | grep 'Touchpad' | awk '{print $6}' | cut -c4-)
@@ -86,15 +86,15 @@ fi
 
 # tmux auto attach
 # need env $TERM_PROGRAM
-TERMS_ALLOWED=(alacritty vscode kitty)
-if [[ -n $TERM_PROGRAM ]] && [[ -n $(echo $TERMS_ALLOWED | grep $TERM_PROGRAM) ]] && ! [[ -v TMUX ]] && ! [[ -v VIM ]];
+TERMS_ALLOWED=(alacritty vscode xterm-kitty)
+if [[ -n $TERM ]] && [[ -n $(echo $TERMS_ALLOWED | grep $TERM) ]] && ! [[ -v TMUX ]] && ! [[ -v VIM ]];
 then
-  export TERM_ENV=$TERM_PROGRAM
-  if [[ -z $(tmux ls | grep $TERM_PROGRAM) ]];
+  export TERM_ENV=$TERM
+  if [[ -z $(tmux ls | grep $TERM) ]];
   then
-    tmux new -s $TERM_PROGRAM
+    tmux new -s $TERM
   else
-    tmux attach -t $TERM_PROGRAM
+    tmux attach -t $TERM
   fi
   clear
   echo $fg_bold[green] ">" $fg_bold[red]"Exit?"

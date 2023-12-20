@@ -15,15 +15,17 @@
 ;;      directory (for easy access to its source code).
 
 (doom! :input
-       ;; chinese
+       ;;bidi              ; (tfel ot) thgir etirw uoy gnipleh
+       ;;chinese
        ;;japanese
        ;;layout            ; auie,ctsrnm is the superior home row
 
        :completion
-       (company +tng)           ; the ultimate code completion backend
+       company           ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        ivy               ; a search engine for love and life
+       vertico           ; the search engine of the future
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -45,8 +47,8 @@
        ;; tabs              ; a tab bar for Emacs
        ;; treemacs          ; a project drawer, like neotree but cooler
        unicode           ; extended unicode support for various languages
-       ;; vc-gutter         ; vcs diff in the fringe
-       ;; vi-tilde-fringe   ; fringe tildes to mark beyond EOB
+       (vc-gutter +pretty) ; vcs diff in the fringe
+       vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
        workspaces        ; tab emulation, persistence & separate workspaces
        ;;zen               ; distraction-free coding or writing
@@ -54,7 +56,7 @@
        :editor
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
-       ;; fold              ; (nigh) universal code folding
+       fold              ; (nigh) universal code folding
        ;; (format +onsave)  ; automated prettiness
        ;;god               ; run Emacs commands without modifier keys
        lispy               ; vim for lisp, for people who don't like vim
@@ -86,6 +88,8 @@
        :tools
        ;;ansible
        (debugger +lsp)          ; FIXME stepping through code, to help you add bugs
+       ;;biblio            ; Writes a PhD for you (citation needed)
+       ;;collab            ; buffers with friends
        ;; direnv
        docker
        editorconfig      ; let someone else argue about tabs vs spaces
@@ -103,10 +107,11 @@
        ;;taskrunner        ; taskrunner for all your projects
        ;;terraform         ; infrastructure as code
        ;; tmux              ; an API for interacting with tmux
+       ;;tree-sitter       ; syntax and parsing, sitting in a tree...
        upload            ; map local to remote projects via ssh/ftp
 
        :os
-       ;; (:if IS-MAC macos)  ; improve compatibility with macOS
+       (:if IS-MAC macos)  ; improve compatibility with macOS
        tty               ; improve the terminal Emacs experience
 
        :lang
@@ -160,7 +165,7 @@
        ;; (ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        (rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
-       (scheme +guile)   ; a fully conniving family of lisps
+       ;; (scheme +guile)   ; a fully conniving family of lisps
        (sh +lsp)                 ; she sells {ba,z,fi}sh shells on the C xor
        ;;sml
        ;;solidity          ; do you need a blockchain? No.

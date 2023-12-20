@@ -44,7 +44,7 @@
 
 ;; python {{
 ;; (package! company-jedi)
-(package! lsp-jedi)
+;; (package! lsp-jedi)
 (package! jupyter)
 ;; elpy
 (package! elpy)
