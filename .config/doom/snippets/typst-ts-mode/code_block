@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: code_block
+# key: <s
+# --
+\`\`\`$1
+$0
+\`\`\`

@@ -1,0 +1,531 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("ranger-k"
+ (filename . "/mnt/share/Programming/Projects/Roahm/rearmour/results/sphere_armtd_experiments_results/")
+ (front-context-string . "armtd_1branched_")
+ (rear-context-string . "76k 01-10 16:01 ")
+ (position . 520)
+ (last-modified 26043 5841 490692 223000))
+("2024WI"
+ (filename . "/mnt/share/JDsync/2024WI/")
+ (front-context-string . "EECS 542 001 WN ")
+ (rear-context-string . "  0 01-22 00:37 ")
+ (position . 34)
+ (last-modified 26030 36635 340871 672000))
+("hosico_split"
+ (filename . "/mnt/share/Programming/Projects/Hosico-Split/")
+ (front-context-string . "split_backend/\n ")
+ (rear-context-string . " 4k 12-27 23:35 ")
+ (position . 81)
+ (last-modified 25998 14684 10752 99000))
+("docker-ros-noetic"
+ (filename . "/docker:ros_noetic:/mnt/share/Programming/Projects/")
+ (front-context-string . "441\n  drwxrwxrwx")
+ (rear-context-string . "  0 07-17 10:30 ")
+ (position . 34)
+ (last-modified 25993 59508 149523 329000))
+("docker-ros-humble"
+ (filename . "/docker:ros_humble:/mnt/share/Programming/Projects/")
+ (front-context-string . "441\n  drwxrwxrwx")
+ (rear-context-string . "  0 07-17 10:30 ")
+ (position . 34)
+ (last-modified 25987 28908 682560 802000))
+("docker-ros-rolling-wayland"
+ (filename . "/docker:ros_rolling_wayland:/mnt/share/Programming/Projects/")
+ (front-context-string . "441/\n  drwxrwxrw")
+ (rear-context-string . "  0 07-17 10:30 ")
+ (position . 34)
+ (last-modified 25986 20390 697830 587000))
+("docker-ros-rolling"
+ (filename . "/docker:ros_rolling:/mnt/share/Programming/Projects/")
+ (front-context-string . "441\n  drwxrwxrwx")
+ (rear-context-string . "  0 07-17 10:30 ")
+ (position . 82))
+("ranger-o"
+ (filename . "/mnt/share/Programming/Projects/Roahm/moveit_ws/src/moveit2_tutorials/")
+ (front-context-string . "_templates/\n  -r")
+ (rear-context-string . "  0 12-04 02:51 ")
+ (position . 157)
+ (last-modified 25978 27988 236724 665000))
+("rts"
+ (filename . "/mnt/share/Programming/Projects/Roahm/rts/")
+ (front-context-string . "rts-arm-planning")
+ (rear-context-string . "456 10-02 16:22 ")
+ (position . 34)
+ (last-modified 25883 9942 97743 847000))
+("enerf"
+ (filename . "/mnt/share/Programming/Projects/event_nerf/")
+ (front-context-string)
+ (rear-context-string . "  0 09-17 23:02 ")
+ (position . 118)
+ (last-modified 25866 27568 967714 579000))
+("docker-enerf"
+ (filename . "/docker:ubuntu-cuda:/mnt/share/Programming/Projects/event_nerf/")
+ (front-context-string)
+ (rear-context-string . "  0 09-17 23:02 ")
+ (position . 118)
+ (last-modified 25866 27554 259667 120000))
+("rearmour"
+ (filename . "/mnt/share/Programming/Projects/Roahm/rearmour/")
+ (front-context-string)
+ (rear-context-string . " 4k 09-04 23:21 ")
+ (position . 34)
+ (last-modified 25847 32962 477650 503000))
+("ROB501"
+ (filename . "/mnt/share/JDsync/2023FA/ROB 501 001 FA 2023/")
+ (front-context-string . "hw_solutions/\n  ")
+ (rear-context-string . "  0 08-31 09:38 ")
+ (position . 354)
+ (last-modified 25844 37636 509968 31000))
+("ROB550"
+ (filename . "/mnt/share/JDsync/2023FA/ROB 550 001 FA 2023/")
+ (front-context-string . "course files_cou")
+ (rear-context-string . "  0 08-30 09:46 ")
+ (position . 74)
+ (last-modified 25840 46351 745259 8000))
+("24intern"
+ (filename . "/mnt/share/JDsync/2023FA/intern/")
+ (front-context-string . "intern24.org*\n  ")
+ (rear-context-string . " 3k 08-30 15:14 ")
+ (position . 170)
+ (last-modified 25840 4304 857364 97000))
+("2023FA"
+ (filename . "/mnt/share/JDsync/2023FA/")
+ (front-context-string . "chores/\n  drwxrw")
+ (rear-context-string . "  0 08-29 16:19 ")
+ (position . 34)
+ (last-modified 25839 37361 195828 176000))
+("codes"
+ (filename . "~/codes/")
+ (front-context-string)
+ (rear-context-string . "176 05-25 15:11 ")
+ (position . 1495))
+("CUL2610"
+ (filename . "/mnt/share/JDsync/2023SU/CUL2610J/")
+ (front-context-string . "CUL2610_syllabus")
+ (rear-context-string . ".9k 05-11 06:59 ")
+ (position . 324))
+("VE320"
+ (filename . "/mnt/share/JDsync/2023SU/ECE3200J/")
+ (front-context-string . "Appendix B - Gen")
+ (rear-context-string . ".5k 05-22 20:39 ")
+ (position . 168))
+("VE441"
+ (filename . "/mnt/share/JDsync/2023SU/ECE4410J/")
+ (front-context-string . "codes@ -> /mnt/s")
+ (rear-context-string . " 35 05-18 08:42 ")
+ (position . 83))
+("2023SU"
+ (filename . "/mnt/share/JDsync/2023SU/")
+ (front-context-string . "CUL2610J/\n  drwx")
+ (rear-context-string . " 4k 05-17 10:38 ")
+ (position . 82))
+("rddf"
+ (filename . "/mnt/share/Programming/Projects/Roahm/rdf/rdf-approximation/python/tests/test_zono_utils_3d.py")
+ (front-context-string . ")\n    start = ti")
+ (rear-context-string . "  #     )\n    # ")
+ (position . 4011))
+("rdf"
+ (filename . "/mnt/share/Programming/Projects/Roahm/rdf/")
+ (front-context-string . "rdf/\n  drwxrwxrw")
+ (rear-context-string . " 4k 02-17 10:18 ")
+ (position . 82))
+("TC496"
+ (filename . "/mnt/share/JDsync/2023WI/TCHNCLCM 496 011 WN 2023/")
+ (front-context-string . "assignments/\n  d")
+ (rear-context-string . "  0 01-29 15:33 ")
+ (position . 81))
+("ROB498"
+ (filename . "/mnt/share/JDsync/2023WI/ROB 498 001 WN 2023/")
+ (front-context-string . "homeworks/\n  drw")
+ (rear-context-string . "  0 01-20 09:54 ")
+ (position . 175))
+("IOE510"
+ (filename . "/mnt/share/JDsync/2023WI/IOE 510 001 WN 2023/")
+ (front-context-string . "Articles and Int")
+ (rear-context-string . " 4k 01-06 14:01 ")
+ (position . 82))
+("EECS489"
+ (filename . "/mnt/share/JDsync/2023WI/EECS489/")
+ (front-context-string . "eecs489/\n  drwxr")
+ (rear-context-string . " 4k 01-05 13:32 ")
+ (position . 81))
+("ROB530"
+ (filename . "/mnt/share/JDsync/2023WI/NAVARCH 568 001 WN 2023/")
+ (front-context-string . "assignments/\n  d")
+ (rear-context-string . "  0 01-04 14:36 ")
+ (position . 82))
+("2023WI"
+ (filename . "/mnt/share/JDsync/2023WI/")
+ (front-context-string . "NAVARCH 568 001 ")
+ (rear-context-string . " 4k 01-04 14:36 ")
+ (position . 82))
+("viva"
+ (filename . "/docker:ros2:/mnt/share/Programming/Projects/eecs467/viva_wksp/")
+ (front-context-string . "build/\n  drwxrwx")
+ (rear-context-string . "  0 12-08 13:27 ")
+ (position . 82))
+("MS app"
+ (filename . "/mnt/share/JDsync/2022FA/app/")
+ (front-context-string . "transcript_SJTU_")
+ (rear-context-string . ".4k 11-23 21:25 ")
+ (position . 312))
+("roahm"
+ (filename . "/mnt/share/Programming/Projects/Roahm/")
+ (front-context-string)
+ (rear-context-string . " 4k 10-04 18:00 ")
+ (position . 123))
+("bot3b"
+ (filename . "/ssh:bot3b:/workspace/")
+ (front-context-string . "botlab\n  drwxr-x")
+ (rear-context-string . " 4k 09-18 13:16 ")
+ (position . 80))
+("AEROSP584"
+ (filename . "/mnt/share/JDsync/2022FA/AEROSP 584 001 FA 2022/")
+ (front-context-string . "1-slide Introduc")
+ (rear-context-string . "296 09-05 18:49 ")
+ (position . 82))
+("EECS467"
+ (filename . "/mnt/share/JDsync/2022FA/EECS 467 001 FA 2022/")
+ (front-context-string . "codes@ -> /mnt/s")
+ (rear-context-string . " 39 09-01 20:18 ")
+ (position . 81))
+("EECS461"
+ (filename . "/mnt/share/JDsync/2022FA/EECS 461 001 FA 2022/")
+ (front-context-string . "handouts/\n  drwx")
+ (rear-context-string . " 4k 08-28 18:58 ")
+ (position . 82))
+("EECS460"
+ (filename . "/mnt/share/JDsync/2022FA/EECS 460 001 FA 2022/")
+ (front-context-string . "EECS460Fall22_Co")
+ (rear-context-string . ".6M 08-28 18:57 ")
+ (position . 174))
+("2022FA"
+ (filename . "/mnt/share/JDsync/2022FA/")
+ (front-context-string . "AEROSP 584 001 F")
+ (rear-context-string . " 4k 09-01 10:27 ")
+ (position . 82))
+("kinova-ros1"
+ (filename . "/docker:ros1:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
+ (front-context-string)
+ (rear-context-string . "610 07-25 11:44 ")
+ (position . 402))
+("ekf-matlab"
+ (filename . "/mnt/share/Programming/Projects/Roahm/kinova_gen3/EKF-Kinova/")
+ (front-context-string . "1.mw*\n  -rwxrwxr")
+ (rear-context-string . ".1k 08-10 14:01 ")
+ (position . 123))
+("flake"
+ (filename . "~/flake/")
+ (front-context-string . "flake.lock\n  -rw")
+ (rear-context-string . ".9k 08-06 10:48 ")
+ (position . 202))
+("kinova-ros2"
+ (filename . "/docker:ros2:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_ros2/")
+ (front-context-string . "src/\n  -rwxrwxrw")
+ (rear-context-string . "  0 07-27 10:57 ")
+ (position . 409))
+("docker-kinova"
+ (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova_control_wksp/")
+ (front-context-string)
+ (rear-context-string . "  0 07-21 20:22 ")
+ (position . 160))
+("kinova-sys-id"
+ (filename . "/mnt/share/Programming/Projects/Roahm/kinova_gen3/kinova-sys-id/")
+ (front-context-string . "pyproject.toml*\n")
+ (rear-context-string . "410 07-13 13:36 ")
+ (position . 337))
+("docker-ros2"
+ (filename . "/docker:ros2:/mnt/share/Programming/Projects/")
+ (front-context-string . "petoi\n  drwxrwxr")
+ (rear-context-string . " 4k 06-11 20:41 ")
+ (position . 415))
+("docker-opencat"
+ (filename . "/docker:ros-gui:/mnt/share/Programming/Projects/petoi/ros_opencat_workspace/")
+ (front-context-string)
+ (rear-context-string . "  0 05-20 22:18 ")
+ (position . 79))
+("EECS498-algorithmic-robotics"
+ (filename . "/mnt/share/JDsync/2021FA/EECS 498 001 FA 2021/")
+ (front-context-string . "books\n  drwxrwxr")
+ (rear-context-string . "  0 2021-10-23  ")
+ (position . 83))
+("petoi"
+ (filename . "/mnt/share/JDsync/2022SU/petoi/")
+ (front-context-string . "codes@ -> /mnt/s")
+ (rear-context-string . " 37 05-15 01:25 ")
+ (position . 79))
+("Visual Odometry ETH"
+ (filename . "/mnt/share/JDsync/2022SU/visual-odometry-eth/")
+ (front-context-string)
+ (rear-context-string . "  0 05-10 14:06 ")
+ (position . 81))
+("VG496"
+ (filename . "/mnt/share/JDsync/2022SU/VG496SU2022-1/")
+ (front-context-string)
+ (rear-context-string . "  0 05-09 13:10 ")
+ (position . 81))
+("VP390"
+ (filename . "/mnt/share/JDsync/2022SU/VP390/")
+ (front-context-string . "lecture slides/\n")
+ (rear-context-string . "  0 05-09 13:10 ")
+ (position . 83))
+("2022SU"
+ (filename . "/mnt/share/JDsync/2022SU/")
+ (front-context-string . "VG496SU2022-1/\n ")
+ (rear-context-string . "  0 05-09 13:10 ")
+ (position . 81))
+("robotics"
+ (filename . "/mnt/share/Programming/robotics/")
+ (front-context-string . "mujoco/\n  drwxrw")
+ (rear-context-string . "440 04-13 11:10 ")
+ (position . 34))
+("Programming"
+ (filename . "/mnt/share/Programming/")
+ (front-context-string . "Projects/\n  drwx")
+ (rear-context-string . " 4k 04-27 21:21 ")
+ (position . 284))
+("docker-ros"
+ (filename . "/docker:ros-gui:/mnt/share/Programming/")
+ (front-context-string . "python/\n  drwxrw")
+ (rear-context-string . " 4k 2020-09-08  ")
+ (position . 327))
+("debug"
+ (filename . "~/Downloads/")
+ (front-context-string . "basic-debug.pdf\n")
+ (rear-context-string . "92k 04-09 14:14 ")
+ (position . 566))
+("shixi"
+ (filename . "/mnt/share/Programming/shixi/")
+ (front-context-string . "fyairo_desktop/\n")
+ (rear-context-string . " 4k 2021-01-26  ")
+ (position . 34))
+("373_proj"
+ (filename . "/mnt/share/Programming/Projects/eecs373/")
+ (front-context-string)
+ (rear-context-string . "  0 03-16 01:03 ")
+ (position . 34))
+("config"
+ (filename . "~/dotfiles/.config/")
+ (front-context-string . "autostart/\n  drw")
+ (rear-context-string . "284 02-18 02:44 ")
+ (position . 168))
+("dotfiles"
+ (filename . "~/dotfiles/")
+ (front-context-string)
+ (rear-context-string . "lable 464.9 GiB\n")
+ (position . 50))
+("CAR_SIM"
+ (filename . "/mnt/share/Programming/Projects/CAR_SIM/")
+ (front-context-string)
+ (rear-context-string . "  0 02-07 13:08 ")
+ (position . 81))
+("guix"
+ (filename . "~/.config/guix/")
+ (front-context-string . "current -> /var/")
+ (rear-context-string . " 43 02-03 22:49 ")
+ (position . 82))
+("EARTH111"
+ (filename . "/mnt/share/JDsync/2022WI/EARTH 111 001 WN 2022/")
+ (front-context-string . "Class Slides/\n  ")
+ (rear-context-string . "  0 01-07 20:11 ")
+ (position . 33))
+("EECS201"
+ (filename . "/mnt/share/JDsync/2022WI/EECS 201 001 WN 2022/")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("EECS373"
+ (filename . "/mnt/share/JDsync/2022WI/EECS373/")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("EECS445"
+ (filename . "/mnt/share/JDsync/2022WI/EECS 445  WN 2022/")
+ (front-context-string . "course_image/\n  ")
+ (rear-context-string . "  0 01-07 20:15 ")
+ (position . 33))
+("EECS498-cv"
+ (filename . "/mnt/share/JDsync/2022WI/EECS 498 008 WN 2022/")
+ (front-context-string)
+ (rear-context-string . "  0 01-07 16:08 ")
+ (position . 33))
+("STATS412"
+ (filename . "/mnt/share/JDsync/2022WI/STATS 412 002 WN 2022/")
+ (front-context-string . "Exam Reviews/\n  ")
+ (rear-context-string . "  0 01-04 17:46 ")
+ (position . 33))
+("22WI"
+ (filename . "/mnt/share/JDsync/2022WI/")
+ (front-context-string . "EARTH 111 001 WN")
+ (rear-context-string . " 4k 01-04 17:50 ")
+ (position . 33))
+("MDP"
+ (filename . "/mnt/share/JDsync/um_misc/clubs/MDP/")
+ (front-context-string . "Statements/\n  dr")
+ (rear-context-string . " 4k 10-17 22:18 ")
+ (position . 80))
+("Documents"
+ (filename . "/mnt/share/JDsync/Documents/")
+ (front-context-string . "Chen,Che, 167208")
+ (rear-context-string . ".3k 2021-03-26  ")
+ (position . 485))
+("EAGLE"
+ (filename . "~/EAGLE/")
+ (front-context-string . "cam/\n  drwxr-xr-")
+ (rear-context-string . " 4k 09-12 13:20 ")
+ (position . 81))
+("maav"
+ (filename . "/mnt/share/JDsync/um_misc/clubs/maav/")
+ (front-context-string)
+ (rear-context-string . "  0 09-18 20:55 ")
+ (position . 80))
+("EECS200"
+ (filename . "/mnt/share/JDsync/2021FA/EECS 200 001 FA 2021/")
+ (front-context-string . "labs/\n  drwxrwxr")
+ (rear-context-string . "  0 09-06 20:59 ")
+ (position . 82))
+("MATH217"
+ (filename . "/mnt/share/JDsync/2021FA/MATH 217 All Sections FA 2021/")
+ (front-context-string . "Bertoloni Meli/\n")
+ (rear-context-string . "  0 08-29 20:58 ")
+ (position . 84))
+("EECS370"
+ (filename . "/mnt/share/JDsync/2021FA/EECS 370 FA 2021/")
+ (front-context-string)
+ (rear-context-string . "  0 08-31 15:10 ")
+ (position . 80))
+("EECS281"
+ (filename . "/mnt/share/JDsync/2021FA/EECS 281 FA 2021/")
+ (front-context-string . "course_image/\n  ")
+ (rear-context-string . "  0 08-29 20:56 ")
+ (position . 81))
+("2021FA"
+ (filename . "/mnt/share/JDsync/2021FA/")
+ (front-context-string . "EECS 281 FA 2021")
+ (rear-context-string . " 4k 08-29 20:56 ")
+ (position . 81))
+("um_misc"
+ (filename . "/mnt/share/JDsync/um_misc/")
+ (front-context-string . "documents/\n  drw")
+ (rear-context-string . " 4k 07-15 22:51 ")
+ (position . 81))
+("JDsync"
+ (filename . "/mnt/share/JDsync/")
+ (front-context-string . "2019FA/\n  drwxrw")
+ (rear-context-string . " 4k 07-09 23:35 ")
+ (position . 85))
+("books"
+ (filename . "/mnt/share/JDsync/books/")
+ (front-context-string . "algorithm/\n  drw")
+ (rear-context-string . "  0 2021-01-13  ")
+ (position . 83))
+("haskell-cis194"
+ (filename . "/mnt/share/Programming/learning/haskell/cis194/")
+ (front-context-string)
+ (rear-context-string . "159 07-09 09:57 ")
+ (position . 78))
+("telegram"
+ (filename . "~/Downloads/Telegram Desktop/")
+ (front-context-string . "044002000311-368")
+ (rear-context-string . ".1k 06-06 17:49 ")
+ (position . 140))
+("srtdoc"
+ (filename . "/mnt/share/Programming/Projects/slam/srtdoc/")
+ (front-context-string . "dataset/\n  drwxr")
+ (rear-context-string . "  0 07-31 21:50 ")
+ (position . 81))
+("slam"
+ (filename . "/mnt/share/Programming/Projects/slam/")
+ (front-context-string . "xavier-catkin-wo")
+ (rear-context-string . " 4k 03-19 15:11 ")
+ (position . 326))
+("ORB_SLAM3"
+ (filename . "/mnt/share/Programming/Projects/slam/refs/ORB_SLAM3/")
+ (front-context-string . "build/\n  drwxrwx")
+ (rear-context-string . " 4k 07-26 19:32 ")
+ (position . 82))
+("citation"
+ (filename . "~/Documents/emacs/citation.bib")
+ (front-context-string . "\n@article{10.230")
+ (rear-context-string)
+ (position . 1))
+("Downloads"
+ (filename . "~/Downloads/")
+ (front-context-string . "BaiduNetDisk/\n  ")
+ (rear-context-string . " 4k 05-13 17:38 ")
+ (position . 83))
+("Papers"
+ (filename . "~/Documents/emacs/papers/")
+ (front-context-string . "japan/\n  drwxrwx")
+ (rear-context-string . " 4k 04-30 13:01 ")
+ (position . 83))
+("Emacs"
+ (filename . "~/Documents/emacs/papers/")
+ (front-context-string . "japan/\n  drwxrwx")
+ (rear-context-string . " 4k 04-30 13:01 ")
+ (position . 83))
+("org-capture-last-stored"
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20231030141255-underactuated_robotics.org")
+ (front-context-string)
+ (rear-context-string . "tuated robotics\n")
+ (position . 100)
+ (last-modified 25919 61992 570141 448000))
+("Projects"
+ (filename . "/mnt/share/Programming/Projects/")
+ (front-context-string . ".backup/\n  drwxr")
+ (rear-context-string . " 4k 04-11 01:13 ")
+ (position . 81))
+("agv_ros"
+ (filename . "/mnt/share/Programming/Projects/ipp_agv/agv_ros/")
+ (front-context-string . "agv_env/\n  drwxr")
+ (rear-context-string . "  0 06-19 21:11 ")
+ (position . 81))
+("learning"
+ (filename . "/mnt/share/Programming/learning/")
+ (front-context-string . "ComputerNetworki")
+ (rear-context-string . " 4k 2021-02-03  ")
+ (position . 79))
+("baidusb"
+ (filename . "/mnt/share/JDsync/2021SU/baidusb/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("notes"
+ (filename . "/mnt/share/Programming/notes/source/_posts/")
+ (front-context-string . "  /mnt/share/Pro")
+ (rear-context-string)
+ (position . 1))
+("VE203"
+ (filename . "/mnt/share/JDsync/2021SU/VE203/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("VE311"
+ (filename . "/mnt/share/JDsync/2021SU/VE311/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("VE300"
+ (filename . "/mnt/share/JDsync/2021SU/VE300/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("VE270"
+ (filename . "/mnt/share/JDsync/2021SU/VE270/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+("VR235"
+ (filename . "/mnt/share/JDsync/2021SU/VR235/")
+ (front-context-string . "/mnt/share/JDsyn")
+ (rear-context-string)
+ (position . 3))
+("21SU"
+ (filename . "/mnt/share/JDsync/2021SU/")
+ (front-context-string . "  /mnt/share/JDs")
+ (rear-context-string)
+ (position . 1))
+)
