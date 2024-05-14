@@ -11,7 +11,8 @@
     //"margin-top":5,
     // "modules-left": ["wlr/workspaces"],
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["tray",
+    "modules-right": [
+                      "tray",
                       "privacy",
                       "temperature",
                       "battery",
@@ -29,6 +30,7 @@
     "custom/dynamic_pill": {
         "return-type": "json",
         "exec": "~/.config/hypr/scripts/tools/start_dyn",
+        "max-length": 50
     },
     "custom/ss":{
         "format":"{}",
@@ -186,12 +188,12 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} ",
+        "format-bluetooth-muted": " {icon} ",
         "format-muted": " {volume}%",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
+            "headphone": "",
+            "hands-free": "",
             "headset": "",
             "phone": "",
             "portable": "",

@@ -9,7 +9,7 @@
 
 # ALIAS{{{
 # overwrite
-alias ls="exa"
+alias ls="eza"
 # alias ssh="kitty +kitten ssh"
 # alias poweroff="systemctl hibernate"
 # file associations
@@ -61,6 +61,10 @@ function kb_switch() {
 #   done
 # }
 
+function kb_switch() {
+  ~/dotfiles/.config/hypr/scripts/switch_keyboard.sh
+}
+
 function touchpad_switch() {
   id=$(xinput list --long | grep 'Touchpad' | awk '{print $6}' | cut -c4-)
   if xinput list $id | grep -i --quiet disable; then
@@ -71,6 +75,7 @@ function touchpad_switch() {
     echo touchpad off
   fi
 }
+
 
 # TERMINAL BEHAVIOR{{{
 # ENV specification for certain environment
@@ -101,5 +106,5 @@ then
   read ans_exit
   [[ $ans_exit = 'n' ]] || exit 0
 fi
-
 # }}}
+

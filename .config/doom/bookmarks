@@ -2,7 +2,37 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("docker-ros-rolling-wayland"
+(("ranger-k"
+ (filename . "/mnt/share/Programming/Projects/Roahm/rearmour/results/sphere_armtd_experiments_results/")
+ (front-context-string . "armtd_1branched_")
+ (rear-context-string . "76k 01-10 16:01 ")
+ (position . 520)
+ (last-modified 26043 5841 490692 223000))
+("2024WI"
+ (filename . "/mnt/share/JDsync/2024WI/")
+ (front-context-string . "EECS 542 001 WN ")
+ (rear-context-string . "  0 01-22 00:37 ")
+ (position . 34)
+ (last-modified 26030 36635 340871 672000))
+("hosico_split"
+ (filename . "/mnt/share/Programming/Projects/Hosico-Split/")
+ (front-context-string . "split_backend/\n ")
+ (rear-context-string . " 4k 12-27 23:35 ")
+ (position . 81)
+ (last-modified 25998 14684 10752 99000))
+("docker-ros-noetic"
+ (filename . "/docker:ros_noetic:/mnt/share/Programming/Projects/")
+ (front-context-string . "441\n  drwxrwxrwx")
+ (rear-context-string . "  0 07-17 10:30 ")
+ (position . 34)
+ (last-modified 25993 59508 149523 329000))
+("docker-ros-humble"
+ (filename . "/docker:ros_humble:/mnt/share/Programming/Projects/")
+ (front-context-string . "441\n  drwxrwxrwx")
+ (rear-context-string . "  0 07-17 10:30 ")
+ (position . 34)
+ (last-modified 25987 28908 682560 802000))
+("docker-ros-rolling-wayland"
  (filename . "/docker:ros_rolling_wayland:/mnt/share/Programming/Projects/")
  (front-context-string . "441/\n  drwxrwxrw")
  (rear-context-string . "  0 07-17 10:30 ")

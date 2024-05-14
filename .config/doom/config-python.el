@@ -33,7 +33,7 @@
   (python-mode . blacken-mode)
   :config
   (setq blacken-only-if-project-is-blackened t)
-  (map! :mode 'python-mode :leader :desc "blacken buffer" :n "c =" #'blacken-buffer))
+  (map! :desc "blacken buffer" :mode 'python-mode :map python-mode-map :localleader :n "=" #'blacken-buffer))
 
 ;; (use-package! lsp-jedi
 ;;   :after lsp-mode
@@ -49,12 +49,18 @@
 ;;                       :remote? t
 ;;                       :server-id 'jedi-tramp))))
 (after! lsp-mode
-    (lsp-register-client
-     (make-lsp-client :new-connection
-                      (lsp-tramp-connection "pylsp")
-                      :major-modes '(python-mode)
-                      :remote? t
-                      :server-id 'pylsp-tramp)))
+  (add-to-list 'lsp-disabled-clients 'pyright)
+  (add-to-list 'lsp-disabled-clients 'pyls)
+  (add-to-list 'lsp-disabled-clients 'jedi)
+  (add-to-list 'lsp-disabled-clients 'pyright-tramp)
+  (add-to-list 'lsp-disabled-clients 'pyls-tramp)
+  (add-to-list 'lsp-disabled-clients 'jedi-tramp)
+  (lsp-register-client
+   (make-lsp-client :new-connection
+                    (lsp-tramp-connection "pylsp")
+                    :major-modes '(python-mode)
+                    :remote? t
+                    :server-id 'pylsp-tramp)))
 
 
 
@@ -84,5 +90,10 @@
 
 ;; poetry
 (setq poetry-tracking-strategy 'projectile)
+
+;; code-cells.el
+(use-package! code-cells
+  :config
+  (add-hook 'python-mode-hook 'code-cells-mode-maybe))
 
 (provide 'config-python)

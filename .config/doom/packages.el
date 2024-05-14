@@ -82,7 +82,14 @@
 
 (package! smartparens)
 
-;; (package! zotxt-emacs :recipe (:host github :repo "egh/zotxt-emacs"))
+(package! zotxt-emacs :recipe (:host github :repo "egh/zotxt-emacs"))
+(package! deferred :recipe (:host github :repo "kiwanami/emacs-deferred"))
 
 ;; copilot
 (package! copilot :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
+
+;; typst
+(package! typst-ts-mode :recipe (:host sourcehut :repo "meow_king/typst-ts-mode"))
+
+;; alternative ipynb
+(package! code-cells.el :recipe (:host github :repo "astoff/code-cells.el"))

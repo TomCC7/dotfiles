@@ -1,8 +1,0 @@
-[Desktop Entry]
-    Type=Application
-    Version=0.20.22
-    Name=Clash for Windows
-    Comment=Clash for Windows startup script
-    Exec="/opt/clash-for-windows-bin/cfw"
-    StartupNotify=false
-    Terminal=false

@@ -10,6 +10,7 @@
       user-mail-address "playercc7@gmail.com")
 (load! "bindings")
 (load! "config-appearance")
+(setq bookmark-default-file (concat doom-user-dir "bookmarks"))
 
 
 ;; fill column
@@ -25,10 +26,11 @@
   (setq org-noter-always-create-frame nil)
   (setq org-noter-notes-search-path '("~/Documents/emacs/roam")))
 
-;; (use-package! org-zotxt
-;;   :config
-;;   )
-;; (add-hook! org-mode #'org-zotxt-mode)
+(use-package! zotxt
+  :config
+  (require 'org-zotxt-noter)
+  (add-hook! org-mode #'org-zotxt-mode)
+  )
 
 ;; org-roam-ui
 (use-package! websocket
@@ -91,6 +93,19 @@
       )
 
 (setq org-latex-compiler "xelatex")
+
+;; typst
+(use-package! typst-ts-mode
+  :config
+  (add-hook! 'typst-ts-mode-hook #'typst-ts-watch-mode)
+  (add-hook 'pdf-view-mode-hook
+            (lambda ()
+              (auto-revert-mode t)
+              (display-line-numbers-mode -1)
+              (column-number-mode -1)
+              (blink-cursor-mode -1)
+              ))
+  (setq auto-revert-interval 0.5))
 
 ;; (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
 
@@ -191,24 +206,24 @@
 
 ;; clipboard settings on wayland
 ;; credit: yorickvP on Github
-(when (string= (getenv "XDG_SESSION_TYPE") "wayland")
-  (setq wl-copy-process nil)
+;; (when (string= (getenv "XDG_SESSION_TYPE") "wayland")
+;;   (setq wl-copy-process nil)
 
-  (defun wl-copy (text)
-    (setq wl-copy-process (make-process :name "wl-copy"
-                                        :buffer nil
-                                        :command '("wl-copy" "-f" "-n")
-                                        :connection-type 'pipe))
-    (process-send-string wl-copy-process text)
-    (process-send-eof wl-copy-process))
+;;   (defun wl-copy (text)
+;;     (setq wl-copy-process (make-process :name "wl-copy"
+;;                                         :buffer nil
+;;                                         :command '("wl-copy" "-f" "-n")
+;;                                         :connection-type 'pipe))
+;;     (process-send-string wl-copy-process text)
+;;     (process-send-eof wl-copy-process))
 
-  (defun wl-paste ()
-    (if (and wl-copy-process (process-live-p wl-copy-process))
-        nil ; should return nil if we're the current paste owner
-        (shell-command-to-string "wl-paste -n | tr -d \r")))
+;;   (defun wl-paste ()
+;;     (if (and wl-copy-process (process-live-p wl-copy-process))
+;;         nil ; should return nil if we're the current paste owner
+;;         (shell-command-to-string "wl-paste -n | tr -d \r")))
 
-  (setq interprogram-cut-function 'wl-copy)
-  (setq interprogram-paste-function 'wl-paste))
+;;   (setq interprogram-cut-function 'wl-copy)
+;;   (setq interprogram-paste-function 'wl-paste))
 
 ;; helper
 (load! "helpers")

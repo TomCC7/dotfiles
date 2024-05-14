@@ -1,7 +1,8 @@
-main_mode = 'Normal'
+main_mode = "Normal"
+lang = "eng"
 speak = false
 
 [Normal]
 with_pronunciation = true
 with_variants = true
-with_sentence = false
+with_sentence = true

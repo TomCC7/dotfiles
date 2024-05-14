@@ -74,4 +74,10 @@
 ;; dart
 (map! :desc "flutter run or hot-reload"
       :leader :mode 'dart-mode :n "c c" #'flutter-run-or-hot-reload)
+
+;; code-cells
+(map! :desc "next cell" :n "g j" #'code-cells-forward-cell)
+(map! :desc "previous cell" :n "g k" #'code-cells-backward-cell)
+(map! :desc "eval cell" :n "e" #'code-cells-eval)
+(map! :desc "eval cell above" :n "E" #'code-cells-eval-above)
 ;; }}}
