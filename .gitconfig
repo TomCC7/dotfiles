@@ -7,9 +7,10 @@
 [init]
 	defaultBranch = main
 [credential]
-	helper = "!f() { /home/docker/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node /tmp/vscode-remote-containers-57325a4d-46d9-4a8b-b8a2-01db92117ec3.js git-credential-helper $*; }; f"
+	helper = "!f() { /home/docker/.vscode-server/bin/5437499feb04f7a586f677b155b039bc2b3669eb/node /tmp/vscode-remote-containers-09aead99-d0d1-4208-b586-fed6a9bc5d80.js git-credential-helper $*; }; f"
 [safe]
 	directory = /opt/flutter
+	directory = /home/cc/codes/orbslam3_docker/ORB_SLAM3
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

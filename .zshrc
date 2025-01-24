@@ -85,8 +85,7 @@ zinit wait lucid for \
   OMZP::colored-man-pages \
   OMZP::cp \
   OMZP::extract \
-  as"completion" \
-  OMZP::autojump \
+  # as"completion" \
   # hohmannr/bubblified  \
   # sobolevn/zsh-wakatime   \
 
@@ -103,6 +102,7 @@ alias svim="sudo -E nvim"
 alias cconfig="cmake -B ./build"
 alias cbuild="cmake --build ./build"
 alias e="emacsclient --create-frame -nw"
+alias omni-python=/home/cc/.local/share/ov/pkg/isaac-sim-4.2.0/python.sh
 
 # }}
 
@@ -213,6 +213,25 @@ export PATH="$HOME/.poetry/bin:$HOME/.local/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/docker/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/docker/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/docker/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/docker/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/docker/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/docker/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/cc/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
@@ -229,3 +248,13 @@ if [ -f "/home/cc/miniforge3/etc/profile.d/mamba.sh" ]; then
     . "/home/cc/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
+
+export PATH="/opt/drake/bin${PATH:+:${PATH}}"
+export PYTHONPATH="/opt/drake/lib/python$(python3 -c 'import sys; print("{0}.{1}".format(*sys.version_info))')/site-packages${PYTHONPATH:+:${PYTHONPATH}}"
+
+export CMAKE_PREFIX_PATH=/thirdparties/rdk_install:$CMAKE_PREFIX_PATH
+export PATH=/opt/openrobots/bin:$PATH
+export PKG_CONFIG_PATH=/opt/openrobots/lib/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=/opt/openrobots/lib:$LD_LIBRARY_PATH
+export PYTHONPATH=/opt/openrobots/lib/python3.10/site-packages:$PYTHONPATH
+export CMAKE_PREFIX_PATH=/opt/openrobots:$CMAKE_PREFIX_PATH

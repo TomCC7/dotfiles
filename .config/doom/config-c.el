@@ -1,6 +1,7 @@
 ;;; ../../dotfiles/.config/doom/config-c.el -*- lexical-binding: t; -*-
 
-(setq lsp-clients-clangd-args '("-j=6"
+(setq lsp-clients-clangd-args '(
+                                ;; "-j=6"
                                 "--background-index"
                                 "--clang-tidy"
                                 "--header-insertion-decorators=0"

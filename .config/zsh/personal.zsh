@@ -31,9 +31,9 @@ alias ch="charcoal query"
 
 # FUNCTIONS{{{
 # toggle laptop keyboard
-function kb_switch() {
-  swaymsg input 2821:6582:Asus_Keyboard events toggle enabled disabled
-}
+# function kb_switch() {
+#   swaymsg input 2821:6582:Asus_Keyboard events toggle enabled disabled
+# }
 
 # function touchpad_switch() {
 #   swaymsg input 1267:12515:DELL0922:00_04F3:30E3_Touchpad events toggle enabled disabled
@@ -61,20 +61,25 @@ function kb_switch() {
 #   done
 # }
 
+# function touchpad_switch() {
+#   id=$(xinput list --long | grep 'Touchpad' | awk '{print $6}' | cut -c4-)
+#   if xinput list $id | grep -i --quiet disable; then
+#     xinput enable $id
+#     echo touchpad on
+#   else
+#     xinput disable $id
+#     echo touchpad off
+#   fi
+# }
+
 function kb_switch() {
   ~/dotfiles/.config/hypr/scripts/switch_keyboard.sh
 }
 
 function touchpad_switch() {
-  id=$(xinput list --long | grep 'Touchpad' | awk '{print $6}' | cut -c4-)
-  if xinput list $id | grep -i --quiet disable; then
-    xinput enable $id
-    echo touchpad on
-  else
-    xinput disable $id
-    echo touchpad off
-  fi
+  ~/dotfiles/.config/hypr/scripts/switch_touchpad.sh
 }
+
 
 
 # TERMINAL BEHAVIOR{{{

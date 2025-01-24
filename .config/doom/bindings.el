@@ -15,7 +15,7 @@
 
 ;; {{{ Leader map
 (map! :leader :desc "find file in current workspace" :n "e" #'find-file)
-(map! :leader :desc "ranger" :n "r" #'deer)
+(map! :leader :desc "ranger" :n "r" #'(lambda () (interactive) (dired ".")))
 (map! :leader :desc "toggle vterm" :n "j" #'+vterm/toggle)
 (map! :leader :desc "jump to bookmark" :n "RET" #'bookmark-jump)
 ;; search
