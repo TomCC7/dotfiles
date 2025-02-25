@@ -150,13 +150,13 @@
        ;; lua               ; one-based indices? one-based indices
        (markdown +grip)         ; writing docs for people to ignore
        ;; nim               ; python + lisp at the speed of c
-       nix               ; I hereby declare "nix geht mehr!"
+       (nix +lsp)           ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        (org +roam2 +noter +pretty +jupyter +pandoc)              ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;; plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +lsp +conda +poetry)            ; beautiful is better than ugly
+       (python +lsp +conda +poetry :editor format)            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6

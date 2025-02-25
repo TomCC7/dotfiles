@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("uav"
+(("ccserver"
+ (filename . "/ssh:ccserver:~/")
+ (front-context-string . "roahm\n  drwx----")
+ (rear-context-string . "0K Jan 26 23:43 ")
+ (position . 1816)
+ (last-modified 26519 3913 824739 537000))
+("uav"
  (filename . "/mnt/share/Programming/Projects/courses/uav/")
  (front-context-string)
  (rear-context-string . "0K Sep 20 12:16 ")

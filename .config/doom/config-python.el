@@ -88,9 +88,6 @@
   (org-babel-jupyter-override-src-block "python")
   (org-babel-jupyter-override-src-block "julia"))
 
-;; poetry
-(setq poetry-tracking-strategy 'projectile)
-
 ;; code-cells.el
 (use-package! code-cells
   :config

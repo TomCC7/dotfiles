@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # .zshrc
 # sh -c "$(curl -fsSL https://git.io/zinit-install)"
 # zmodload zsh/zprof # test start time
@@ -69,7 +76,7 @@ colors
 zinit snippet OMZL::prompt_info_functions.zsh
 # zinit ice depth=1; zinit light hohmannr/bubblified
 # powerlevel10k
-# zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 # # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -83,8 +90,10 @@ zinit wait lucid for \
   zsh-users/zsh-autosuggestions \
   unixorn/fzf-zsh-plugin \
   OMZP::colored-man-pages \
+  skywind3000/z.lua \
   OMZP::cp \
   OMZP::extract \
+  chisui/zsh-nix-shell \
   # as"completion" \
   # hohmannr/bubblified  \
   # sobolevn/zsh-wakatime   \
@@ -258,3 +267,11 @@ export PKG_CONFIG_PATH=/opt/openrobots/lib/pkgconfig:$PKG_CONFIG_PATH
 export LD_LIBRARY_PATH=/opt/openrobots/lib:$LD_LIBRARY_PATH
 export PYTHONPATH=/opt/openrobots/lib/python3.10/site-packages:$PYTHONPATH
 export CMAKE_PREFIX_PATH=/opt/openrobots:$CMAKE_PREFIX_PATH
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/cc/.dart-cli-completion/zsh-config.zsh ]] && . /home/cc/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
