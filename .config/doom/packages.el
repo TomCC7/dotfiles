@@ -91,5 +91,12 @@
 ;; typst
 (package! typst-ts-mode :recipe (:host sourcehut :repo "meow_king/typst-ts-mode"))
 
+;; kdl
+(package! kdl-ts-mode :recipe (:host github :repo "dataphract/kdl-ts-mode"))
+
 ;; alternative ipynb
 (package! code-cells.el :recipe (:host github :repo "astoff/code-cells.el"))
+
+(package! org-remoteimg :recipe (:host github :repo "gaoDean/org-remoteimg"))
+
+(package! pet :recipe (:host github :repo "wyuenho/emacs-pet"))

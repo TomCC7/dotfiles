@@ -221,25 +221,8 @@ function vterm_printf(){
 export PATH="$HOME/.poetry/bin:$HOME/.local/bin:$PATH"
 
 # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/docker/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/docker/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/docker/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/docker/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-if [ -f "/home/docker/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/home/docker/miniforge3/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-
-# >>> conda initialize >>>
+function enable_conda()
+{
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/cc/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -257,6 +240,7 @@ if [ -f "/home/cc/miniforge3/etc/profile.d/mamba.sh" ]; then
     . "/home/cc/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
+}
 
 export PATH="/opt/drake/bin${PATH:+:${PATH}}"
 export PYTHONPATH="/opt/drake/lib/python$(python3 -c 'import sys; print("{0}.{1}".format(*sys.version_info))')/site-packages${PYTHONPATH:+:${PYTHONPATH}}"
@@ -275,3 +259,7 @@ export CMAKE_PREFIX_PATH=/opt/openrobots:$CMAKE_PREFIX_PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools

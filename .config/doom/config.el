@@ -16,6 +16,11 @@
 ;; fill column
 (setq fill-column 80)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
+(use-package! org-remoteimg
+  :config
+  (setq org-display-remote-inline-images 'cache)
+  (setq url-automatic-caching t))
+
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -106,6 +111,14 @@
               (blink-cursor-mode -1)
               ))
   (setq auto-revert-interval 0.5))
+
+;; kdl
+(use-package! kdl-ts-mode
+  :config
+  (setq treesit-language-source-alist
+        '(
+          (kdl "https://github.com/tree-sitter-grammars/tree-sitter-kdl" "master" "src")
+          )))
 
 ;; (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
 

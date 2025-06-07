@@ -18,22 +18,14 @@
 (custom-set-variables
  '(conda-anaconda-home "/home/cc/miniforge3"))
 
-(use-package! flymake-ruff
-  :hook
-  (python-mode . flymake-mode)
-  (python-mode . flymake-ruff-load)
-  :config
-  (custom-set-variables
-   ;; '(python-check-command "ruff")
-   '(flymake-start-on-save-buffer t)))
-
-(use-package! blacken
-  :ensure t
-  :hook
-  (python-mode . blacken-mode)
-  :config
-  (setq blacken-only-if-project-is-blackened t)
-  (map! :desc "blacken buffer" :mode 'python-mode :map python-mode-map :localleader :n "=" #'blacken-buffer))
+;; (use-package! flymake-ruff
+;;   :hook
+;;   (python-mode . flymake-mode)
+;;   (python-mode . flymake-ruff-load)
+;;   :config
+;;   (custom-set-variables
+;;    ;; '(python-check-command "ruff")
+;;    '(flymake-start-on-save-buffer t)))
 
 ;; (use-package! lsp-jedi
 ;;   :after lsp-mode
@@ -55,12 +47,21 @@
   (add-to-list 'lsp-disabled-clients 'pyright-tramp)
   (add-to-list 'lsp-disabled-clients 'pyls-tramp)
   (add-to-list 'lsp-disabled-clients 'jedi-tramp)
-  (lsp-register-client
-   (make-lsp-client :new-connection
-                    (lsp-tramp-connection "pylsp")
-                    :major-modes '(python-mode)
-                    :remote? t
-                    :server-id 'pylsp-tramp)))
+  ;; diable pylsp lint
+  (setq lsp-pylsp-plugins-pycodestyle-enabled nil
+        lsp-pylsp-plugins-pyflakes-enabled nil
+        lsp-pylsp-plugins-mccabe-enabled nil
+        lsp-pylsp-plugins-pylint-enabled nil
+        lsp-pylsp-plugins-flake8-enabled nil
+        lsp-pylsp-plugins-mypy-enabled nil
+        lsp-pylsp-plugins-pydocstyle-enabled nil)
+  ;; (lsp-register-client
+  ;;  (make-lsp-client :new-connection
+  ;;                   (lsp-tramp-connection "pylsp")
+  ;;                   :major-modes '(python-mode)
+  ;;                   :remote? t
+  ;;                   :server-id 'pylsp-tramp))
+  )
 
 
 
@@ -92,5 +93,10 @@
 (use-package! code-cells
   :config
   (add-hook 'python-mode-hook 'code-cells-mode-maybe))
+
+;; pet
+(use-package! pet
+  :config
+  (add-hook 'python-base-mode-hook 'pet-mode -10))
 
 (provide 'config-python)

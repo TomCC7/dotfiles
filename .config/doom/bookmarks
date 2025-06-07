@@ -2,7 +2,19 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("ccserver"
+(("pt"
+ (filename . "/mnt/share/Programming/Projects/project_t/")
+ (front-context-string . "  /mnt/share/Pro")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26666 32832 243209 306000))
+("quantgroup"
+ (filename . "/mnt/share/Programming/Projects/qg/")
+ (front-context-string . "  /mnt/share/Pro")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26663 34493 880572 356000))
+("ccserver"
  (filename . "/ssh:ccserver:~/")
  (front-context-string . "roahm\n  drwx----")
  (rear-context-string . "0K Jan 26 23:43 ")
@@ -492,11 +504,11 @@
  (rear-context-string . " 4k 04-30 13:01 ")
  (position . 83))
 ("org-capture-last-stored"
- (filename . "/mnt/share/JDsync/Documents/emacs/roam/20231030141255-underactuated_robotics.org")
+ (filename . "/mnt/share/JDsync/Documents/emacs/roam/20250326185602-vlm.org")
  (front-context-string)
- (rear-context-string . "tuated robotics\n")
- (position . 100)
- (last-modified 25919 61992 570141 448000))
+ (rear-context-string . "D:\n#+title: VLM\n")
+ (position . 81)
+ (last-modified 26596 34310 552703 974000))
 ("Projects"
  (filename . "/mnt/share/Programming/Projects/")
  (front-context-string . ".backup/\n  drwxr")
