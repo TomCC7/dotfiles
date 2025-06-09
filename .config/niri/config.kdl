@@ -354,8 +354,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T { spawn "kitty"; }
-    Mod+Return { spawn "kitty"; }
+    Mod+T { spawn "alacritty"; }
+    Mod+Return { spawn "alacritty"; }
     // Mod+D { spawn "fuzzel"; }
     Alt+Space { spawn "rofi" "-combi-modi" "drun,window,run" "-show" "combi" "-icon-theme" "Papirus" "-show-icons"; }
     Super+Alt+L { spawn "swaylock"; }

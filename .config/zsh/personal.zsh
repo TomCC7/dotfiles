@@ -96,7 +96,7 @@ fi
 
 # tmux auto attach
 # need env $TERM_PROGRAM
-TERMS_ALLOWED=(alacritty vscode xterm-kitty)
+TERMS_ALLOWED=(alacritty vscode xterm-kitty xterm-256color)
 if [[ -n $TERM ]] && [[ -n $(echo $TERMS_ALLOWED | grep $TERM) ]] && ! [[ -v TMUX ]] && ! [[ -v VIM ]];
 then
   export TERM_ENV=$TERM

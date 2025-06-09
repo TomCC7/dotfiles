@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # .zshrc
 # sh -c "$(curl -fsSL https://git.io/zinit-install)"
 # zmodload zsh/zprof # test start time
@@ -98,6 +91,13 @@ zinit wait lucid for \
   # hohmannr/bubblified  \
   # sobolevn/zsh-wakatime   \
 
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # VARS
 export VISUAL=nvim 
 export EDITOR=nvim
@@ -116,10 +116,10 @@ alias omni-python=/home/cc/.local/share/ov/pkg/isaac-sim-4.2.0/python.sh
 # }}
 
 # personalized config
-if [[ $HOST = cccomputer ]] && [[ $USER = cc ]];
+if [[ $HOST = cccomputer ||  $HOST = astra-rog  ]] && [[ $USER = cc ]];
 then
   source $ZSH_CONFIG_DIR/personal.zsh
-  source $ZSH_CONFIG_DIR/private.zsh
+  [[ -f $ZSH_CONFIG_DIR/private.zsh ]] && source $ZSH_CONFIG_DIR/private.zsh
   # wakatime plugin
   # zinit wait lucid for sobolevn/wakatime-zsh-plugin
 fi

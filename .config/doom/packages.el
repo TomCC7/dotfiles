@@ -100,3 +100,7 @@
 (package! org-remoteimg :recipe (:host github :repo "gaoDean/org-remoteimg"))
 
 (package! pet :recipe (:host github :repo "wyuenho/emacs-pet"))
+
+
+;; cursor?
+(package! aider :recipe (:host github :repo "tninja/aider.el" :branch "v0.10.0"))
