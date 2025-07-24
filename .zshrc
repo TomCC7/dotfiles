@@ -245,13 +245,6 @@ fi
 export PATH="/opt/drake/bin${PATH:+:${PATH}}"
 export PYTHONPATH="/opt/drake/lib/python$(python3 -c 'import sys; print("{0}.{1}".format(*sys.version_info))')/site-packages${PYTHONPATH:+:${PYTHONPATH}}"
 
-export CMAKE_PREFIX_PATH=/thirdparties/rdk_install:$CMAKE_PREFIX_PATH
-export PATH=/opt/openrobots/bin:$PATH
-export PKG_CONFIG_PATH=/opt/openrobots/lib/pkgconfig:$PKG_CONFIG_PATH
-export LD_LIBRARY_PATH=/opt/openrobots/lib:$LD_LIBRARY_PATH
-export PYTHONPATH=/opt/openrobots/lib/python3.10/site-packages:$PYTHONPATH
-export CMAKE_PREFIX_PATH=/opt/openrobots:$CMAKE_PREFIX_PATH
-
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/cc/.dart-cli-completion/zsh-config.zsh ]] && . /home/cc/.dart-cli-completion/zsh-config.zsh || true
@@ -263,3 +256,7 @@ export CMAKE_PREFIX_PATH=/opt/openrobots:$CMAKE_PREFIX_PATH
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+if [ -z "$DIRENV_ENABLED" ]; then
+  eval "$(direnv hook zsh)"
+fi

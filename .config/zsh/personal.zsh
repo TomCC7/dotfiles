@@ -88,7 +88,7 @@ if [[ -n $TERM_ENV ]];
 then
   if [[ $TERM_ENV == vscode ]];
   then
-    export EDITOR=code-insiders
+    export EDITOR=code
   else
     export TERM_PROGRAM=$TERM_ENV
   fi
@@ -96,7 +96,18 @@ fi
 
 # tmux auto attach
 # need env $TERM_PROGRAM
-TERMS_ALLOWED=(alacritty vscode xterm-kitty xterm-256color)
+if [[ -n $(env | grep ALACRITTY) ]];
+then
+  export TERM_ENV=$TERM
+  if [[ -z $(tmux ls | grep $TERM) ]];
+  then
+    tmux new -s $TERM
+  else
+    tmux attach -t $TERM
+  fi
+fi
+
+TERMS_ALLOWED=(alacritty vscode xterm-kitty)
 if [[ -n $TERM ]] && [[ -n $(echo $TERMS_ALLOWED | grep $TERM) ]] && ! [[ -v TMUX ]] && ! [[ -v VIM ]];
 then
   export TERM_ENV=$TERM

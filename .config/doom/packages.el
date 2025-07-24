@@ -50,8 +50,8 @@
 (package! elpy)
 (package! blacken)
 ;; flymake-ruff
-(package! flymake-ruff :recipe
-  (:host github :repo "erickgnavar/flymake-ruff" :branch "master"))
+;; (package! flymake-ruff :recipe
+;;   (:host github :repo "erickgnavar/flymake-ruff" :branch "master"))
 ;; }}
 
 ;; pdf-tools
