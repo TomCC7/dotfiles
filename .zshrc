@@ -116,7 +116,7 @@ alias omni-python=/home/cc/.local/share/ov/pkg/isaac-sim-4.2.0/python.sh
 # }}
 
 # personalized config
-if [[ $HOST = cccomputer ||  $HOST = astra-rog  ]] && [[ $USER = cc ]];
+if [[ $HOST = cccomputer ||  $HOST = astra-rog || $HOST = ccdesktop ]] && [[ $USER = cc ]];
 then
   source $ZSH_CONFIG_DIR/personal.zsh
   [[ -f $ZSH_CONFIG_DIR/private.zsh ]] && source $ZSH_CONFIG_DIR/private.zsh
@@ -220,28 +220,6 @@ function vterm_printf(){
 
 export PATH="$HOME/.poetry/bin:$HOME/.local/bin:$PATH"
 
-# >>> conda initialize >>>
-function enable_conda()
-{
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/cc/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/cc/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/cc/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/cc/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-if [ -f "/home/cc/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/home/cc/miniforge3/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-}
-
 export PATH="/opt/drake/bin${PATH:+:${PATH}}"
 export PYTHONPATH="/opt/drake/lib/python$(python3 -c 'import sys; print("{0}.{1}".format(*sys.version_info))')/site-packages${PYTHONPATH:+:${PYTHONPATH}}"
 
@@ -260,3 +238,20 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 if [ -z "$DIRENV_ENABLED" ]; then
   eval "$(direnv hook zsh)"
 fi
+source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+
+_direnv_hook() {
+  trap -- '' SIGINT
+  eval "$("/nix/store/cssrdy0w7cy3zmb12l8mj48f0477c2sh-direnv-2.36.0/bin/direnv" export zsh)"
+  trap - SIGINT
+}
+typeset -ag precmd_functions
+if (( ! ${precmd_functions[(I)_direnv_hook]} )); then
+  precmd_functions=(_direnv_hook $precmd_functions)
+fi
+typeset -ag chpwd_functions
+if (( ! ${chpwd_functions[(I)_direnv_hook]} )); then
+  chpwd_functions=(_direnv_hook $chpwd_functions)
+fi
+
+export PATH="/home/cc/.pixi/bin:$PATH"

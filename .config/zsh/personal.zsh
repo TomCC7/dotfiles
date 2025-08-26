@@ -20,7 +20,7 @@ alias -s pptx="libreoffice"
 alias -s docx="libreoffice"
 alias -s xslx="libreoffice"
 # acronym
-alias aur="yay"
+alias aur="paru"
 alias swaycfg="vim ~/.config/sway/config"
 alias ml="/home/cc/Applications/matlab/bin/matlab -desktop & disown"
 alias vmstart="xfreerdp /v:192.168.122.246:3389 /w:2560 /h:1440 /bpp:32 +clipboard +fonts /gdi:hw /rfx /rfx-mode:video /sound:sys:pulse +menu-anims +window-drag"

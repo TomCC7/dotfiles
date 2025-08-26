@@ -248,11 +248,11 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
-spawn-at-startup "xwayland-satellite" ":1"
+spawn-at-startup "xwayland-satellite" ":0"
 spawn-at-startup "kanshi"
 
 environment {
-    DISPLAY ":1"
+    DISPLAY ":0"
     GDK_BACKEND: "wayland,x11"
     SDL_VIDEODRIVER: "wayland"
     CLUTTER_BACKEND: "wayland"

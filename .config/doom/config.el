@@ -113,12 +113,12 @@
   (setq auto-revert-interval 0.5))
 
 ;; kdl
-(use-package! kdl-ts-mode
-  :config
-  (setq treesit-language-source-alist
-        '(
-          (kdl "https://github.com/tree-sitter-grammars/tree-sitter-kdl" "master" "src")
-          )))
+;; (use-package! kdl-ts-mode
+;;   :config
+;;   (setq treesit-language-source-alist
+;;         '(
+;;           (kdl "https://github.com/tree-sitter-grammars/tree-sitter-kdl" "master" "src")
+;;           )))
 
 ;; (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
 
@@ -270,4 +270,4 @@
 (load! "config-lang")
 
 ;; private
-(load! "private")
+;; (load! "private")
