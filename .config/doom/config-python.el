@@ -1,28 +1,14 @@
 ;;; config-python.el -*- lexical-binding: t; -*-
-(custom-set-variables
- '(conda-anaconda-home "/home/cc/miniforge3"))
-
 (after! lsp-mode
+  ;; (setq lsp-pyright-langserver-command "basedpyright")
   (add-to-list 'lsp-disabled-clients 'pyright)
-  (add-to-list 'lsp-disabled-clients 'pyls)
+  ;; (add-to-list 'lsp-disabled-clients 'pyls)
+  ;; (add-to-list 'lsp-disabled-clients 'pylsp)
   (add-to-list 'lsp-disabled-clients 'jedi)
   (add-to-list 'lsp-disabled-clients 'pyright-tramp)
+
   (add-to-list 'lsp-disabled-clients 'pyls-tramp)
   (add-to-list 'lsp-disabled-clients 'jedi-tramp)
-  ;; diable pylsp lint
-  (setq lsp-pylsp-plugins-pycodestyle-enabled nil
-        lsp-pylsp-plugins-pyflakes-enabled nil
-        lsp-pylsp-plugins-mccabe-enabled nil
-        lsp-pylsp-plugins-pylint-enabled nil
-        lsp-pylsp-plugins-flake8-enabled nil
-        lsp-pylsp-plugins-mypy-enabled nil
-        lsp-pylsp-plugins-pydocstyle-enabled nil)
-  ;; (lsp-register-client
-  ;;  (make-lsp-client :new-connection
-  ;;                   (lsp-tramp-connection "pylsp")
-  ;;                   :major-modes '(python-mode)
-  ;;                   :remote? t
-  ;;                   :server-id 'pylsp-tramp))
   )
 
 
