@@ -1,10 +1,9 @@
 ;;; ../../dotfiles/.config/doom/config-c.el -*- lexical-binding: t; -*-
 
 (setq lsp-clients-clangd-args '(
-                                ;; "-j=6"
+                                "-j=6"
                                 "--background-index"
                                 "--clang-tidy"
-                                "--header-insertion-decorators=0"
                                 "--compile-commands-dir=./build"))
 (setq lsp-tramp-command lsp-clients-clangd-args)
 (push "clangd" lsp-tramp-command)

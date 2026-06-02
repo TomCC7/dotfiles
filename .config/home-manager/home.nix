@@ -82,29 +82,27 @@
 
   home.packages = with pkgs; [
     # DESKTOP APPS
+    meshlab
     zathura
     zotero
-    code-cursor
+    # code-cursor
     vscode
     # youtube-music
     nomacs
     telegram-desktop
     element-desktop
     mpv
-    kooha
     _1password-cli
     _1password-gui
     # WINDOW MANAGER
     rofi-wayland
     brightnessctl
-    xwayland-satellite
     kanshi
     wdisplays
     waybar
     mako
     swaybg
     pavucontrol
-    glmark2
     bibata-cursors
     gparted
     exfatprogs
@@ -112,7 +110,6 @@
     # CLIS
     git
     git-lfs
-    tmux
     stow
     eza
     bottom
@@ -128,8 +125,7 @@
     camset
     # programming
     lua
-    uv
-    rustup
+    # rustup
     openssl
     openssl.dev
     pkg-config
@@ -139,6 +135,7 @@
     nodejs
     yarn
     pipx
+    mosh
     # fonts
     meslo-lgs-nf
     nerd-fonts.meslo-lg
@@ -147,13 +144,13 @@
     noto-fonts-cjk-serif
   ];
 
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      # "application/pdf" = [ "evince.desktop" ];
-      "text/html" = [ "google-chrome.desktop" ];
-    };
-  };
+  # xdg.mimeApps = {
+  #   enable = true;
+  #   defaultApplications = {
+  #     # "application/pdf" = [ "evince.desktop" ];
+  #     "text/html" = [ "google-chrome.desktop" ];
+  #   };
+  # };
 
   # shurufa
   # i18n.inputMethod = {
@@ -244,12 +241,12 @@
   # security.pam.services.swaylock = { };
 
   # 1password ssh
-  programs.ssh = {
-    enable = true;
-    extraConfig = ''
-      IdentityAgent "~/.1password/agent.sock"
-      '';
-  };
+  # programs.ssh = {
+  #   enable = true;
+  #   extraConfig = ''
+  #     IdentityAgent "~/.1password/agent.sock"
+  #     '';
+  # };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "25.05";

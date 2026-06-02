@@ -45,7 +45,7 @@
 ;; python {{
 ;; (package! company-jedi)
 ;; (package! lsp-jedi)
-(package! jupyter)
+;; (package! jupyter)
 ;; elpy
 (package! elpy)
 (package! blacken)
@@ -104,3 +104,8 @@
 
 ;; cursor?
 (package! aider :recipe (:host github :repo "tninja/aider.el" :branch "v0.10.0"))
+
+;; agent-shell
+(package! shell-maker)
+(package! acp)
+(package! agent-shell)

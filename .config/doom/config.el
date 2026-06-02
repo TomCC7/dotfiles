@@ -2,7 +2,8 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-
+(require 'acp)
+(require 'agent-shell)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -183,7 +184,7 @@
 ;; projectile
 (use-package! projectile
   :config
-  (setq projectile-indexing-method 'native))
+  (setq projectile-indexing-method 'alien))
 
 ;; matlab
 (use-package! matlab-mode

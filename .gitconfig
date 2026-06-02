@@ -1,5 +1,5 @@
 [user]
-	email = cctom@umich.edu
+	email = cc7@duck.com
 	name = cc
 [pull]
 	rebase = false
@@ -18,3 +18,5 @@
 	required = true
 [lfs]
 	skipdownloaderrors = true
+[push]
+	autoSetupRemote = true

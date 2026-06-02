@@ -1,3 +1,10 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/home/cc/.zsh/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 # .zshrc
 # sh -c "$(curl -fsSL https://git.io/zinit-install)"
 # zmodload zsh/zprof # test start time
@@ -90,6 +97,8 @@ zinit wait lucid for \
   # as"completion" \
   # hohmannr/bubblified  \
   # sobolevn/zsh-wakatime   \
+
+autoload -U +X bashcompinit && bashcompinit
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -202,6 +211,8 @@ function find_up() {
 
 function rs() {
   source $(find_up -regex ".*/\(devel\|install\)$")/setup.zsh
+  eval "$(register-python-argcomplete ros2)"
+  eval "$(register-python-argcomplete colcon)"
 }
 
 # {{ EMACS FUNCTIONS
@@ -218,10 +229,6 @@ function vterm_printf(){
 }
 ## }}
 
-export PATH="$HOME/.poetry/bin:$HOME/.local/bin:$PATH"
-
-export PATH="/opt/drake/bin${PATH:+:${PATH}}"
-export PYTHONPATH="/opt/drake/lib/python$(python3 -c 'import sys; print("{0}.{1}".format(*sys.version_info))')/site-packages${PYTHONPATH:+:${PYTHONPATH}}"
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
@@ -254,4 +261,27 @@ if (( ! ${chpwd_functions[(I)_direnv_hook]} )); then
   chpwd_functions=(_direnv_hook $chpwd_functions)
 fi
 
-export PATH="/home/cc/.pixi/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.pixi/bin:$HOME/.local/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/cc/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# opencode
+export PATH=/home/cc/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/home/cc/.bun/_bun" ] && source "/home/cc/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+source ~/.clawdock/clawdock-helpers.sh
+source ~/.clawdock/clawdock-helpers.sh
+
+# OpenClaw Completion
+source "/home/cc/.openclaw/completions/openclaw.zsh"

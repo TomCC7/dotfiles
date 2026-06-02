@@ -19,7 +19,7 @@
 (map! :leader :desc "toggle vterm" :n "j" #'+vterm/toggle)
 (map! :leader :desc "jump to bookmark" :n "RET" #'bookmark-jump)
 ;; search
-(map! :leader :desc "git grep" :n "s g" #'counsel-git-grep)
+(map! :leader :desc "git grep" :n "s g" #'consult-git-grep)
 ;; files
 (map! :leader :desc "kill buffer" :n "f k" #'kill-this-buffer)
 ;; window
