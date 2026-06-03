@@ -1,0 +1,68 @@
+#cloud-config
+# Autoinstall for Ubuntu Desktop 24.04 LTS — for the *desktop* ISO,
+# which supports autoinstall natively (no server-ISO conversion needed).
+autoinstall:
+  version: 1
+
+  # --- Region (US English / US keyboard / Pacific time) ---
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
+  timezone: America/Los_Angeles
+
+  # --- Full desktop (LibreOffice, Thunderbird, etc.) ---
+  # Use id: ubuntu-desktop-minimal for the slim variant.
+  source:
+    id: ubuntu-desktop
+
+  # --- Third-party drivers (NVIDIA, Wi-Fi firmware) + restricted codecs ---
+  drivers:
+    install: true
+  codecs:
+    install: true
+
+  # --- Apply security updates during install ---
+  updates: security
+
+  # --- Plain ext4 partitions (desktop-style, non-LVM) ---
+  storage:
+    layout:
+      name: direct
+
+  # --- User account -------------------------------------------------
+  # Hostname here is a placeholder — a late-command below replaces it
+  # with dimensional-<4 random alphanumerics> at install time.
+  # Password hash generated with: mkpasswd --method=SHA-512
+  identity:
+    realname: 'dimos'            # <-- your display name
+    username: dimos               # <-- your username
+    hostname: dimensional            # placeholder, randomized below
+    password: '$6$gYHrJ18nfAD260kF$F.5CkI6mDqK9Aq4uGbZv3rSxnPTKt7QAwzhjQI..BDi9805haI2s3iYwDq1hOhL4lrFobJ/1Nfm4TjGf24yU1.'
+
+  # --- Dev tools (apt) ---
+  packages:
+    - git
+    - build-essential
+    - curl
+
+  # --- Snaps: VS Code + Discord ---
+  snaps:
+    - name: code
+      classic: true
+    - name: discord
+
+  late-commands:
+    # Randomize hostname: dimensional-<4 random lowercase alphanumerics>.
+    # (Hostnames only allow a-z, 0-9 and hyphens — RFC 1123 — so true
+    # "symbols" aren't permitted; random alphanumerics are the way.)
+    - >-
+      h="dimensional-$(tr -dc 'a-z0-9' </dev/urandom | head -c 4)";
+      echo "$h" > /target/etc/hostname;
+      sed -i "s/\bdimensional\b/$h/g" /target/etc/hosts
+
+    # Google Chrome isn't in the Ubuntu archive or snap store; install
+    # Google's official .deb (it also adds Google's apt repo for updates).
+    # Requires network access during install.
+    - wget -O /target/tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - curtin in-target -- apt-get install -y /tmp/chrome.deb
+    - rm -f /target/tmp/chrome.deb
