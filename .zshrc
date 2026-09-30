@@ -93,7 +93,6 @@ zinit wait lucid for \
   skywind3000/z.lua \
   OMZP::cp \
   OMZP::extract \
-  chisui/zsh-nix-shell \
   # as"completion" \
   # hohmannr/bubblified  \
   # sobolevn/zsh-wakatime   \
@@ -245,21 +244,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 if [ -z "$DIRENV_ENABLED" ]; then
   eval "$(direnv hook zsh)"
 fi
-source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
-
-_direnv_hook() {
-  trap -- '' SIGINT
-  eval "$("/nix/store/cssrdy0w7cy3zmb12l8mj48f0477c2sh-direnv-2.36.0/bin/direnv" export zsh)"
-  trap - SIGINT
-}
-typeset -ag precmd_functions
-if (( ! ${precmd_functions[(I)_direnv_hook]} )); then
-  precmd_functions=(_direnv_hook $precmd_functions)
-fi
-typeset -ag chpwd_functions
-if (( ! ${chpwd_functions[(I)_direnv_hook]} )); then
-  chpwd_functions=(_direnv_hook $chpwd_functions)
-fi
 
 export PATH="$HOME/.cargo/bin:$HOME/.pixi/bin:$HOME/.local/bin:$PATH"
 
@@ -285,3 +269,8 @@ source ~/.clawdock/clawdock-helpers.sh
 
 # OpenClaw Completion
 source "/home/cc/.openclaw/completions/openclaw.zsh"
+
+export DENO_INSTALL="/home/cc/.deno"
+export PATH="/home/cc/.deno/bin:$PATH"
+
+if [ -e /home/cc/.nix-profile/etc/profile.d/nix.sh ]; then . /home/cc/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

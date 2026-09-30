@@ -20,3 +20,11 @@
 	skipdownloaderrors = true
 [push]
 	autoSetupRemote = true
+[credential "https://lfs.dimensionalos.com"]
+	helper = "!f() { if [ \"$1\" = \"get\" ]; then echo \"username=token\"; echo \"password=$(gh auth token)\"; fi; }; f"
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential

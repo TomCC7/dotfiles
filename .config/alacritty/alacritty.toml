@@ -1,111 +1,134 @@
-[colors]
-draw_bold_text_with_bright_colors = true
-
-[[keyboard.bindings]]
-action = "Paste"
-key = "V"
-mods = "Control|Shift"
-
-[[keyboard.bindings]]
-action = "Copy"
-key = "C"
-mods = "Control|Shift"
-
-[[keyboard.bindings]]
-action = "PasteSelection"
-key = "Insert"
-mods = "Shift"
-
-[[keyboard.bindings]]
-action = "ResetFontSize"
-key = "Key0"
-mods = "Control"
-
-[[keyboard.bindings]]
-action = "IncreaseFontSize"
-key = "Equals"
-mods = "Control"
-
-[[keyboard.bindings]]
-action = "IncreaseFontSize"
-key = "Plus"
-mods = "Control"
-
-[[keyboard.bindings]]
-action = "DecreaseFontSize"
-key = "Minus"
-mods = "Control"
-
-[[keyboard.bindings]]
-action = "DecreaseFontSize"
-key = "Minus"
-mods = "Control"
+# Alacritty configuration — TOML format (Alacritty 0.13+)
+# Docs: https://alacritty.org/config-alacritty.html
 
 [general]
+# Reload the config automatically when this file changes.
 live_config_reload = true
-
-[colors.bright]
-black = "#575b70"
-blue = "#caa9fa"
-cyan = "#9aedfe"
-green = "#5af78e"
-magenta = "#ff92d0"
-red = "#ff6e67"
-white = "#e6e6e6"
-yellow = "#f4f99d"
-
-[colors.normal]
-black = "#000000"
-blue = "#caa9fa"
-cyan = "#8be9fd"
-green = "#50fa7b"
-magenta = "#ff79c6"
-red = "#ff5555"
-white = "#bfbfbf"
-yellow = "#f1fa8c"
-
-[colors.primary]
-background = "#282a36"
-foreground = "#f8f8f2"
-
-[cursor]
-style = "Underline"
+# Drop extra TOML files here to split your config (themes, keybinds, etc).
+import = []
 
 [env]
-TERM = "xterm-256color"
+TERM = "alacritty"
 
-[font.bold]
-family = "MesloLGS Nerd Font Mono"
+# ─── Window ──────────────────────────────────────────────────────────────────
+[window]
+padding = { x = 10, y = 10 }
+dynamic_padding = true
+decorations = "full"
+opacity = 0.96
+blur = true
+startup_mode = "Windowed"
+dynamic_title = true
+# Sized in columns/lines; ignored when startup_mode is Maximized/Fullscreen.
+dimensions = { columns = 120, lines = 34 }
 
-[font.bold_italic]
-family = "MesloLGS Nerd Font Mono"
+# ─── Scrolling ───────────────────────────────────────────────────────────────
+[scrolling]
+history = 100000
+multiplier = 3
 
-[font.italic]
-family = "MesloLGS Nerd Font Mono"
+# ─── Font ────────────────────────────────────────────────────────────────────
+# JetBrainsMono Nerd Font (pkg: ttf-jetbrains-mono-nerd). Matches Ghostty's
+# bundled JetBrains Mono and provides powerline + Nerd Font icon glyphs.
+[font]
+size = 12.0
+normal      = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold        = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic      = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+offset = { x = 0, y = 0 }
+glyph_offset = { x = 0, y = 0 }
 
-[font.normal]
-family = "MesloLGS NF"
+# ─── Cursor ──────────────────────────────────────────────────────────────────
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 600
+blink_timeout = 0          # 0 = blink forever
+unfocused_hollow = true
+thickness = 0.15
+
+# ─── Selection / Mouse ───────────────────────────────────────────────────────
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [mouse]
 hide_when_typing = true
 
-[scrolling]
-history = 10000
-multiplier = 3
-
-[window]
-decorations = "full"
-decorations_theme_variant = "Dark"
-dynamic_padding = true
-opacity = 1
-title = "Alacritty@Garuda"
-
-[window.class]
-general = "Alacritty"
-instance = "Alacritty"
-
-[window.padding]
-x = 10
-y = 10
-
+# ─── Keyboard ────────────────────────────────────────────────────────────────
 [keyboard]
+bindings = [
+  { key = "Equals",   mods = "Control",       action = "IncreaseFontSize" },
+  { key = "Minus",    mods = "Control",       action = "DecreaseFontSize" },
+  { key = "Key0",     mods = "Control",       action = "ResetFontSize" },
+  { key = "C",        mods = "Control|Shift", action = "Copy" },
+  { key = "V",        mods = "Control|Shift", action = "Paste" },
+  { key = "F",        mods = "Control|Shift", action = "SearchForward" },
+  { key = "B",        mods = "Control|Shift", action = "SearchBackward" },
+  { key = "Return",   mods = "Control|Shift", action = "SpawnNewInstance" },
+]
+
+# ─── Colors — Catppuccin Mocha ───────────────────────────────────────────────
+[colors.primary]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+dim_foreground = "#7f849c"
+bright_foreground = "#cdd6f4"
+
+[colors.cursor]
+text   = "#1e1e2e"
+cursor = "#f5e0dc"
+
+[colors.vi_mode_cursor]
+text   = "#1e1e2e"
+cursor = "#b4befe"
+
+[colors.search.matches]
+foreground = "#1e1e2e"
+background = "#a6adc8"
+
+[colors.search.focused_match]
+foreground = "#1e1e2e"
+background = "#a6e3a1"
+
+[colors.footer_bar]
+foreground = "#1e1e2e"
+background = "#a6adc8"
+
+[colors.hints.start]
+foreground = "#1e1e2e"
+background = "#f9e2af"
+
+[colors.hints.end]
+foreground = "#1e1e2e"
+background = "#a6adc8"
+
+[colors.selection]
+text       = "#1e1e2e"
+background = "#f5e0dc"
+
+[colors.normal]
+black   = "#45475a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
+
+[colors.bright]
+black   = "#585b70"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#a6adc8"
+
+# ─── Bell ────────────────────────────────────────────────────────────────────
+[bell]
+animation = "EaseOutExpo"
+duration = 0           # 0 = visual bell disabled
+color = "#cdd6f4"
