@@ -1,6 +1,6 @@
 # OPENSPEC:START
 # OpenSpec shell completions configuration
-fpath=("/home/cc/.zsh/completions" $fpath)
+fpath=("$HOME/.zsh/completions" $fpath)
 autoload -Uz compinit
 compinit
 # OPENSPEC:END
@@ -119,14 +119,14 @@ alias svim="sudo -E nvim"
 alias cconfig="cmake -B ./build"
 alias cbuild="cmake --build ./build"
 alias e="emacsclient --create-frame -nw"
-alias omni-python=/home/cc/.local/share/ov/pkg/isaac-sim-4.2.0/python.sh
+alias omni-python=$HOME/.local/share/ov/pkg/isaac-sim-4.2.0/python.sh
 
 # }}
 
 # personalized config
 if [[ $HOST = cccomputer ||  $HOST = astra-rog || $HOST = ccdesktop ]] && [[ $USER = cc ]];
 then
-  source $ZSH_CONFIG_DIR/personal.zsh
+  [[ -r "$ZSH_CONFIG_DIR/personal.zsh" ]] && source "$ZSH_CONFIG_DIR/personal.zsh"
   [[ -f $ZSH_CONFIG_DIR/private.zsh ]] && source $ZSH_CONFIG_DIR/private.zsh
   # wakatime plugin
   # zinit wait lucid for sobolevn/wakatime-zsh-plugin
@@ -231,7 +231,7 @@ function vterm_printf(){
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
-[[ -f /home/cc/.dart-cli-completion/zsh-config.zsh ]] && . /home/cc/.dart-cli-completion/zsh-config.zsh || true
+[[ -f $HOME/.dart-cli-completion/zsh-config.zsh ]] && . $HOME/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -241,14 +241,14 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-if [ -z "$DIRENV_ENABLED" ]; then
+if [[ -z "$DIRENV_ENABLED" ]] && (( $+commands[direnv] )); then
   eval "$(direnv hook zsh)"
 fi
 
 export PATH="$HOME/.cargo/bin:$HOME/.pixi/bin:$HOME/.local/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/home/cc/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -256,21 +256,20 @@ esac
 # pnpm end
 
 # opencode
-export PATH=/home/cc/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
 
 # bun completions
-[ -s "/home/cc/.bun/_bun" ] && source "/home/cc/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-source ~/.clawdock/clawdock-helpers.sh
-source ~/.clawdock/clawdock-helpers.sh
+[[ -r ~/.clawdock/clawdock-helpers.sh ]] && source ~/.clawdock/clawdock-helpers.sh
 
 # OpenClaw Completion
-source "/home/cc/.openclaw/completions/openclaw.zsh"
+[[ -r "$HOME/.openclaw/completions/openclaw.zsh" ]] && source "$HOME/.openclaw/completions/openclaw.zsh"
 
-export DENO_INSTALL="/home/cc/.deno"
-export PATH="/home/cc/.deno/bin:$PATH"
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$HOME/.deno/bin:$PATH"
 
-if [ -e /home/cc/.nix-profile/etc/profile.d/nix.sh ]; then . /home/cc/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

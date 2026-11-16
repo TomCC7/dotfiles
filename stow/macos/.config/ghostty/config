@@ -1,0 +1,22 @@
+font-family = MesloLGS Nerd Font
+font-size = 14
+macos-option-as-alt = left
+shell-integration = zsh
+
+# Native macOS glass material (macOS 26+, Ghostty with glass support).
+# Older Ghostty: replace background-blur below with `true`.
+background = 17191f
+foreground = e6e8ed
+background-opacity = 0.80
+background-blur = macos-glass-regular
+window-padding-x = 18
+window-padding-y = 14
+
+# Drop down from the top; keep the native glass background.
+# Position changes require a complete Ghostty restart on macOS.
+quick-terminal-position = top
+quick-terminal-size = 48%,100%
+quick-terminal-autohide = true
+
+# Toggle the quick terminal while Ghostty is running (macOS Accessibility required).
+keybind = global:ctrl+alt+t=toggle_quick_terminal
