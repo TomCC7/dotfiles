@@ -12,10 +12,10 @@ background-blur = macos-glass-regular
 window-padding-x = 18
 window-padding-y = 14
 
-# A compact floating terminal, rather than a screen-wide opaque panel.
+# Drop down from the top; keep the native glass background.
 # Position changes require a complete Ghostty restart on macOS.
-quick-terminal-position = center
-quick-terminal-size = 48%,76%
+quick-terminal-position = top
+quick-terminal-size = 48%,100%
 quick-terminal-autohide = true
 
 # Toggle the quick terminal while Ghostty is running (macOS Accessibility required).
