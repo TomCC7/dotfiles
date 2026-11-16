@@ -45,6 +45,20 @@ configs, shell history, caches and other unrelated files.
 
 ## 3. Activate Home Manager
 
+First enable the required features for both the initial Nix command and the Nix
+subprocesses launched by Home Manager. Flags on the outer command alone do not
+configure those subprocesses. Add this line to your user Nix config (preserving
+any existing settings):
+
+```sh
+mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/nix"
+printf '\nextra-experimental-features = nix-command flakes\n' >> "${XDG_CONFIG_HOME:-$HOME/.config}/nix/nix.conf"
+nix config show experimental-features
+```
+
+This is a one-time setup, not a command to repeat on every update. The last
+command should show both `nix-command` and `flakes`. No daemon restart is needed.
+
 ```sh
 cd "$HOME/dotfiles"
 case "$(uname -m)" in
