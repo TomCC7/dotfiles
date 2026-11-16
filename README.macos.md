@@ -30,15 +30,15 @@ Do not install over an existing working Nix installation.
 
 ## 2. Clone and install GUI apps
 
-For the initial feature branch (use main after this branch is merged):
+Clone the main branch:
 
 ```sh
-git clone --branch feat/macos-minimal https://github.com/TomCC7/dotfiles.git "$HOME/dotfiles"
+git clone --branch main https://github.com/TomCC7/dotfiles.git "$HOME/dotfiles"
 cd "$HOME/dotfiles"
 brew bundle --file=Brewfile.macos
 ```
 
-If you already have a checkout, fetch and switch to `feat/macos-minimal` there
+If you already have a checkout, fetch and switch to `main` there
 instead. Preserve uncommitted changes; do not overwrite an existing checkout.
 Do not run Stow over this whole repository: it also contains Linux-specific
 configs, shell history, caches and other unrelated files.
