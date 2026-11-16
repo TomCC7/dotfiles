@@ -2,3 +2,6 @@ font-family = MesloLGS Nerd Font
 font-size = 14
 macos-option-as-alt = left
 shell-integration = zsh
+
+# Toggle the quick terminal while Ghostty is running (macOS Accessibility required).
+keybind = global:ctrl+alt+t=toggle_quick_terminal
